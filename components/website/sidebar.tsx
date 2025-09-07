@@ -61,7 +61,7 @@ function DocsSidebar() {
                     <Link
                       href={link.href}
                       onClick={() => addVisitedPage(link.href, link.name)}
-                      className={`flex gap-2 group font-medium items-center py-1  transition-all ${
+                      className={`flex gap-2 group font-medium items-center py-1 my-2  transition-all ${
                         link.href === pathname
                           ? 'active-nav'
                           : 'text-slate-600 hover:text-slate-900  dark:text-slate-400 dark:hover:text-white'
@@ -88,7 +88,7 @@ function DocsSidebar() {
               <>
                 <li
                   key={link.href}
-                  className={`2xl:text-sm text-[0.81em]  flex items-center gap-1 dark:hover:text-white 2xl:py-1 py-0.5 pl-2 border-l transition-all ${
+                  className={`2xl:text-sm text-[0.81em]  flex items-center gap-1 dark:hover:text-white my-3 2xl:py-1 py-0.5 pl-2 border-l transition-all ${
                     link.href === pathname
                       ? 'dark:border-white border-black text-black dark:text-white font-semibold'
                       : 'dark:text-slate-400 2xl:font-normal font-medium hover:border-black/60 dark:hover:border-white/50 text-slate-500 hover:text-slate-900'
