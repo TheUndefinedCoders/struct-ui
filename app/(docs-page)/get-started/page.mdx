@@ -1,0 +1,71 @@
+export const metadata = {
+  title: 'Get Started',
+};
+
+<div className='mt-20'>
+  <h4 className='text-4xl font-semibold'>Introdcution</h4>
+</div>
+
+Beautifully designed components that you can copy and paste into your apps. Accessible. Customizable. Open Source.
+
+struct-ui is a collection of reusable components, each with a bunch of examples in different styles that can be used in various positions.
+**I wondered how users would enjoy the journey of scrolling through a website if they didn't feel there was something special about it.**
+
+##### Installation
+
+You must install `tailwindcss`. As most of our components use `framer-motion` install it too.
+
+```bash
+npm install framer-motion clsx tailwind-merge
+```
+
+Must Add it in the `utils.ts`:
+
+```tsx utils.tsx
+import { type ClassValue, clsx } from 'clsx';
+import { twMerge } from 'tailwind-merge';
+
+export function cn(...inputs: ClassValue[]) {
+  return twMerge(clsx(inputs));
+}
+```
+
+use this hooks for mediaQueries:
+
+```tsx use-media-query.tsx
+import { useEffect, useState } from 'react';
+
+export function useMediaQuery(query: string) {
+  const [value, setValue] = useState(false);
+
+  useEffect(() => {
+    function onChange(event: MediaQueryListEvent) {
+      setValue(event.matches);
+    }
+
+    const result = matchMedia(query);
+    result.addEventListener('change', onChange);
+    setValue(result.matches);
+
+    return () => result.removeEventListener('change', onChange);
+  }, [query]);
+
+  return value;
+}
+```
+
+### Motivation
+
+The main purpose of **Struct-UI** is to make life easier for frontend developers.
+
+Over the past few years, while building websites, I realized how much I enjoy creating interfaces that are reactive, clean, and user-friendly. But I also faced a recurring problem: many components I built were reusable, yet I often found myself digging through old files to find the code. It was frustrating and time-consuming.  
+
+That’s when the idea struck me — *why not bring all these animations and components together in one place?*  
+A dedicated library where developers can easily access modern, reusable, and production-ready components without the hassle of reinventing the wheel every time.  
+
+I also want to acknowledge and give credit to amazing projects like  
+[shadcn/ui](https://ui.shadcn.com) and [aceternity/ui](https://ui.aceternity.com).  
+
+They inspired me to believe that a free, open, and developer-friendly component library like **Struct-UI** could also empower others to build faster and design better.  
+
+<div className='mb-4'></div>
