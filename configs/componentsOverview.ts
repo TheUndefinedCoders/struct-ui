@@ -34,7 +34,7 @@ const componentsOverviewCards = [
   {
     id: 'card-hover',
     url: '/components/card-hover',
-    name: 'Card Hover Comp-tab',
+    name: 'Card Hover',
     imgSrc: preview.cardHover,
   },
 ];
