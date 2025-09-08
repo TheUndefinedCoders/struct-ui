@@ -31,6 +31,12 @@ const componentsOverviewCards = [
     name: 'Cards',
     imgSrc: preview.card,
   },
+  {
+    id: 'card-hover',
+    url: '/components/card-hover',
+    name: 'Card Hover Comp-tab',
+    imgSrc: preview.cardHover,
+  },
 ];
 
 export default componentsOverviewCards;

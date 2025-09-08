@@ -77,6 +77,20 @@
       "new": true
     },
     {
+      "name": "Card-Hover",
+      "componentArray": [
+        {
+          "componentName": "card-hover",
+          "filesrc": "components/card-hover/card-hover.tsx",
+          "iframeSrc": "live-components/card-hover",
+          "parentlink": "card-hover",
+          "parentName": "Card Hover"
+        }
+      ],
+      "type": "card-hover",
+      "new": true
+    },
+    {
       "name": "Product Cards",
       "componentArray": [
         {
