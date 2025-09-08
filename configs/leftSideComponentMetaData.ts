@@ -13,6 +13,12 @@ export const basicComponents = [
     component: 'card',
   },
   {
+    href: '/components/card-hover',
+    name: 'Card Hover',
+    component: 'card',
+    new: true,
+  },
+  {
     href: '/components/footers',
     name: 'Footers'
   },
