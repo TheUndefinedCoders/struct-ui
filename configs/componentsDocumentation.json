@@ -97,6 +97,20 @@
       "type": "card"
     },
     {
+      "name": "Card Hover",
+      "componentArray": [
+        {
+          "componentName": "cardhover",
+          "filesrc": "components/card-hover/card-hover.tsx",
+          "iframeSrc": "live-components/card-hover",
+          "parentlink": "card-hover",
+          "parentName": "Card Hover"
+        }
+      ],
+      "type": "card-hover",
+      "new": true
+    },
+    {
       "name": "Footers",
       "componentArray": [
         {

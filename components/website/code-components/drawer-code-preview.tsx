@@ -5,7 +5,7 @@ import {
   TabsList,
   TabsTrigger,
 } from '@/components/website/ui/tabs';
-import docs from '@/configs/docs.json';
+import docs from '@/configs/componentsDocumentation.json';
 import {
   Dialog,
   DialogContent,

@@ -5,10 +5,10 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { Component, Rocket } from 'lucide-react';
 import { IRecentPage, useRecentPagesStore } from '@/hooks/useZustStore';
-import docsData from '@/configs/docs.json' assert { type: 'json' };
+// import docsData from '@/configs/docs.json' assert { type: 'json' };
 import { useTheme } from 'next-themes';
-import { generateSidebarData } from './constant';
-import { MainComponents, SpecialComponents } from '@/configs/docs';
+// import { generateSidebarData } from './constant';
+import { creativeComponents, basicComponents } from '@/configs/leftSideComponentMetaData';
 
 export const basePath = [
   {
@@ -29,7 +29,7 @@ function DocsSidebar() {
   const { addVisitedPage, getRecentPages, removeAllRecentPages } =
     useRecentPagesStore();
   const [recentPages, setRecentPages] = useState<IRecentPage[]>([]);
-  const groupedComponents = MainComponents.reduce((acc, component) => {
+  const groupedComponents = creativeComponents.reduce((acc, component) => {
     const group = component.component || null;
     //@ts-ignore
     if (!acc[group]) {
@@ -41,7 +41,7 @@ function DocsSidebar() {
     return acc;
   }, {});
 
-  const sidebarData = generateSidebarData(docsData.dataArray);
+  // const sidebarData = generateSidebarData(docsData.dataArray);
   // console.log(sidebarData);
 
   useEffect(() => {
@@ -83,7 +83,7 @@ function DocsSidebar() {
             })}
           </ul>
           <h1 className='text-lg font-semibold pb-1'>Components</h1>
-          {SpecialComponents?.map((link: any) => {
+          {basicComponents?.map((link: any) => {
             return (
               <>
                 <li

@@ -1,6 +1,6 @@
 import React, { Suspense } from 'react';
 import { notFound } from 'next/navigation';
-import docs from '@/configs/docs.json';
+import docs from '@/configs/componentsDocumentation.json';
 import dynamic from 'next/dynamic';
 export async function generateStaticParams() {
   const paths = docs.dataArray.flatMap((category) =>

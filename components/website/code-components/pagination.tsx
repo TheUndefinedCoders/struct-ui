@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { ChevronsLeft, ChevronsRight } from 'lucide-react';
-import docsData from '@/configs/docs.json' assert { type: 'json' };
+import docsData from '@/configs/componentsDocumentation.json' assert { type: 'json' };
 import { generateSidebarData } from '../constant';
 
 export function ComponentPagination({ doc }: any) {

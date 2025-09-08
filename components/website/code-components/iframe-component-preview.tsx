@@ -9,7 +9,7 @@ import {
 } from '@/components/website/ui/tabs';
 import ComponentPreview from './component-preview';
 import { PreCode } from './pre-code';
-import docs from '@/configs/docs.json';
+import docs from '@/configs/componentsDocumentation.json';
 import { Code, Eye } from 'lucide-react';
 import { ReactNode } from 'react';
 
