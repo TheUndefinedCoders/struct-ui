@@ -1,6 +1,7 @@
 import React from 'react';
 import Header from '@/components/website/header';
 import DocsSidebar from '@/components/website/sidebar';
+import { Footer } from '@/components/website/footer';
 
 export default async function ComponentLayout({
   children,
@@ -14,31 +15,7 @@ export default async function ComponentLayout({
         <DocsSidebar />
         <div className=' min-w-0 max-w-full'>{children}</div>
       </main>
-      <footer className='border-t pb-24 pt-4 xl:pb-4'>
-        <div className='container mx-auto'>
-          <p className='text-balance text-center text-sm leading-loose text-muted-foreground md:text-left'>
-            Built by{' '}
-            <a
-              href='https://x.com/numann_dev'
-              target='_blank'
-              rel='noreferrer'
-              className='font-medium underline underline-offset-4'
-            >
-              numann
-            </a>{' '}
-            . The source code is available on{' '}
-            <a
-              href='https://github.com/numanndev/structui'
-              target='_blank'
-              rel='noreferrer'
-              className='font-medium underline underline-offset-4'
-            >
-              GitHub
-            </a>
-            .
-          </p>
-        </div>
-      </footer>
+      <Footer />
     </>
   );
 }

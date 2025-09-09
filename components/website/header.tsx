@@ -18,6 +18,7 @@ import {
   X,
 } from 'lucide-react';
 import { SearchDialog } from './searchbar';
+import { OWNER_URL } from './utils/websiteConstants';
 // import MobileHeader from './moibile-header'
 
 function Header() {
@@ -81,7 +82,7 @@ function Header() {
 
             <a
               target='_blank'
-              href='https://x.com/numann_dev'
+              href={OWNER_URL}
               className='border flex-shrink-0 bg-primary  text-primary-foreground text-2xl w-12   grid  place-content-center    rounded-md'
             >
               <svg

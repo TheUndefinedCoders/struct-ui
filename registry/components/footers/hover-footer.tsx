@@ -45,7 +45,7 @@ function index() {
               </svg>
             </a>
             <a
-              href='https://x.com/numann_dev'
+              href='https://numan-dev.web.app'
               target='_blank'
               className='bg-gray-50 sm:w-auto w-full  grid place-content-center  2xl:h-40 h-32 2xl:p-10 p-5 rounded-lg'
             >

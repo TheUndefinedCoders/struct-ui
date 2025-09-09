@@ -19,6 +19,7 @@ import { generateSidebarData } from './constant';
 import { cn } from '@/lib/utils';
 import { basePath } from './sidebar';
 import { creativeComponents, basicComponents } from '@/configs/leftSideComponentMetaData';
+import { OWNER_URL } from './utils/websiteConstants';
 
 // import { componentsArr } from './sidebar';
 
@@ -88,7 +89,7 @@ export function SearchDialog({ classname }: { classname?: string }) {
                     Follow for more updates
                   </span>
                   <a
-                    href='https://x.com/numann_dev'
+                    href={OWNER_URL}
                     target='_blank'
                     className='flex w-full items-center gap-2 rounded-md bg-blue-500/20 p-3'
                   >
