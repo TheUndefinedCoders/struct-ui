@@ -125,6 +125,20 @@
       "new": true
     },
     {
+      "name": "Image Hover",
+      "componentArray": [
+        {
+          "componentName": "image-hover",
+          "filesrc": "components/image-hover/image-hover.tsx",
+          "iframeSrc": "live-components/image-hover",
+          "parentlink": "image-hover",
+          "parentName": "Image Hover"
+        }
+      ],
+      "type": "image-hover",
+      "new": true
+    },
+    {
       "name": "Footers",
       "componentArray": [
         {
