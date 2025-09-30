@@ -75,7 +75,7 @@ function HeroSec() {
 
             <p className="text-lg text-neutral-400 max-w-xl">
               Who love spending hours tweaking CSS and debugging animations?
-              Save yourself the headache and grab these components — they're practically begging to make your life easier.
+              Save yourself the headache and grab these components — they&apos;re practically begging to make your life easier.
             </p>
 
             <div className="flex gap-4">
