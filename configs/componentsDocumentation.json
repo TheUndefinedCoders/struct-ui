@@ -139,6 +139,20 @@
       "new": true
     },
     {
+      "name": "Tabs",
+      "componentArray": [
+        {
+          "componentName": "tabs",
+          "filesrc": "components/tabs/tabs.tsx",
+          "iframeSrc": "live-components/tabs",
+          "parentlink": "tabs",
+          "parentName": "Tabs"
+        }
+      ],
+      "type": "tabs",
+      "new": true
+    },
+    {
       "name": "Footers",
       "componentArray": [
         {

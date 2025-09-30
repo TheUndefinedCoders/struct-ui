@@ -21,7 +21,12 @@ export const basicComponents = [
   {
     href: '/components/image-hover',
     name: 'Image Hover',
-    component: 'image-hover',
+    component: 'image-hover'
+  },
+  {
+    href: '/components/tabs',
+    name: 'Tabs',
+    component: 'tabs',
     new: true,
   },
   {
