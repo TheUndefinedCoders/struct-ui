@@ -93,19 +93,20 @@ function DocsSidebar() {
                       ? 'dark:border-white border-black text-black dark:text-white font-semibold'
                       : 'dark:text-slate-400 2xl:font-normal font-medium hover:border-black/60 dark:hover:border-white/50 text-slate-500 hover:text-slate-900'
                   }`}
-                  // data-active={link.id === pathname}
+                  data-active={link.id === pathname}
                 >
                   <Link
                     href={link.href}
                     onClick={() => addVisitedPage(link.href, link.name)}
+                    className='w-full'
                   >
                     {link.name}
+                    {link?.new && (
+                      <span className='2xl:text-xs text-[0.74em] bg-blue-500 text-white px-1 ml-2 rounded-sm'>
+                        New
+                      </span>
+                    )}
                   </Link>
-                  {link?.new && (
-                    <span className='2xl:text-xs text-[0.74em] bg-blue-500 text-white px-1 rounded'>
-                      New
-                    </span>
-                  )}
                 </li>
               </>
             );
@@ -155,7 +156,7 @@ export const ItemsWithName = ({
             key={link.href}
             // @ts-ignore
             ref={(el) => (itemRefs.current[index] = el)}
-            className={`2xl:text-sm text-[0.81em]  flex items-center gap-1 dark:hover:text-white 2xl:py-1 py-0.5 pl-2 border-l transition-all ${
+            className={`2xl:text-sm text-[0.81em]  flex items-center gap-1 dark:hover:text-white my-3 2xl:py-1 py-0.5 pl-2 border-l transition-all ${
               link.href === pathname
                 ? 'dark:border-white border-black text-black dark:text-white font-semibold'
                 : 'dark:text-slate-400 2xl:font-normal font-medium hover:border-black/60 dark:hover:border-white/50 text-slate-500 hover:text-slate-900'
@@ -164,14 +165,15 @@ export const ItemsWithName = ({
             <Link
               href={link.href}
               onClick={() => addVisitedPage(link.href, link.name)}
+              className='w-full'
             >
               {link.name}
+              {link?.new && (
+                <span className='2xl:text-xs text-[0.74em] bg-blue-500 text-white px-1 ml-2 rounded-sm'>
+                  New
+                </span>
+              )}
             </Link>
-            {link?.new && (
-              <span className='2xl:text-xs text-[0.74em] bg-blue-500 text-white px-1 rounded'>
-                New
-              </span>
-            )}
           </li>
         ))}
       </ul>
