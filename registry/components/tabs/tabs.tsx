@@ -6,14 +6,7 @@ interface ITabs {
   id: string;
 }
 
-export default function Tabs() {
-  const [selectedTab, setSelectedTab] = useState<string>('tab1');
-
-  const tabsConfig: ITabs[] = [
-    { label: 'Tab 1', id: 'tab1' },
-    { label: 'Tab 2', id: 'tab2' },
-    { label: 'Tab 3', id: 'tab3' },
-  ];
+export default function Tabs({tabsConfig, selectedTab, setSelectedTab}: {tabsConfig: ITabs[], selectedTab: string, setSelectedTab: (id: string) => void}) {
 
   const selectedIndex = tabsConfig.findIndex(section => section.id === selectedTab);
   const sliderWidth = 100 / tabsConfig.length;
@@ -23,7 +16,7 @@ export default function Tabs() {
   };
 
   return (
-    <section className="w-full max-w-screen-sm mx-auto p-2">
+    <div className="w-full max-w-screen-sm mx-auto p-2">
       <div className="relative flex bg-gray-200 dark:bg-gray-900 rounded-full p-1 shadow-inner dark:shadow-gray-950">
         <div className="relative flex bg-gray-100 dark:bg-gray-800 rounded-full p-1 shadow-inner dark:shadow-gray-900 min-w-[200px] w-full">
           <div
@@ -36,11 +29,10 @@ export default function Tabs() {
           {tabsConfig.map((tab) => (
             <button
               key={tab.id}
-              className={`relative z-20 flex-1 bg-transparent border-none font-medium rounded-full transition-all duration-300 py-2 px-4 ${
-                selectedTab === tab.id
-                  ? 'text-black dark:text-white font-semibold'
-                  : 'text-gray-700 dark:text-gray-400 hover:bg-gray-300 dark:hover:bg-gray-700'
-              }`}
+              className={`relative z-20 flex-1 bg-transparent border-none font-medium rounded-full transition-all duration-300 py-2 px-4 ${selectedTab === tab.id
+                ? 'text-black dark:text-white font-semibold'
+                : 'text-gray-700 dark:text-gray-400 hover:bg-gray-300 dark:hover:bg-gray-700'
+                }`}
               onClick={() => handleTabChange(tab.id)}
               disabled={selectedTab === tab.id}
             >
@@ -49,6 +41,6 @@ export default function Tabs() {
           ))}
         </div>
       </div>
-    </section>
+    </div>
   );
 }
