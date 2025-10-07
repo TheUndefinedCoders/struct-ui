@@ -147,6 +147,20 @@
           "iframeSrc": "live-components/tabs",
           "parentlink": "tabs",
           "parentName": "Tabs"
+        },
+        {
+          "componentName": "tabs-two",
+          "filesrc": "components/tabs/tabs-two.tsx",
+          "iframeSrc": "live-components/tabs",
+          "parentlink": "tabs",
+          "parentName": "Tabs"
+        },
+        {
+          "componentName": "tabs-three",
+          "filesrc": "components/tabs/tabs-three.tsx",
+          "iframeSrc": "live-components/tabs",
+          "parentlink": "tabs",
+          "parentName": "Tabs"
         }
       ],
       "type": "tabs",

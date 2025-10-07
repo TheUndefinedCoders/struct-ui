@@ -22,6 +22,7 @@ type ComponentCodePreview = {
   isTab?: boolean;
   isFitheight?: boolean;
   isNotCopy?: boolean;
+  isDefaultCodeTab?: boolean;
 };
 export type TCurrComponentProps = {
   componentName: string;
@@ -41,6 +42,7 @@ export default async function ComponentCodePreview({
   isTab = false,
   isNotCopy = false,
   isFitheight = false,
+  isDefaultCodeTab = false,
 }: ComponentCodePreview) {
   const currComponent: TCurrComponentProps | null =
     docs.dataArray.reduce<TCurrComponentProps | null>((acc, component) => {
@@ -69,16 +71,18 @@ export default async function ComponentCodePreview({
   return (
     <div className='not-prose relative z-0 flex items-center justify-between pb-3'>
       <Tabs
-        defaultValue={`${name}preview`}
+        defaultValue={`${isDefaultCodeTab ? name + 'code' : name + 'preview'}`}
         className='relative mt-1 w-full border-2 rounded-lg'
       >
         <TabsList className='absolute left-0 pl-1 top-0 z-10 flex h-12 w-full justify-start rounded-b-none rounded-t-lg border-b-2 border-t-0 border-x-0  bg-border/40 backdrop-blur-lg dark:bg-gray-900'>
-          <TabsTrigger
-            value={`${name}preview`}
-            className='flex gap-2 items-center data-[state=active]:bg-white data-[state=active]:border-b-2 '
-          >
-            <Eye className='w-5 h-5' /> Preview
-          </TabsTrigger>
+          {!isDefaultCodeTab && (
+            <TabsTrigger
+              value={`${name}preview`}
+              className='flex gap-2 items-center data-[state=active]:bg-white data-[state=active]:border-b-2 '
+            >
+              <Eye className='w-5 h-5' /> Preview
+            </TabsTrigger>
+          )}
           <TabsTrigger
             value={`${name}code`}
             className='flex gap-2 items-center data-[state=active]:bg-white data-[state=active]:border-b-2'
