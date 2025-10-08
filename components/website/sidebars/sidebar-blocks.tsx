@@ -67,29 +67,27 @@ function DocsSidebar() {
           <ul className='pb-1'>
             {basePath?.map((link, index) => {
               return (
-                <>
-                  <li key={`id-${index}`}>
-                    <Link
-                      href={link.href}
-                      onClick={() => addVisitedPage(link.href, link.name)}
-                      className={`flex gap-2 group font-medium items-center py-1 my-2  transition-all ${
+                <li key={`id-${index}-${link.href}`}>
+                  <Link
+                    href={link.href}
+                    onClick={() => addVisitedPage(link.href, link.name)}
+                    className={`flex gap-2 group font-medium items-center py-1 my-2  transition-all ${
+                      link.href === pathname
+                        ? 'active-nav'
+                        : 'text-slate-600 hover:text-slate-900  dark:text-slate-400 dark:hover:text-white'
+                    }`}
+                  >
+                    {React.cloneElement(link?.icon, {
+                      className: `${
                         link.href === pathname
-                          ? 'active-nav'
-                          : 'text-slate-600 hover:text-slate-900  dark:text-slate-400 dark:hover:text-white'
-                      }`}
-                    >
-                      {React.cloneElement(link?.icon, {
-                        className: `${
-                          link.href === pathname
-                            ? 'dark:text-base-dark dark:bg-white bg-base-dark text-white'
-                            : 'dark:bg-gray-800 dark:text-white group-hover:bg-base-dark group-hover:text-white  dark:group-hover:bg-white dark:group-hover:text-base-dark'
-                        } h-7 w-7 border transition-all rounded-md p-1`,
-                      })}
+                          ? 'dark:text-base-dark dark:bg-white bg-base-dark text-white'
+                          : 'dark:bg-gray-800 dark:text-white group-hover:bg-base-dark group-hover:text-white  dark:group-hover:bg-white dark:group-hover:text-base-dark'
+                      } h-7 w-7 border transition-all rounded-md p-1`,
+                    })}
 
-                      {link.name}
-                    </Link>
-                  </li>
-                </>
+                    {link.name}
+                  </Link>
+                </li>
               );
             })}
           </ul>

@@ -34,6 +34,19 @@
       "type": "card"
     },
     {
+      "name": "Team Cards",
+      "componentArray": [
+        {
+          "componentName": "team-cards",
+          "filesrc": "blocks/team-cards/team-cards.tsx",
+          "iframeSrc": "live-blocks/team-cards",
+          "parentlink": "team-cards",
+          "parentName": "Team Cards"
+        }
+      ],
+      "type": "card"
+    },
+    {
       "name": "Footers",
       "componentArray": [
         {

@@ -5,7 +5,8 @@ import {
   TabsList,
   TabsTrigger,
 } from '@/components/website/ui/tabs';
-import docs from '@/configs/componentsDocumentation.json';
+import componentsDocumentation from '@/configs/componentsDocumentation.json';
+import blocksDocumentation from '@/configs/blocksDocumentation.json';
 
 import ComponentPreview from './component-preview';
 import { extractCodeFromFilePath } from '@/lib/code';
@@ -23,6 +24,7 @@ type ComponentCodePreview = {
   isFitheight?: boolean;
   isNotCopy?: boolean;
   isDefaultCodeTab?: boolean;
+  documentationType?: string;
 };
 export type TCurrComponentProps = {
   componentName: string;
@@ -43,9 +45,14 @@ export default async function ComponentCodePreview({
   isNotCopy = false,
   isFitheight = false,
   isDefaultCodeTab = false,
+  documentationType = 'components',
 }: ComponentCodePreview) {
+  let documentationData = componentsDocumentation;
+  if (documentationType === 'blocks') {
+    documentationData = blocksDocumentation;
+  }
   const currComponent: TCurrComponentProps | null =
-    docs.dataArray.reduce<TCurrComponentProps | null>((acc, component) => {
+    documentationData.dataArray.reduce<TCurrComponentProps | null>((acc, component) => {
       const file = component?.componentArray?.find(
         (file) => file.componentName === name
       );

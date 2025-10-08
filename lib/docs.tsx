@@ -7,9 +7,9 @@ import { getTableOfContents, TableOfContents } from './toc';
 // Update this line to reflect the new directory structure
 const docsDirectory = path.join(process.cwd(), 'content/components');
 
-export async function getDocBySlug(slug: string) {
+export async function getDocBySlug(slug: string, docPath?: string) {
   const realSlug = slug === 'index' ? '' : slug;
-  const fullPath = path.join(docsDirectory, `${realSlug}.mdx`);
+  const fullPath = path.join(docPath || docsDirectory, `${realSlug}.mdx`);
 
   if (!fs.existsSync(fullPath)) {
     return null;
@@ -19,7 +19,7 @@ export async function getDocBySlug(slug: string) {
   const { data, content } = matter(fileContents);
 
   // Update this line to use the correct import path
-  const mdxContent = await import(`../content/components/${realSlug}.mdx`);
+  const mdxContent = await import(`../${docPath || 'content/components'}/${realSlug}.mdx`);
   const toc = getTableOfContents(content);
 
   return {
