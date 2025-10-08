@@ -21,7 +21,7 @@ export async function generateMetadata({
   params: { slug?: string[] };
 }): Promise<Metadata> {
   const slug = params.slug?.join('/') || '';
-  const doc = await getDocBySlug(slug);
+  const doc = await getDocBySlug(slug, 'content/blocks');
   if (!doc) {
     return {};
   }
@@ -37,7 +37,7 @@ export default async function DocPage({
   params: { slug?: string[] };
 }) {
   const slug = params.slug?.join('/') || '';
-  const doc = await getDocBySlug(slug);
+  const doc = await getDocBySlug(slug, 'content/blocks');
   // console.log(doc);
 
   if (!doc) {

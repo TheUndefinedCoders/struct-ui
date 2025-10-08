@@ -4,6 +4,11 @@ export const basicBlocks = [
     name: 'Products-Cards',
     component: 'card',
   },
+  {
+    href: '/blocks/team-cards',
+    name: 'Team-Cards',
+    component: 'card',
+  },
 ];
 
 
