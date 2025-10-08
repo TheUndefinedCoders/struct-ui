@@ -51,6 +51,7 @@ function Card2() {
           </button> */}
           {CardArr.map((data, index) => (
             <Image
+              key={index}
               src={data?.img}
               alt='shoes'
               width={1000}

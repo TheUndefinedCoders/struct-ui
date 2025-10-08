@@ -26,7 +26,7 @@ export default function TableOfContents({ toc }: TableOfContentsProps) {
 
   // Resolving the TOC promise and setting the toc items
   useEffect(() => {
-    console.log(toc);
+    // console.log(toc);
 
     toc.then((resolvedToc) => {
       setTocItems(resolvedToc.items);

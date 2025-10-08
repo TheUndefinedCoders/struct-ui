@@ -47,7 +47,7 @@ export const findPrevNextComp = (dataArray: any[], slug: string) => {
   const index = components.findIndex(
     (component) => component.id === `/docs/${slug}`
   );
-  console.log('componet', index, slug);
+  console.log('component:--- ', index, slug);
 
   // Return previous and next components based on the found index
   if (index === -1) {

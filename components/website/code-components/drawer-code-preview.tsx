@@ -5,7 +5,8 @@ import {
   TabsList,
   TabsTrigger,
 } from '@/components/website/ui/tabs';
-import docs from '@/configs/componentsDocumentation.json';
+import componentsDocumentation from '@/configs/componentsDocumentation.json';
+import blocksDocumentation from '@/configs/blocksDocumentation.json';
 import {
   Dialog,
   DialogContent,
@@ -37,6 +38,7 @@ type ComponentCodePreview = {
   children: React.ReactNode; //
   responsive?: boolean;
   isCard?: string;
+  documentationType?: string;
 };
 export type TCurrComponentProps = {
   componentName: string;
@@ -53,6 +55,7 @@ export default async function DrawerCodePreview({
   children,
   isCard,
   responsive,
+  documentationType = 'components',
 }: ComponentCodePreview) {
   // console.log(children);
 
@@ -60,8 +63,16 @@ export default async function DrawerCodePreview({
   const parsedCodeblock = Codes[0]?.props;
   // console.log(parsedCodeblock);
 
+  let documentationData = componentsDocumentation;
+  if (documentationType === 'blocks') {
+    documentationData = blocksDocumentation;
+  }
+
+  console.log("documentationType:---- ", documentationType, documentationData);
+  
+
   const currComponent: TCurrComponentProps | null =
-    docs.dataArray.reduce<TCurrComponentProps | null>((acc, component) => {
+  documentationData.dataArray.reduce<TCurrComponentProps | null>((acc, component) => {
       const file = component?.componentArray?.find(
         (file) => file.componentName === name
       );
@@ -71,6 +82,8 @@ export default async function DrawerCodePreview({
       }
       return acc;
     }, null);
+
+  console.log("currComponent:--- ", currComponent);
 
   if (!currComponent) {
     return <div>Component not found</div>;

@@ -8,7 +8,7 @@ import { ComponentPagination } from '@/components/website/code-components/pagina
 
 export async function generateStaticParams() {
   const docs = await getAllDocs();
-  console.log(docs);
+  // console.log(docs);
 
   return docs.map((doc) => ({
     slug: doc.slug === 'index' ? [] : doc.slug.split('/'),
