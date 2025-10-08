@@ -28,21 +28,33 @@ function Header() {
     <>
       <header className=' fixed left-0 top-0 z-10 w-full border-b-[1px] border-border dark:bg-black/40 bg-white/40 px-2 py-2 backdrop-blur-lg'>
         <div className='mx-auto flex items-center justify-between gap-2 px-2 2xl:container'>
-          <Link href='/' className='hidden lg:block'>
-            <div className='relative hidden gap-2 lg:flex'>
-              <img
-                src='../struct-ui-logo.svg'
-                alt='struct-ui'
-                className='w-full h-8'
-              />
+          <div className='flex items-center gap-4'>
+            <Link href='/' className='hidden lg:block'>
+              <div className='relative hidden gap-2 lg:flex'>
+                <img
+                  src='../struct-ui-logo.svg'
+                  alt='struct-ui'
+                  className='w-full h-8'
+                />
+                <img
+                  src='../struct-ui-text.svg'
+                  alt='struct-ui'
+                  className='w-full'
+                />
+              </div>
+            </Link>
+            <Link href='/components' className='flex gap-2 group font-medium items-center py-1  transition-all text-slate-600 hover:text-slate-900  dark:text-slate-300 dark:hover:text-white'>
+              Components
+            </Link>
+            <Link href='/templates' className='flex gap-2 group font-medium items-center py-1  transition-all text-slate-600 hover:text-slate-900  dark:text-slate-300 dark:hover:text-white'>
+              Templates
+            </Link>
+            <Link href="/blocks" className="flex gap-2 group font-medium items-center py-1  transition-all text-slate-600 hover:text-slate-900  dark:text-slate-300 dark:hover:text-white">
+              Blocks
+              {/* <span className="text-xs font-normal inline-block -translate-y-2 italic text-blue-600">New</span> */}
+            </Link>
 
-              <img
-                src='../struct-ui-text.svg'
-                alt='struct-ui'
-                className='w-full'
-              />
-            </div>
-          </Link>
+          </div>
 
           {/* <MobileHeader /> */}
           <div className='flex gap-2 '>
