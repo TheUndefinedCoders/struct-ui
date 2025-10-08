@@ -20,13 +20,14 @@ import { cn } from '@/lib/utils';
 import { basePath } from './sidebar';
 import { creativeComponents, basicComponents } from '@/configs/leftSideComponentMetaData';
 import { OWNER_URL } from './utils/websiteConstants';
+import { basicBlocks } from '@/configs/leftSideBlocksMetaData';
 
 // import { componentsArr } from './sidebar';
 
 export function SearchDialog({ classname }: { classname?: string }) {
   const router = useRouter();
   const { setTheme } = useTheme();
-  const searchbardata = [...basePath, ...basicComponents, ...creativeComponents];
+  const searchbardata = [...basePath, ...basicComponents, ...creativeComponents, ...basicBlocks];
   console.log(searchbardata);
 
   const [searchOpen, setSearchOpen] = React.useState(false);

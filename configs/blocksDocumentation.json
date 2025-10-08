@@ -1,0 +1,67 @@
+{
+  "dataArray": [
+    {
+      "name": "demo",
+      "componentArray": [
+        {
+          "componentName": "democomponent",
+          "filesrc": "blocks/demo/index.tsx",
+          "iframeSrc": "live-blocks/democomponent",
+          "parentlink": "demo",
+          "parentName": "demo"
+        }
+      ],
+      "type": "demo"
+    },
+    {
+      "name": "Product Cards",
+      "componentArray": [
+        {
+          "componentName": "productcard1",
+          "filesrc": "blocks/card/product-card1.tsx",
+          "iframeSrc": "live-blocks/productcard1",
+          "parentlink": "product-cards",
+          "parentName": "Product Cards"
+        },
+        {
+          "componentName": "productcard2",
+          "filesrc": "blocks/card/product-card2.tsx",
+          "iframeSrc": "live-blocks/productcard2",
+          "parentlink": "product-cards",
+          "parentName": "Product Cards"
+        }
+      ],
+      "type": "card"
+    },
+    {
+      "name": "Footers",
+      "componentArray": [
+        {
+          "componentName": "animated-logo-footer",
+          "filesrc": "blocks/footers/footer1.tsx",
+          "iframeSrc": "live-blocks/animated-logo-footer",
+          "parentlink": "footers",
+          "parentName": "Footers"
+        },
+        {
+          "componentName": "hover-footer",
+          "iframeSrc": "live-blocks/hover-footer",
+          "filesrc": "blocks/footers/hover-footer.tsx",
+          "filesArray": [
+            {
+              "name": "index.tsx",
+              "filesrc": "registry/blocks/footers/hover-footer.tsx"
+            },
+            {
+              "name": "cursor-follow-text.tsx",
+              "filesrc": "blocks/core/cursor-follow-text.tsx"
+            }
+          ],
+          "parentlink": "footers",
+          "parentName": "Footers"
+        }
+      ],
+      "type": "footers"
+    }
+  ]
+}
