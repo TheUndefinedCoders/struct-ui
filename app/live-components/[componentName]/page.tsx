@@ -30,7 +30,7 @@ export default function SectionPage({
   }, null as any);
   // console.log(component);
 
-  console.log(componentName);
+  // console.log(componentName);
 
   if (!component) {
     notFound();

@@ -28,7 +28,7 @@ export function SearchDialog({ classname }: { classname?: string }) {
   const router = useRouter();
   const { setTheme } = useTheme();
   const searchbardata = [...basePath, ...basicComponents, ...creativeComponents, ...basicBlocks];
-  console.log(searchbardata);
+  // console.log(searchbardata);
 
   const [searchOpen, setSearchOpen] = React.useState(false);
   React.useEffect(() => {
