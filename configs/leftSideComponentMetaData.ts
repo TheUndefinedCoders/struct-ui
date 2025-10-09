@@ -30,6 +30,11 @@ export const basicComponents = [
     new: true,
   },
   {
+    href: '/components/chip',
+    name: 'Chip',
+    component: 'chip',
+  },
+  {
     href: '/components/footers',
     name: 'Footers'
   },

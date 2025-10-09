@@ -167,6 +167,76 @@
       "new": true
     },
     {
+      "name": "Chip",
+      "componentArray": [
+        {
+          "componentName": "chip",
+          "filesrc": "components/chip/chip.tsx",
+          "iframeSrc": "live-components/chip",
+          "parentlink": "chip",
+          "parentName": "Chip"
+        },
+        {
+          "componentName": "chips-circle",
+          "filesrc": "components/chip/chips-circle.tsx",
+          "iframeSrc": "live-components/chip",
+          "parentlink": "chip",
+          "parentName": "Chip"
+        },
+        {
+          "componentName": "chips-square",
+          "filesrc": "components/chip/chips-square.tsx",
+          "iframeSrc": "live-components/chip",
+          "parentlink": "chip",
+          "parentName": "Chip"
+        },
+        {
+          "componentName": "chips-left-border",
+          "filesrc": "components/chip/chips-left-border.tsx",
+          "iframeSrc": "live-components/chip",
+          "parentlink": "chip",
+          "parentName": "Chip"
+        },
+        {
+          "componentName": "chips-right-border",
+          "filesrc": "components/chip/chips-right-border.tsx",
+          "iframeSrc": "live-components/chip",
+          "parentlink": "chip",
+          "parentName": "Chip"
+        },
+        {
+          "componentName": "chips-bottom-border",
+          "filesrc": "components/chip/chips-bottom-border.tsx",
+          "iframeSrc": "live-components/chip",
+          "parentlink": "chip",
+          "parentName": "Chip"
+        },
+        {
+          "componentName": "chips-top-border",
+          "filesrc": "components/chip/chips-top-border.tsx",
+          "iframeSrc": "live-components/chip",
+          "parentlink": "chip",
+          "parentName": "Chip"
+        },
+        {
+          "componentName": "chips-color-border",
+          "filesrc": "components/chip/chips-color-border.tsx",
+          "iframeSrc": "live-components/chip",
+          "parentlink": "chip",
+          "parentName": "Chip"
+        },
+        {
+          "componentName": "chips-all",
+          "filesrc": "components/chip/chips-all.tsx",
+          "iframeSrc": "live-components/chip",
+          "parentlink": "chip",
+          "parentName": "Chip"
+        }
+      ],
+      "type": "chip",
+      "new": true
+    },
+    {
       "name": "Footers",
       "componentArray": [
         {
