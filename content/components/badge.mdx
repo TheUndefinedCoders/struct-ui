@@ -1,0 +1,76 @@
+export const metadata = {
+  title: "Badges",
+  description: "The Badge component can be used to show text, labels, and counters inside a small box or circle element which can be placed inside paragraphs, buttons, dropdowns, menu items, and more.",
+  keywords: [
+    "Badge",
+    "Badge React",
+    "Pill",
+    "Pill React",
+    "Tags React",
+    "Tags",
+    "Pill selection",
+  ],
+  authors: [{ name: "Numan", url: "https://numan-dev.web.app" }],
+  creator: "@numan-dev",
+  publisher: "Struct-UI",
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1
+    }
+  },
+  category: "technology"
+};
+
+## Usage
+
+To get started, import the `Badges` component and define your tabs data.
+
+
+```Badge.tsx``` *(Copy and Paste this code. )*
+<ComponentCodePreview name='badge' hasReTrigger isFitheight isDefaultCodeTab={true} />
+
+
+## Circle Badges
+<ComponentCodePreview name='badges-circle' hasReTrigger isFitheight />
+
+## Square Badges
+<ComponentCodePreview name='badges-square' hasReTrigger isFitheight />
+
+## Left Border Badges
+<ComponentCodePreview name='badges-left-border' hasReTrigger isFitheight />
+
+## Right Border Badges
+<ComponentCodePreview name='badges-right-border' hasReTrigger isFitheight />
+
+## Bottom Border Badges
+<ComponentCodePreview name='badges-bottom-border' hasReTrigger isFitheight />
+
+## Top Border Badges
+<ComponentCodePreview name='badges-top-border' hasReTrigger isFitheight />
+
+## Different Color Variants Badges
+<ComponentCodePreview name='badges-color-border' hasReTrigger isFitheight />
+
+## All type of Badges
+<ComponentCodePreview name='badges-all' hasReTrigger isFitheight />
+
+
+
+## **Props**
+Props that can passed to Badges Component.
+| Prop | Type | Default | Description |
+| :--- | :--- | :--- | :--- |
+| **`badgeData`** | `IBadge` | Required | An object containing the badge's data like `label` and `id`. |
+| **`border`** | `'left' \| 'right' \| 'top' \| 'bottom'` | `undefined` | Specifies which side of the badge should have a border. |
+| **`borderColor`** | `string` | `undefined` | Sets the color of the border. |
+| **`textColor`** | `string` | `'#2D3748'` | Sets the text color of the badge. |
+| **`bgColor`** | `string` | `'#FFFFFF'` | Sets the background color of the badge. |
+| **`isRounded`** | `boolean` | `true` | If `true`, the badge will have fully rounded corners. |
+
+---

@@ -1,15 +1,15 @@
 'use client';
-import Chip from './chip';
+import Badge from './badge';
 
-interface IChips {
+interface IBadges {
   label: string;
   id: string;
   border?: string;
   borderColor?: string;
 }
 
-export default function ChipsSquare() {
-  const chipsData: IChips[] = [
+export default function BadgesSquare() {
+  const badgesData: IBadges[] = [
     { label: 'Next.js', id: 'nextjs' },
     { label: 'React', id: 'react' },
     { label: 'Astro', id: 'astro' },
@@ -20,12 +20,12 @@ export default function ChipsSquare() {
   return (
     <>
       <div className="flex space-x-2 justify-around">
-        {chipsData.map((chipData) => (
-          <Chip
-            key={chipData.id}
-            chipData={chipData}
-            border={chipData.border}
-            borderColor={chipData.borderColor}
+        {badgesData.map((badgeData) => (
+          <Badge
+            key={badgeData.id}
+            badgeData={badgeData}
+            border={badgeData.border}
+            borderColor={badgeData.borderColor}
             textColor="#2d3748"
             bgColor="#FFFFFF"
             isRounded={false}
