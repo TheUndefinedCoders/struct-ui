@@ -1,7 +1,7 @@
 'use client';
 import { useState } from 'react';
 
-interface IChip {
+interface IBadge {
   label: string;
   id: string;
   border?: string;
@@ -26,7 +26,7 @@ const getBorderClass = (border: string | undefined) => {
   }
 }
 
-export default function Chip({ chipData, border, borderColor, textColor, bgColor, isRounded=true }: { chipData: IChip, border?: string, borderColor?: string, textColor?: string, bgColor?: string, isRounded?: boolean}) {
+export default function Badge({ badgeData, border, borderColor, textColor, bgColor, isRounded=true }: { badgeData: IBadge, border?: string, borderColor?: string, textColor?: string, bgColor?: string, isRounded?: boolean}) {
 
   return (
     <>
@@ -41,7 +41,7 @@ export default function Chip({ chipData, border, borderColor, textColor, bgColor
         >
           <span className="mx-auto flex items-center">
             {/* <img className="mr-2" src="/_next/static/media/calendar-icon.116fc372.png" alt="calender-icon" width="22" /> */}
-            {chipData.label}
+            {badgeData.label}
           </span>
         </span>
       </span>
