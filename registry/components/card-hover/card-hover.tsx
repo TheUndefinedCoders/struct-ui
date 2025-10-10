@@ -1,5 +1,6 @@
 'use client';
 import React from 'react';
+import Badge from '../badge/badge';
 
 export default function CardHover() {
 
@@ -80,7 +81,7 @@ export default function CardHover() {
 
               <div className="flex flex-wrap gap-2">
                 {user.skills.map((skill, index) => (
-                  <span key={index} className="cursor-pointer rounded-md bg-gray-100 px-2 py-1 text-xs text-gray-700 dark:bg-gray-700/40 dark:text-gray-200">{skill}</span>
+                  <Badge key={index} badgeData={{ label: skill, id: `skill-${index}` }} border="bottom" borderColor="#1076c1" isRounded={false} />
                 ))}
               </div>
 
