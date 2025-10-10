@@ -32,7 +32,7 @@ export default function Chip({ chipData, border, borderColor, textColor, bgColor
     <>
       <span className="text-gray-400 inline-flex items-center leading-none text-sm pr-0 py-1 mr-2 cursor-pointer">
         <span
-          className={`bg-white tracking-wide text-gray-800 font-bold shadow-md py-1 px-4 inline-flex items-center border-slate-600 border ${getBorderClass(border)} ${isRounded ? 'rounded-full' : 'rounded'}`}
+          className={`bg-white tracking-wide text-gray-800 font-bold shadow-md py-1 px-2 inline-flex items-center border-slate-600 border ${getBorderClass(border)} ${isRounded ? 'rounded-full' : 'rounded'}`}
           style={{
             borderColor: borderColor,
             backgroundColor: bgColor ? bgColor : '#FFFFFF',

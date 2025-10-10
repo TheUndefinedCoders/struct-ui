@@ -1,6 +1,6 @@
 export const metadata = {
-  title: "Tabs - Animated Sliding Pill Tabs Component",
-  description: "A modern, accessible React tabs component with smooth sliding pill indicator. Features animated transitions, dark mode support, and mobile-responsive design. Perfect for dashboard navigation, settings panels, and content organization with elegant hover effects and seamless tab switching.",
+  title: "Chips",
+  description: "The Chip component can be used to show text, labels, and counters inside a small box or circle element which can be placed inside paragraphs, buttons, dropdowns, menu items, and more.",
   keywords: [
     "Chip",
     "Chip React",
@@ -27,7 +27,12 @@ export const metadata = {
   category: "technology"
 };
 
-```Chip.tsx```
+## Usage
+
+To get started, import the `Chips` component and define your tabs data.
+
+
+```Chip.tsx``` *(Copy and Paste this code. )*
 <ComponentCodePreview name='chip' hasReTrigger isFitheight isDefaultCodeTab={true} />
 
 
@@ -54,3 +59,18 @@ export const metadata = {
 
 ## All type of Chips
 <ComponentCodePreview name='chips-all' hasReTrigger isFitheight />
+
+
+
+## **Props**
+Props that can passed to Chips Component.
+| Prop | Type | Default | Description |
+| :--- | :--- | :--- | :--- |
+| **`chipData`** | `IChip` | Required | An object containing the chip's data like `label` and `id`. |
+| **`border`** | `'left' \| 'right' \| 'top' \| 'bottom'` | `undefined` | Specifies which side of the chip should have a border. |
+| **`borderColor`** | `string` | `undefined` | Sets the color of the border. |
+| **`textColor`** | `string` | `'#2D3748'` | Sets the text color of the chip. |
+| **`bgColor`** | `string` | `'#FFFFFF'` | Sets the background color of the chip. |
+| **`isRounded`** | `boolean` | `true` | If `true`, the chip will have fully rounded corners. |
+
+---
