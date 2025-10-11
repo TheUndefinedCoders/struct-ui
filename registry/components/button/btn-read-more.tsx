@@ -1,4 +1,9 @@
-const BtnReadMore = ({ label = "Read More", link = "#", target = "_self", className = ""}) => {
+const BtnReadMore = ({
+  label = "Read More",
+  link = "#",
+  target = "_self",
+  className = ""
+}) => {
   return (
     <a href={link} target={target} className={`w-full ${className}`}>
       <div className="relative inline-flex items-center justify-start py-2 pl-4 pr-12 overflow-hidden font-semibold text-cyan-600 transition-all duration-150 ease-in-out rounded hover:pl-10 hover:pr-6 bg-gray-50 group w-full">
