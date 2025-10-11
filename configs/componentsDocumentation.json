@@ -17,6 +17,13 @@
       "name": "Buttons",
       "componentArray": [
         {
+          "componentName": "btn-read-more",
+          "filesrc": "components/button/btn-read-more.tsx",
+          "iframeSrc": "live-components/btn-read-more",
+          "parentlink": "buttons",
+          "parentName": "Buttons"
+        },
+        {
           "componentName": "button-background-shine",
           "filesrc": "components/button/btn-bg-shine.tsx",
           "iframeSrc": "live-components/button-background-shine",
