@@ -1,6 +1,7 @@
 'use client';
 import React from 'react';
 import Badge from '../badge/badge';
+import BtnReadMore from '../button/btn-read-more';
 
 export default function CardHover() {
 
@@ -48,7 +49,7 @@ export default function CardHover() {
       <div className="flex items-center justify-around flex-wrap">
 
         {userData.map((user, index) => (
-          <div key={index} className="group relative overflow-hidden p-6 text-gray-800 shadow-lg ring-1 ring-gray-100 transition-transform duration-500 hover:-translate-y-2 hover:scale-105 focus:ring-4 focus:ring-indigo-300 focus:outline-none dark:text-gray-100 dark:shadow-2xl dark:ring-gray-700 dark:focus:ring-indigo-600 w-full max-w-[422px] mx-auto [background:linear-gradient(white,white)_padding-box,conic-gradient(from_var(--border-angle),theme(colors.slate.200)_80%,_theme(colors.indigo.300)_86%,_theme(colors.indigo.100)_90%,_theme(colors.indigo.300)_94%,_theme(colors.slate.200))_border-box] dark:[background:linear-gradient(45deg,#080b11,theme(colors.slate.800)_50%,#172033)_padding-box,conic-gradient(from_var(--border-angle),theme(colors.slate.600/.48)_80%,_theme(colors.indigo.500)_86%,_theme(colors.indigo.300)_90%,_theme(colors.indigo.500)_94%,_theme(colors.slate.600/.48))_border-box] rounded-xl border border-transparent animate-border mb-8" aria-label="Cool hover effect card">
+          <div key={index} className="relative overflow-hidden p-6 text-gray-800 shadow-lg ring-1 ring-gray-100 transition-transform duration-500 hover:-translate-y-2 hover:scale-105 focus:ring-4 focus:ring-indigo-300 focus:outline-none dark:text-gray-100 dark:shadow-2xl dark:ring-gray-700 dark:focus:ring-indigo-600 w-full max-w-[422px] mx-auto [background:linear-gradient(white,white)_padding-box,conic-gradient(from_var(--border-angle),theme(colors.slate.200)_80%,_theme(colors.indigo.300)_86%,_theme(colors.indigo.100)_90%,_theme(colors.indigo.300)_94%,_theme(colors.slate.200))_border-box] dark:[background:linear-gradient(45deg,#080b11,theme(colors.slate.800)_50%,#172033)_padding-box,conic-gradient(from_var(--border-angle),theme(colors.slate.600/.48)_80%,_theme(colors.indigo.500)_86%,_theme(colors.indigo.300)_90%,_theme(colors.indigo.500)_94%,_theme(colors.slate.600/.48))_border-box] rounded-xl border border-transparent animate-border mb-8" aria-label="Cool hover effect card">
             <span className="pointer-events-none absolute -top-10 -left-8 h-40 w-40 transform rounded-full bg-gradient-to-tr from-indigo-300 via-pink-300 to-rose-300 opacity-30 blur-3xl transition-all duration-500 group-hover:scale-110 group-hover:opacity-60 dark:opacity-20"></span>
             <span className="pointer-events-none absolute -right-10 -bottom-10 h-48 w-48 transform rounded-full bg-gradient-to-bl from-emerald-200 via-cyan-200 to-indigo-200 opacity-25 blur-3xl transition-all duration-700 group-hover:scale-105 group-hover:opacity-50 dark:opacity-10"></span>
 
@@ -81,19 +82,12 @@ export default function CardHover() {
 
               <div className="flex flex-wrap gap-2">
                 {user.skills.map((skill, index) => (
-                  <Badge key={index} badgeData={{ label: skill, id: `skill-${index}` }} border="bottom" borderColor="#1076c1" isRounded={false} />
+                  <Badge key={index} badgeData={{ label: skill, id: `skill-${index}` }} border="bottom" borderColor="#1076c1" bgColor="#000000b5" textColor="#ffffff" isRounded={false} />
                 ))}
               </div>
 
               <div className="pt-2 w-full">
-                <a href={user.portfilioLink ? user.portfilioLink : "#"} target="_blank" className="w-full py-1.5 px-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium rounded-md transition-all duration-300 hover:from-cyan-600 hover:to-blue-700 hover:shadow-lg transform hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-opacity-50 dark:from-cyan-600 dark:to-blue-700 dark:hover:from-cyan-700 dark:hover:to-blue-800 flex items-center justify-center">
-                  <div className="flex items-center justify-between w-full">
-                    <span>View Portfolio</span>
-                    <svg className="h-4 w-4 " xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
-                      <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                    </svg>
-                  </div>
-                </a>
+                <BtnReadMore label='View Profile' />
               </div>
             </div>
           </div>
