@@ -39,6 +39,7 @@ type ComponentCodePreview = {
   responsive?: boolean;
   isCard?: string;
   documentationType?: string;
+  isFullWidth?: boolean;
 };
 export type TCurrComponentProps = {
   componentName: string;
@@ -56,6 +57,7 @@ export default async function DrawerCodePreview({
   isCard,
   responsive,
   documentationType = 'components',
+  isFullWidth = false,
 }: ComponentCodePreview) {
   // console.log(children);
 
@@ -138,7 +140,7 @@ export default async function DrawerCodePreview({
       <div
         className={`${
           isCard ? 'p-10 h-[550px]' : '2xl:p-20 py-16 px-2 h-fit'
-        } my-2 w-full border-2  rounded-lg overflow-hidden  dark:bg-[#080b11] bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:20px_20px] relative grid place-content-center`}
+        } ${isFullWidth ? '' : 'place-content-center'} my-2 w-full border-2  rounded-lg overflow-hidden  dark:bg-[#080b11] bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:20px_20px] relative grid`}
       >
         <div className='not-prose'>
           <ComponentBlocks componentfile={parsedCodeblock.filesrc} />
