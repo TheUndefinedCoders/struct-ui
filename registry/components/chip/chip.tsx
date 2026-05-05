@@ -54,7 +54,7 @@ export default function Chip({
           }}
         >
           <span className="mx-auto flex items-center">
-            {/* <img className="mr-2" src="/_next/static/media/calendar-icon.116fc372.png" alt="calender-icon" width="22" /> */}
+            {/* <img className="mr-2" src="/images/num_heart.gif" alt="calender-icon" width="18" /> */}
             {chipData.label}
           </span>
         </span>
