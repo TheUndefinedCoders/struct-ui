@@ -1,0 +1,60 @@
+---
+title: Installation
+description: How to install Struct UI components in your project
+---
+
+# Installation
+
+Struct UI components can be installed using the shadcn CLI. This allows you to add individual components to your project without installing the entire library.
+
+## Prerequisites
+
+Make sure you have a React/Next.js project set up with:
+- Tailwind CSS
+- TypeScript (recommended)
+
+## Using shadcn CLI
+
+You can install any Struct UI component using the shadcn CLI:
+
+```bash
+npx shadcn@latest add "https://struct-ui.vercel.app/r/chip"
+```
+
+Replace `chip` with the name of any component you want to install.
+
+## Available Components
+
+| Component | Command |
+|-----------|---------|
+| Chip | `npx shadcn@latest add "https://struct-ui.vercel.app/r/chip"` |
+| Button Spotlight | `npx shadcn@latest add "https://struct-ui.vercel.app/r/button-spotlight"` |
+| Button Shine | `npx shadcn@latest add "https://struct-ui.vercel.app/r/button-shine"` |
+| Card Hover | `npx shadcn@latest add "https://struct-ui.vercel.app/r/card-hover"` |
+| Image Hover | `npx shadcn@latest add "https://struct-ui.vercel.app/r/image-hover"` |
+| Tabs | `npx shadcn@latest add "https://struct-ui.vercel.app/r/tabs"` |
+| Blur Vignette | `npx shadcn@latest add "https://struct-ui.vercel.app/r/blur-vignette"` |
+| Motion Number | `npx shadcn@latest add "https://struct-ui.vercel.app/r/motion-number"` |
+| Horizontal Scroll | `npx shadcn@latest add "https://struct-ui.vercel.app/r/horizontal-scroll"` |
+
+## What Gets Installed
+
+When you run the install command, the CLI will:
+
+1. Download the component source code to `components/ui/`
+2. Automatically install any required npm dependencies
+3. Add any necessary Tailwind configuration
+
+## Manual Installation
+
+If you prefer not to use the CLI, you can also copy the component code directly from the documentation pages. Each component page includes a code preview with copy functionality.
+
+## Dependencies
+
+Some components require additional dependencies:
+
+- **framer-motion**: Used for animations in Button Spotlight, Card Hover, Image Hover, and Motion Number
+- **motion-number**: Required for the Motion Number component
+- **lenis**: Required for the Horizontal Scroll component
+
+These are automatically installed when using the shadcn CLI.

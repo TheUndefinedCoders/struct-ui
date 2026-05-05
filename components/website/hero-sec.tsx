@@ -119,8 +119,8 @@ function HeroSec() {
 
             <div className="bg-slate-50 w-full border border-slate-200 rounded-2xl p-6 shadow-lg hover:shadow-xl hover:scale-105 transition-transform sm:col-span-2 dark:bg-neutral-950 dark:border-neutral-800">
               <a href="/components" className="w-full">
-                <h3 className="font-semibold text-slate-900 dark:text-white">🚀 Deploy Fast</h3>
-                <p className="text-sm text-slate-600 dark:text-neutral-400">Copy, paste, deploy. Done.</p>
+                <h3 className="font-semibold text-slate-900 dark:text-white">🚀 Build Fast</h3>
+                <p className="text-sm text-slate-600 dark:text-neutral-400">Copy, Paste, Run. Done.</p>
               </a>
             </div>
 

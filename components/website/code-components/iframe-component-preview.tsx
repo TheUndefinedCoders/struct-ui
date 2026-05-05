@@ -18,8 +18,8 @@ type TIframeCurrComponentProps = {
   iframelink?: string;
 };
 
-type IframeComponentPrieviewProps = {
-  children?: ReactNode; // Include children in the props
+type IframeComponentPreviewProps = {
+  children?: ReactNode;
 };
 
 const Schema = Block.extend({
@@ -28,8 +28,8 @@ const Schema = Block.extend({
   responsive: z.boolean().optional(),
   isFitheight: z.boolean().optional(),
 });
-export default async function IframeComponentPrieview(
-  props: unknown & IframeComponentPrieviewProps
+export default async function IframeComponentPreview(
+  props: unknown & IframeComponentPreviewProps
 ) {
   const { name, hasReTrigger, responsive, children, isFitheight } = parseProps(
     props,
