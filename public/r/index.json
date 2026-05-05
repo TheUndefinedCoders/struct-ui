@@ -73,5 +73,14 @@
       "lenis"
     ],
     "registryDependencies": []
+  },
+  {
+    "name": "magnetic-button",
+    "type": "registry:ui",
+    "description": "A button with magnetic pull effect that follows the cursor with elastic snap-back animation.",
+    "dependencies": [
+      "framer-motion"
+    ],
+    "registryDependencies": []
   }
 ]

@@ -1,0 +1,20 @@
+{
+  "name": "magnetic-button",
+  "type": "registry:ui",
+  "description": "A button with magnetic pull effect that follows the cursor with elastic snap-back animation.",
+  "dependencies": [
+    "framer-motion"
+  ],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "components/ui/magnetic-button.tsx",
+      "content": "'use client';\nimport { useRef, useState } from 'react';\nimport { motion, useSpring, useMotionValue } from 'framer-motion';\n\ninterface MagneticButtonProps {\n  children: React.ReactNode;\n  className?: string;\n  magneticStrength?: number;\n  magneticRadius?: number;\n  springConfig?: { stiffness: number; damping: number };\n  variant?: 'default' | 'outline' | 'ghost' | 'glow' | 'gradient';\n  size?: 'sm' | 'md' | 'lg';\n  disabled?: boolean;\n  onClick?: () => void;\n}\n\nconst sizeClasses = {\n  sm: 'px-4 py-2 text-sm',\n  md: 'px-6 py-3 text-base',\n  lg: 'px-8 py-4 text-lg',\n};\n\nconst variantClasses = {\n  default:\n    'bg-neutral-900 text-white hover:bg-neutral-800 dark:bg-white dark:text-neutral-900 dark:hover:bg-neutral-100',\n  outline:\n    'border-2 border-neutral-900 text-neutral-900 hover:bg-neutral-900 hover:text-white dark:border-white dark:text-white dark:hover:bg-white dark:hover:text-neutral-900',\n  ghost:\n    'text-neutral-900 hover:bg-neutral-100 dark:text-white dark:hover:bg-neutral-800',\n  glow: 'bg-blue-600 text-white shadow-[0_0_20px_rgba(59,130,246,0.5)] hover:shadow-[0_0_30px_rgba(59,130,246,0.7)] hover:bg-blue-500',\n  gradient:\n    'bg-gradient-to-r from-purple-600 via-pink-600 to-orange-500 text-white hover:opacity-90',\n};\n\nexport default function MagneticButton({\n  children,\n  className = '',\n  magneticStrength = 0.4,\n  magneticRadius = 150,\n  springConfig = { stiffness: 300, damping: 20 },\n  variant = 'default',\n  size = 'md',\n  disabled = false,\n  onClick,\n}: MagneticButtonProps) {\n  const buttonRef = useRef<HTMLButtonElement>(null);\n  const [isHovered, setIsHovered] = useState(false);\n\n  const x = useSpring(0, springConfig);\n  const y = useSpring(0, springConfig);\n  const scale = useSpring(1, { stiffness: 400, damping: 25 });\n\n  const handleMouseMove = (e: React.MouseEvent) => {\n    if (disabled || !buttonRef.current) return;\n\n    const rect = buttonRef.current.getBoundingClientRect();\n    const centerX = rect.left + rect.width / 2;\n    const centerY = rect.top + rect.height / 2;\n\n    const distanceX = e.clientX - centerX;\n    const distanceY = e.clientY - centerY;\n    const distance = Math.hypot(distanceX, distanceY);\n\n    if (distance < magneticRadius) {\n      const strength = (1 - distance / magneticRadius) * magneticStrength;\n      x.set(distanceX * strength);\n      y.set(distanceY * strength);\n    }\n  };\n\n  const handleMouseEnter = () => {\n    if (!disabled) {\n      setIsHovered(true);\n      scale.set(1.05);\n    }\n  };\n\n  const handleMouseLeave = () => {\n    setIsHovered(false);\n    x.set(0);\n    y.set(0);\n    scale.set(1);\n  };\n\n  return (\n    <motion.button\n      ref={buttonRef}\n      style={{ x, y, scale }}\n      onMouseMove={handleMouseMove}\n      onMouseEnter={handleMouseEnter}\n      onMouseLeave={handleMouseLeave}\n      onClick={onClick}\n      disabled={disabled}\n      className={`\n        relative inline-flex items-center justify-center\n        font-medium rounded-full\n        transition-colors duration-200\n        focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-neutral-500\n        disabled:opacity-50 disabled:cursor-not-allowed\n        ${sizeClasses[size]}\n        ${variantClasses[variant]}\n        ${className}\n      `}\n    >\n      {children}\n    </motion.button>\n  );\n}\n",
+      "type": "registry:ui",
+      "target": "components/ui/magnetic-button.tsx"
+    }
+  ],
+  "tailwind": {},
+  "cssVars": {}
+}

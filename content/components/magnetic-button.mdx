@@ -1,0 +1,121 @@
+export const metadata = {
+  title: "Magnetic Button - Interactive Hover Effect Component",
+  description: "A button component that creates a magnetic pull effect, subtly following the cursor when hovering nearby. Features elastic snap-back animation, multiple variants, customizable strength, and spring physics for smooth interactions.",
+  keywords: [
+    "Magnetic Button",
+    "Magnetic Effect",
+    "Hover Animation",
+    "Framer Motion Button",
+    "Interactive Button",
+    "React Button",
+    "Cursor Effect",
+    "Spring Animation",
+  ],
+  authors: [{ name: "Numan", url: "https://numan-dev.web.app" }],
+  creator: "@numan-dev",
+  publisher: "Struct-UI",
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1
+    }
+  },
+  category: "technology"
+};
+
+## Installation
+
+```bash
+npx shadcn@latest add "https://ui-struct.vercel.app/r/magnetic-button"
+```
+
+## Usage
+
+```tsx
+import MagneticButton from "@/components/ui/magnetic-button";
+
+<MagneticButton>Click Me</MagneticButton>
+```
+
+## Preview
+
+Move your cursor near the button to see the magnetic pull effect.
+
+<ComponentCodePreview name='magnetic-button-default' hasReTrigger isFitheight isDefaultCodeTab={false} />
+
+## Variants
+
+Five built-in style variants to match your design system.
+
+<ComponentCodePreview name='magnetic-button-variants' hasReTrigger isFitheight />
+
+### Variant Options
+
+| Variant | Description |
+|---------|-------------|
+| `default` | Solid background, inverts in dark mode |
+| `outline` | Border only, fills on hover |
+| `ghost` | No background, subtle hover effect |
+| `glow` | Blue with glowing shadow effect |
+| `gradient` | Purple to orange gradient |
+
+## Sizes
+
+Three size options for different use cases.
+
+<ComponentCodePreview name='magnetic-button-sizes' hasReTrigger isFitheight />
+
+## Magnetic Strength
+
+Control how strongly the button is pulled toward the cursor.
+
+<ComponentCodePreview name='magnetic-button-strength' hasReTrigger isFitheight />
+
+### Strength Props
+
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| `magneticStrength` | `number` | `0.4` | How strongly the button follows cursor (0-1) |
+| `magneticRadius` | `number` | `150` | Pixel radius where magnetic effect activates |
+
+## With Icons
+
+Combine with icons for enhanced visual appeal.
+
+<ComponentCodePreview name='magnetic-button-icons' hasReTrigger isFitheight />
+
+## Spring Physics
+
+Customize the elastic snap-back behavior with spring configuration.
+
+<ComponentCodePreview name='magnetic-button-elastic' hasReTrigger isFitheight />
+
+### Spring Config
+
+| Property | Description |
+|----------|-------------|
+| `stiffness` | Higher = faster snap back (default: 300) |
+| `damping` | Higher = less bounce (default: 20) |
+
+## Props
+
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| `children` | `ReactNode` | - | Button content |
+| `variant` | `'default' \| 'outline' \| 'ghost' \| 'glow' \| 'gradient'` | `'default'` | Visual style |
+| `size` | `'sm' \| 'md' \| 'lg'` | `'md'` | Button size |
+| `magneticStrength` | `number` | `0.4` | Pull strength (0-1) |
+| `magneticRadius` | `number` | `150` | Activation radius in pixels |
+| `springConfig` | `{ stiffness: number; damping: number }` | `{ stiffness: 300, damping: 20 }` | Spring physics |
+| `disabled` | `boolean` | `false` | Disable interactions |
+| `onClick` | `() => void` | - | Click handler |
+| `className` | `string` | - | Additional CSS classes |
+
+## Full Code
+
+<ComponentCodePreview name='magnetic-button' hasReTrigger isFitheight isDefaultCodeTab={true} />

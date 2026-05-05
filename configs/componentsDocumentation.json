@@ -70,6 +70,62 @@
       "type": "buttons"
     },
     {
+      "name": "Magnetic Button",
+      "componentArray": [
+        {
+          "componentName": "magnetic-button",
+          "filesrc": "components/magnetic-button/magnetic-button.tsx",
+          "iframeSrc": "live-components/magnetic-button",
+          "parentlink": "magnetic-button",
+          "parentName": "Magnetic Button"
+        },
+        {
+          "componentName": "magnetic-button-default",
+          "filesrc": "components/magnetic-button/magnetic-button-default.tsx",
+          "iframeSrc": "live-components/magnetic-button-default",
+          "parentlink": "magnetic-button",
+          "parentName": "Magnetic Button"
+        },
+        {
+          "componentName": "magnetic-button-variants",
+          "filesrc": "components/magnetic-button/magnetic-button-variants.tsx",
+          "iframeSrc": "live-components/magnetic-button-variants",
+          "parentlink": "magnetic-button",
+          "parentName": "Magnetic Button"
+        },
+        {
+          "componentName": "magnetic-button-sizes",
+          "filesrc": "components/magnetic-button/magnetic-button-sizes.tsx",
+          "iframeSrc": "live-components/magnetic-button-sizes",
+          "parentlink": "magnetic-button",
+          "parentName": "Magnetic Button"
+        },
+        {
+          "componentName": "magnetic-button-strength",
+          "filesrc": "components/magnetic-button/magnetic-button-strength.tsx",
+          "iframeSrc": "live-components/magnetic-button-strength",
+          "parentlink": "magnetic-button",
+          "parentName": "Magnetic Button"
+        },
+        {
+          "componentName": "magnetic-button-icons",
+          "filesrc": "components/magnetic-button/magnetic-button-icons.tsx",
+          "iframeSrc": "live-components/magnetic-button-icons",
+          "parentlink": "magnetic-button",
+          "parentName": "Magnetic Button"
+        },
+        {
+          "componentName": "magnetic-button-elastic",
+          "filesrc": "components/magnetic-button/magnetic-button-elastic.tsx",
+          "iframeSrc": "live-components/magnetic-button-elastic",
+          "parentlink": "magnetic-button",
+          "parentName": "Magnetic Button"
+        }
+      ],
+      "type": "magnetic-button",
+      "new": true
+    },
+    {
       "name": "Clip-Path",
       "componentArray": [
         {

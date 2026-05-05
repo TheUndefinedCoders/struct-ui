@@ -4,6 +4,10 @@ export const basicComponents = [
     name: 'Buttons'
   },
   {
+    href: '/components/magnetic-button',
+    name: 'Magnetic Button'
+  },
+  {
     href: '/components/clip-path',
     name: 'Clip Path',
   },
