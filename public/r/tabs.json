@@ -1,0 +1,18 @@
+{
+  "name": "tabs",
+  "type": "registry:ui",
+  "description": "Animated tabs with smooth sliding indicator.",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "components/ui/tabs.tsx",
+      "content": "'use client';\nimport { useState } from 'react';\n\ninterface ITabs {\n  label: string;\n  id: string;\n}\n\nexport default function Tabs({\n  tabsConfig,\n  selectedTab,\n  setSelectedTab,\n}: {\n  tabsConfig: ITabs[];\n  selectedTab: string;\n  setSelectedTab: (id: string) => void;\n}) {\n  const defaultTabs: ITabs[] = [\n    { label: 'Tab 1', id: 'tab1' },\n    { label: 'Tab 2', id: 'tab2' },\n    { label: 'Tab 3', id: 'tab3' },\n  ];\n  const safeTabsConfig = tabsConfig?.length ? tabsConfig : defaultTabs;\n  const [internalSelectedTab, setInternalSelectedTab] = useState<string>(\n    safeTabsConfig[0]?.id ?? 'tab1'\n  );\n  const activeSelectedTab = selectedTab ?? internalSelectedTab;\n  const onTabChange = setSelectedTab ?? setInternalSelectedTab;\n\n  const selectedIndex = Math.max(\n    0,\n    safeTabsConfig.findIndex((section) => section.id === activeSelectedTab)\n  );\n  const sliderWidth = 100 / safeTabsConfig.length;\n\n  const handleTabChange = (sectionId: string) => {\n    onTabChange(sectionId);\n  };\n\n  return (\n    <div className=\"w-full max-w-screen-sm mx-auto p-2\">\n      <div className=\"relative flex bg-gray-200 dark:bg-gray-900 rounded-full p-1 shadow-inner dark:shadow-gray-950\">\n        <div className=\"relative flex bg-gray-100 dark:bg-gray-800 rounded-full p-1 shadow-inner dark:shadow-gray-900 min-w-[200px] w-full\">\n          <div\n            className=\"absolute top-1 h-[calc(100%-8px)] bg-white dark:bg-gray-700 rounded-full shadow-md dark:shadow-black/30 transition-all duration-300 ease-in-out z-10\"\n            style={{\n              width: `calc(${sliderWidth}% - 8px)`,\n              left: `calc(${selectedIndex * sliderWidth}% + 4px)`,\n            }}\n          />\n          {safeTabsConfig.map((tab) => (\n            <button\n              key={tab.id}\n              className={`relative z-20 flex-1 bg-transparent border-none font-medium rounded-full transition-all duration-300 py-2 px-4 ${activeSelectedTab === tab.id\n                ? 'text-black dark:text-white font-semibold'\n                : 'text-gray-700 dark:text-gray-400 hover:bg-gray-300 dark:hover:bg-gray-700'\n                }`}\n              onClick={() => handleTabChange(tab.id)}\n              disabled={activeSelectedTab === tab.id}\n            >\n              {tab.label}\n            </button>\n          ))}\n        </div>\n      </div>\n    </div>\n  );\n}",
+      "type": "registry:ui",
+      "target": "components/ui/tabs.tsx"
+    }
+  ],
+  "tailwind": {},
+  "cssVars": {}
+}

@@ -1,6 +1,6 @@
 export const metadata = {
-  title: "Tabs - Animated Sliding Pill Tabs Component",
-  description: "A modern, accessible React tabs component with smooth sliding pill indicator. Features animated transitions, dark mode support, and mobile-responsive design. Perfect for dashboard navigation, settings panels, and content organization with elegant hover effects and seamless tab switching.",
+  title: "Chip - Customizable Badge Component",
+  description: "A customizable chip/badge component with various border styles, colors, and shapes. Features circle and square variants, directional borders, and full color customization. Perfect for tags, labels, and category indicators.",
   keywords: [
     "Chip",
     "Chip React",
@@ -8,6 +8,8 @@ export const metadata = {
     "Pill React",
     "Tags React",
     "Tags",
+    "Badge",
+    "Label",
     "Pill selection",
   ],
   authors: [{ name: "Numan", url: "https://numan-dev.web.app" }],
@@ -27,7 +29,22 @@ export const metadata = {
   category: "technology"
 };
 
-```Chip.tsx```
+## Installation
+
+```bash
+npx shadcn@latest add "https://ui-struct.vercel.app/r/chip"
+```
+
+## Usage
+
+```tsx
+import Chip from "@/components/ui/chip";
+
+<Chip chipData={{ label: "Featured", id: "featured" }} />
+```
+
+## Preview
+
 <ComponentCodePreview name='chip' hasReTrigger isFitheight isDefaultCodeTab={true} />
 
 

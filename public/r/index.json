@@ -1,0 +1,77 @@
+[
+  {
+    "name": "chip",
+    "type": "registry:ui",
+    "description": "A customizable chip/badge component with various border styles.",
+    "dependencies": [],
+    "registryDependencies": []
+  },
+  {
+    "name": "button-spotlight",
+    "type": "registry:ui",
+    "description": "An animated button with spotlight hover effect.",
+    "dependencies": [
+      "framer-motion"
+    ],
+    "registryDependencies": []
+  },
+  {
+    "name": "button-shine",
+    "type": "registry:ui",
+    "description": "A button with animated shine effect.",
+    "dependencies": [],
+    "registryDependencies": []
+  },
+  {
+    "name": "card-hover",
+    "type": "registry:ui",
+    "description": "A card component with hover animation effects.",
+    "dependencies": [
+      "framer-motion"
+    ],
+    "registryDependencies": []
+  },
+  {
+    "name": "image-hover",
+    "type": "registry:ui",
+    "description": "An image component with hover reveal effects.",
+    "dependencies": [
+      "framer-motion"
+    ],
+    "registryDependencies": []
+  },
+  {
+    "name": "tabs",
+    "type": "registry:ui",
+    "description": "Animated tabs with smooth sliding indicator.",
+    "dependencies": [],
+    "registryDependencies": []
+  },
+  {
+    "name": "blur-vignette",
+    "type": "registry:ui",
+    "description": "A blur vignette overlay component for images and videos.",
+    "dependencies": [],
+    "registryDependencies": []
+  },
+  {
+    "name": "motion-number",
+    "type": "registry:ui",
+    "description": "Animated number counter with smooth transitions.",
+    "dependencies": [
+      "motion-number",
+      "framer-motion"
+    ],
+    "registryDependencies": []
+  },
+  {
+    "name": "horizontal-scroll",
+    "type": "registry:ui",
+    "description": "Horizontal scroll animation section with Framer Motion.",
+    "dependencies": [
+      "framer-motion",
+      "lenis"
+    ],
+    "registryDependencies": []
+  }
+]
