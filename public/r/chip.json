@@ -1,0 +1,18 @@
+{
+  "name": "chip",
+  "type": "registry:ui",
+  "description": "A customizable chip/badge component with various border styles.",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "components/ui/chip.tsx",
+      "content": "'use client';\nimport { useState } from 'react';\n\ninterface IChip {\n  label: string;\n  id: string;\n  border?: string;\n  borderColor?: string;\n  textColor?: string;\n  bgColor?: string;\n  isRounded?: boolean;\n}\n\nconst getBorderClass = (border: string | undefined) => {\n  switch (border) {\n    case 'left':\n      return 'border-l-4';\n    case 'right':\n      return 'border-r-4';\n    case 'top':\n      return 'border-t-4';\n    case 'bottom':\n      return 'border-b-4';\n    default:\n      return '';\n  }\n}\n\nexport default function Chip({\n  chipData,\n  border,\n  borderColor,\n  textColor,\n  bgColor,\n  isRounded = true,\n}: {\n  chipData: IChip;\n  border?: string;\n  borderColor?: string;\n  textColor?: string;\n  bgColor?: string;\n  isRounded?: boolean;\n}) {\n\n  return (\n    <>\n      <span className=\"text-gray-400 inline-flex items-center leading-none text-sm pr-0 py-1 mr-2 cursor-pointer\">\n        <span\n          className={`bg-white dark:bg-gray-800 tracking-wide text-gray-800 dark:text-white font-bold shadow-md py-1 px-4 inline-flex items-center border-slate-600 border ${getBorderClass(border)} ${isRounded ? 'rounded-full' : 'rounded'}`}\n          style={{\n            borderColor: borderColor,\n            backgroundColor: bgColor ? bgColor : '#FFFFFF',\n            color: textColor ? textColor : '#2D3748',\n          }}\n        >\n          <span className=\"mx-auto flex items-center\">\n            {/* <img className=\"mr-2\" src=\"/images/num_heart.gif\" alt=\"calender-icon\" width=\"18\" /> */}\n            {chipData.label}\n          </span>\n        </span>\n      </span>\n    </>\n  );\n}",
+      "type": "registry:ui",
+      "target": "components/ui/chip.tsx"
+    }
+  ],
+  "tailwind": {},
+  "cssVars": {}
+}
