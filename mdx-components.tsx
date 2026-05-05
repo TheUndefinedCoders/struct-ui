@@ -5,7 +5,7 @@ import { PreCode } from '@/components/website/code-components/pre-code';
 import ComponentCodePreview from '@/components/website/code-components/component-code-preview';
 import DrawerCodePreview from '@/components/website/code-components/drawer-code-preview';
 import TabCodePreview from '@/components/website/code-components/tab-codepreview';
-import IframeComponentPrieview from '@/components/website/code-components/iframe-component-preview';
+import IframeComponentPreview from '@/components/website/code-components/iframe-component-preview';
 import CodeBlock from '@/components/website/code-components/code-block';
 
 import {
@@ -42,7 +42,7 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
     TabCodePreview: TabCodePreview,
     DrawerCodePreview: DrawerCodePreview,
     ComponentCodePreview: ComponentCodePreview,
-    IframeComponentPrieview: IframeComponentPrieview,
+    IframeComponentPreview: IframeComponentPreview,
     CodeBlock: CodeBlock,
     img: (props) => (
       <Image
@@ -81,7 +81,7 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
     code: ({
       className,
       ...props
-    }: React.HTMLAttributes<HTMLAnchorElement>) => (
+    }: React.HTMLAttributes<HTMLElement>) => (
       <code
         className={cn(
           'not-prose italic border  bg-primary-foreground px-1 py-0.5',
