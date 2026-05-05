@@ -23,6 +23,7 @@ const registryFileMap = {
   'horizontal-scroll': [
     'registry/components/scroll-animation/framer-horizontal-scroll.tsx',
   ],
+  'magnetic-button': ['registry/components/magnetic-button/magnetic-button.tsx'],
 };
 
 const registryTargetMap = {
@@ -35,6 +36,7 @@ const registryTargetMap = {
   'blur-vignette': ['components/ui/blur-vignette.tsx'],
   'motion-number': ['components/ui/motion-number.tsx'],
   'horizontal-scroll': ['components/ui/horizontal-scroll.tsx'],
+  'magnetic-button': ['components/ui/magnetic-button.tsx'],
 };
 
 const registry = [
@@ -99,6 +101,13 @@ const registry = [
     type: 'registry:ui',
     description: 'Horizontal scroll animation section with Framer Motion.',
     dependencies: ['framer-motion', 'lenis'],
+    registryDependencies: [],
+  },
+  {
+    name: 'magnetic-button',
+    type: 'registry:ui',
+    description: 'A button with magnetic pull effect that follows the cursor with elastic snap-back animation.',
+    dependencies: ['framer-motion'],
     registryDependencies: [],
   },
 ];
