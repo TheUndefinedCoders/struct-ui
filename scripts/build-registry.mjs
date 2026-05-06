@@ -28,6 +28,7 @@ const registryFileMap = {
   'tilt-card': ['registry/components/tilt-card/tilt-card.tsx'],
   'particle-button': ['registry/components/particle-button/particle-button.tsx'],
   'morph-blob': ['registry/components/morph-blob/morph-blob.tsx'],
+  'text-typing': ['registry/components/text-typing/text-typing.tsx'],
 };
 
 const registryTargetMap = {
@@ -45,6 +46,7 @@ const registryTargetMap = {
   'tilt-card': ['components/ui/tilt-card.tsx'],
   'particle-button': ['components/ui/particle-button.tsx'],
   'morph-blob': ['components/ui/morph-blob.tsx'],
+  'text-typing': ['components/ui/text-typing.tsx'],
 };
 
 const registry = [
@@ -143,6 +145,13 @@ const registry = [
     name: 'morph-blob',
     type: 'registry:ui',
     description: 'Liquid SVG blobs that continuously morph and flow with gradient colors and glow effects.',
+    dependencies: ['framer-motion'],
+    registryDependencies: [],
+  },
+  {
+    name: 'text-typing',
+    type: 'registry:ui',
+    description: 'Smooth text typing animation that cycles through texts with typewriter effect and customizable cursor.',
     dependencies: ['framer-motion'],
     registryDependencies: [],
   },

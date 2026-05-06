@@ -1,0 +1,199 @@
+export const metadata = {
+  title: "Text Typing - Smooth Typewriter Animation Component",
+  description: "A smooth text typing animation component that cycles through an array of texts with typewriter effect. Features customizable cursor styles, typing/deleting speeds, infinite loop, and Framer Motion animations. Perfect for hero sections, portfolios, and dynamic content.",
+  keywords: [
+    "Text Typing",
+    "Typewriter Effect",
+    "Typing Animation",
+    "Text Animation",
+    "Framer Motion",
+    "React Animation",
+    "Hero Section",
+    "Portfolio",
+    "Cursor Animation",
+    "Infinite Typing",
+  ],
+  authors: [{ name: "Numan", url: "https://numan-dev.web.app" }],
+  creator: "@numan-dev",
+  publisher: "Struct-UI",
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1
+    }
+  },
+  category: "technology"
+};
+
+## Installation
+
+```bash
+npx shadcn@latest add "https://ui-struct.vercel.app/r/text-typing"
+```
+
+## Usage
+
+```tsx
+import TextTyping from "@/components/ui/text-typing";
+
+<TextTyping
+  texts={['Developer', 'Designer', 'Creator']}
+  typingSpeed={80}
+  cursorStyle="bar"
+/>
+```
+
+## Preview
+
+Watch the text type and delete in a smooth infinite loop.
+
+<ComponentCodePreview name='text-typing-default' hasReTrigger isFitheight />
+
+## Cursor Styles
+
+Three cursor styles to match your design aesthetic.
+
+<ComponentCodePreview name='text-typing-cursors' hasReTrigger isFitheight />
+
+| Cursor Style | Description |
+|--------------|-------------|
+| `bar` | Classic blinking vertical bar |
+| `underscore` | Terminal-style underscore |
+| `block` | Block cursor like text editors |
+
+## Typing Speed
+
+Control how fast text types and deletes.
+
+<ComponentCodePreview name='text-typing-speed' hasReTrigger isFitheight />
+
+| Speed | Typing | Deleting | Use Case |
+|-------|--------|----------|----------|
+| Fast | 30ms | 20ms | Quick, energetic feel |
+| Normal | 80ms | 50ms | Natural typing speed |
+| Slow | 150ms | 80ms | Dramatic, deliberate |
+| Very Slow | 250ms | 100ms | Cinematic effect |
+
+## Hero Section
+
+Perfect for portfolio and landing page hero sections.
+
+<ComponentCodePreview name='text-typing-hero' hasReTrigger isFitheight />
+
+## Gradient & Neon Effects
+
+Combine with CSS gradients and glow effects for stunning visuals.
+
+<ComponentCodePreview name='text-typing-gradient' hasReTrigger isFitheight />
+
+## Terminal Style
+
+Classic terminal/command line aesthetic.
+
+<ComponentCodePreview name='text-typing-terminal' hasReTrigger isFitheight />
+
+## Chat Interface
+
+Simulated chat typing effect.
+
+<ComponentCodePreview name='text-typing-chat' hasReTrigger isFitheight />
+
+## Code Editor
+
+Code editor style with syntax highlighting.
+
+<ComponentCodePreview name='text-typing-code' hasReTrigger isFitheight />
+
+## Component Showcase
+
+Various use cases in different contexts.
+
+<ComponentCodePreview name='text-typing-showcase' hasReTrigger isFitheight />
+
+## Props
+
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| `texts` | `string[]` | - | Array of texts to cycle through |
+| `className` | `string` | `''` | Additional CSS classes |
+| `typingSpeed` | `number` | `80` | Typing speed in milliseconds |
+| `deletingSpeed` | `number` | `50` | Deleting speed in milliseconds |
+| `pauseDuration` | `number` | `1500` | Pause after typing completes (ms) |
+| `cursor` | `boolean` | `true` | Show/hide cursor |
+| `cursorStyle` | `'bar' \| 'underscore' \| 'block'` | `'bar'` | Cursor style |
+| `cursorColor` | `string` | `'currentColor'` | Cursor color |
+| `cursorBlinkSpeed` | `number` | `0.8` | Cursor blink duration (seconds) |
+| `loop` | `boolean` | `true` | Loop through texts infinitely |
+| `onComplete` | `() => void` | - | Callback when loop finishes (if loop=false) |
+
+## Examples
+
+### Basic Usage
+
+```tsx
+<TextTyping texts={['Hello', 'World']} />
+```
+
+### Custom Styling
+
+```tsx
+<span className="text-2xl font-bold">
+  I am a{' '}
+  <TextTyping
+    texts={['Developer', 'Designer', 'Creator']}
+    className="text-blue-500"
+    typingSpeed={100}
+    cursorColor="#3B82F6"
+  />
+</span>
+```
+
+### With Gradient Text
+
+```tsx
+<span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-pink-500">
+  <TextTyping
+    texts={['Amazing', 'Beautiful', 'Stunning']}
+    cursorColor="#A855F7"
+  />
+</span>
+```
+
+### Terminal Style
+
+```tsx
+<div className="font-mono bg-black text-green-400 p-4">
+  <span>$ </span>
+  <TextTyping
+    texts={['npm install', 'yarn add', 'pnpm add']}
+    cursorStyle="block"
+    cursorColor="#22C55E"
+    typingSpeed={50}
+  />
+</div>
+```
+
+### Without Loop
+
+```tsx
+<TextTyping
+  texts={['Loading complete!']}
+  loop={false}
+  onComplete={() => console.log('Done!')}
+/>
+```
+
+## Performance Tips
+
+1. Keep the `texts` array reasonably sized
+2. Avoid very fast typing speeds (< 20ms) on mobile
+3. Use appropriate `pauseDuration` for readability
+
+## Full Code
+
+<ComponentCodePreview name='text-typing' hasReTrigger isFitheight />

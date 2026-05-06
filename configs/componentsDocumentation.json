@@ -427,6 +427,83 @@
       "new": true
     },
     {
+      "name": "Text Typing",
+      "componentArray": [
+        {
+          "componentName": "text-typing",
+          "filesrc": "components/text-typing/text-typing.tsx",
+          "iframeSrc": "live-components/text-typing",
+          "parentlink": "text-typing",
+          "parentName": "Text Typing"
+        },
+        {
+          "componentName": "text-typing-default",
+          "filesrc": "components/text-typing/text-typing-default.tsx",
+          "iframeSrc": "live-components/text-typing-default",
+          "parentlink": "text-typing",
+          "parentName": "Text Typing"
+        },
+        {
+          "componentName": "text-typing-cursors",
+          "filesrc": "components/text-typing/text-typing-cursors.tsx",
+          "iframeSrc": "live-components/text-typing-cursors",
+          "parentlink": "text-typing",
+          "parentName": "Text Typing"
+        },
+        {
+          "componentName": "text-typing-speed",
+          "filesrc": "components/text-typing/text-typing-speed.tsx",
+          "iframeSrc": "live-components/text-typing-speed",
+          "parentlink": "text-typing",
+          "parentName": "Text Typing"
+        },
+        {
+          "componentName": "text-typing-hero",
+          "filesrc": "components/text-typing/text-typing-hero.tsx",
+          "iframeSrc": "live-components/text-typing-hero",
+          "parentlink": "text-typing",
+          "parentName": "Text Typing"
+        },
+        {
+          "componentName": "text-typing-gradient",
+          "filesrc": "components/text-typing/text-typing-gradient.tsx",
+          "iframeSrc": "live-components/text-typing-gradient",
+          "parentlink": "text-typing",
+          "parentName": "Text Typing"
+        },
+        {
+          "componentName": "text-typing-terminal",
+          "filesrc": "components/text-typing/text-typing-terminal.tsx",
+          "iframeSrc": "live-components/text-typing-terminal",
+          "parentlink": "text-typing",
+          "parentName": "Text Typing"
+        },
+        {
+          "componentName": "text-typing-chat",
+          "filesrc": "components/text-typing/text-typing-chat.tsx",
+          "iframeSrc": "live-components/text-typing-chat",
+          "parentlink": "text-typing",
+          "parentName": "Text Typing"
+        },
+        {
+          "componentName": "text-typing-code",
+          "filesrc": "components/text-typing/text-typing-code.tsx",
+          "iframeSrc": "live-components/text-typing-code",
+          "parentlink": "text-typing",
+          "parentName": "Text Typing"
+        },
+        {
+          "componentName": "text-typing-showcase",
+          "filesrc": "components/text-typing/text-typing-showcase.tsx",
+          "iframeSrc": "live-components/text-typing-showcase",
+          "parentlink": "text-typing",
+          "parentName": "Text Typing"
+        }
+      ],
+      "type": "text-typing",
+      "new": true
+    },
+    {
       "name": "Clip-Path",
       "componentArray": [
         {

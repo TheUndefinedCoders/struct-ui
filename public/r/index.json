@@ -119,5 +119,14 @@
       "framer-motion"
     ],
     "registryDependencies": []
+  },
+  {
+    "name": "text-typing",
+    "type": "registry:ui",
+    "description": "Smooth text typing animation that cycles through texts with typewriter effect and customizable cursor.",
+    "dependencies": [
+      "framer-motion"
+    ],
+    "registryDependencies": []
   }
 ]
