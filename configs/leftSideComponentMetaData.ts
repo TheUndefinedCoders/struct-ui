@@ -9,7 +9,7 @@ export const basicComponents = [
     new: true
   },
   {
-    href: '/components/magnetic-button',
+    href: '/components/particle-button',
     name: 'Particle Burst Button'
   },
   {
