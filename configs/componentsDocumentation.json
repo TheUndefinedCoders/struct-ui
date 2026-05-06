@@ -126,6 +126,76 @@
       "new": true
     },
     {
+      "name": "Flip Card",
+      "componentArray": [
+        {
+          "componentName": "flip-card",
+          "filesrc": "components/flip-card/flip-card.tsx",
+          "iframeSrc": "live-components/flip-card",
+          "parentlink": "flip-card",
+          "parentName": "Flip Card"
+        },
+        {
+          "componentName": "flip-card-default",
+          "filesrc": "components/flip-card/flip-card-default.tsx",
+          "iframeSrc": "live-components/flip-card-default",
+          "parentlink": "flip-card",
+          "parentName": "Flip Card"
+        },
+        {
+          "componentName": "flip-card-directions",
+          "filesrc": "components/flip-card/flip-card-directions.tsx",
+          "iframeSrc": "live-components/flip-card-directions",
+          "parentlink": "flip-card",
+          "parentName": "Flip Card"
+        },
+        {
+          "componentName": "flip-card-click",
+          "filesrc": "components/flip-card/flip-card-click.tsx",
+          "iframeSrc": "live-components/flip-card-click",
+          "parentlink": "flip-card",
+          "parentName": "Flip Card"
+        },
+        {
+          "componentName": "flip-card-variants",
+          "filesrc": "components/flip-card/flip-card-variants.tsx",
+          "iframeSrc": "live-components/flip-card-variants",
+          "parentlink": "flip-card",
+          "parentName": "Flip Card"
+        },
+        {
+          "componentName": "flip-card-profile",
+          "filesrc": "components/flip-card/flip-card-profile.tsx",
+          "iframeSrc": "live-components/flip-card-profile",
+          "parentlink": "flip-card",
+          "parentName": "Flip Card"
+        },
+        {
+          "componentName": "flip-card-product",
+          "filesrc": "components/flip-card/flip-card-product.tsx",
+          "iframeSrc": "live-components/flip-card-product",
+          "parentlink": "flip-card",
+          "parentName": "Flip Card"
+        },
+        {
+          "componentName": "flip-card-pricing",
+          "filesrc": "components/flip-card/flip-card-pricing.tsx",
+          "iframeSrc": "live-components/flip-card-pricing",
+          "parentlink": "flip-card",
+          "parentName": "Flip Card"
+        },
+        {
+          "componentName": "flip-card-grid",
+          "filesrc": "components/flip-card/flip-card-grid.tsx",
+          "iframeSrc": "live-components/flip-card-grid",
+          "parentlink": "flip-card",
+          "parentName": "Flip Card"
+        }
+      ],
+      "type": "flip-card",
+      "new": true
+    },
+    {
       "name": "Clip-Path",
       "componentArray": [
         {

@@ -1,0 +1,138 @@
+export const metadata = {
+  title: "3D Flip Card - Interactive Card Component with CSS 3D Transforms",
+  description: "A beautiful 3D flip card component with realistic perspective transforms. Features hover and click triggers, multiple flip directions (horizontal, vertical, diagonal), various style variants, and fully responsive design. Perfect for profiles, products, pricing tables, and interactive content.",
+  keywords: [
+    "Flip Card",
+    "3D Card",
+    "CSS 3D Transform",
+    "Card Animation",
+    "Hover Effect",
+    "React Card",
+    "Interactive Card",
+    "Profile Card",
+    "Product Card",
+    "Framer Motion",
+  ],
+  authors: [{ name: "Numan", url: "https://numan-dev.web.app" }],
+  creator: "@numan-dev",
+  publisher: "Struct-UI",
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1
+    }
+  },
+  category: "technology"
+};
+
+## Installation
+
+```bash
+npx shadcn@latest add "https://ui-struct.vercel.app/r/flip-card"
+```
+
+## Usage
+
+```tsx
+import FlipCard from "@/components/ui/flip-card";
+
+<FlipCard
+  front={<div>Front Content</div>}
+  back={<div>Back Content</div>}
+/>
+```
+
+## Preview
+
+Hover over the card to see the 3D flip effect in action.
+
+<ComponentCodePreview name='flip-card-default' hasReTrigger isFitheight isDefaultCodeTab={false} />
+
+## Flip Directions
+
+Three different flip directions: horizontal, vertical, and diagonal.
+
+<ComponentCodePreview name='flip-card-directions' hasReTrigger isFitheight />
+
+| Direction | Effect |
+|-----------|--------|
+| `horizontal` | Flips left to right (default) |
+| `vertical` | Flips top to bottom |
+| `diagonal` | Flips with a tilted perspective |
+
+## Click Trigger
+
+For mobile-friendly interactions, use click/tap instead of hover.
+
+<ComponentCodePreview name='flip-card-click' hasReTrigger isFitheight />
+
+## Style Variants
+
+Four built-in style variants to match your design.
+
+<ComponentCodePreview name='flip-card-variants' hasReTrigger isFitheight />
+
+| Variant | Description |
+|---------|-------------|
+| `default` | Clean, minimal style |
+| `lifted` | Elevated shadow on hover |
+| `glow` | Blue glow effect |
+| `gradient-border` | Animated gradient border |
+
+## Profile Card
+
+Perfect for team member profiles with social links on the back.
+
+<ComponentCodePreview name='flip-card-profile' hasReTrigger isFitheight />
+
+## Product Card
+
+E-commerce product card with details revealed on flip.
+
+<ComponentCodePreview name='flip-card-product' hasReTrigger isFitheight />
+
+## Pricing Cards
+
+Compare pricing plans with flip interaction.
+
+<ComponentCodePreview name='flip-card-pricing' hasReTrigger isFitheight />
+
+## Responsive Grid
+
+Fully responsive grid layout that works on all screen sizes.
+
+<ComponentCodePreview name='flip-card-grid' hasReTrigger isFitheight />
+
+## Props
+
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| `front` | `ReactNode` | - | Content for the front face |
+| `back` | `ReactNode` | - | Content for the back face |
+| `flipDirection` | `'horizontal' \| 'vertical' \| 'diagonal'` | `'horizontal'` | Direction of the flip |
+| `trigger` | `'hover' \| 'click'` | `'hover'` | How to trigger the flip |
+| `duration` | `number` | `0.6` | Animation duration in seconds |
+| `variant` | `'default' \| 'lifted' \| 'glow' \| 'gradient-border'` | `'default'` | Visual style variant |
+| `className` | `string` | - | Additional CSS classes for the container |
+
+## Accessibility
+
+- Use `trigger="click"` for better mobile and keyboard accessibility
+- The card maintains proper focus states
+- Content is readable in both flipped and unflipped states
+
+## Tips
+
+1. **Set dimensions**: Always wrap the FlipCard in a container with defined width and height
+2. **Mobile**: Use `trigger="click"` for touch devices
+3. **Content overflow**: Use `overflow-hidden` on front/back content to prevent clipping issues
+4. **Images**: Optimize images for the card size to ensure smooth animations
+
+## Full Code
+
+<ComponentCodePreview name='flip-card' hasReTrigger isFitheight isDefaultCodeTab={true}  />

@@ -1,0 +1,20 @@
+{
+  "name": "flip-card",
+  "type": "registry:ui",
+  "description": "A 3D flip card with realistic perspective transforms, multiple directions, and style variants.",
+  "dependencies": [
+    "framer-motion"
+  ],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "components/ui/flip-card.tsx",
+      "content": "'use client';\nimport { useState } from 'react';\nimport { motion } from 'framer-motion';\n\ninterface FlipCardProps {\n  front: React.ReactNode;\n  back: React.ReactNode;\n  className?: string;\n  flipDirection?: 'horizontal' | 'vertical' | 'diagonal';\n  trigger?: 'hover' | 'click';\n  duration?: number;\n  variant?: 'default' | 'lifted' | 'glow' | 'gradient-border';\n}\n\nexport default function FlipCard({\n  front,\n  back,\n  className = '',\n  flipDirection = 'horizontal',\n  trigger = 'hover',\n  duration = 0.6,\n  variant = 'default',\n}: FlipCardProps) {\n  const [isFlipped, setIsFlipped] = useState(false);\n\n  const getRotation = (flipped: boolean) => {\n    if (!flipped) return { rotateX: 0, rotateY: 0 };\n\n    switch (flipDirection) {\n      case 'horizontal':\n        return { rotateY: 180, rotateX: 0 };\n      case 'vertical':\n        return { rotateX: 180, rotateY: 0 };\n      case 'diagonal':\n        return { rotateY: 180, rotateX: 15 };\n      default:\n        return { rotateY: 180, rotateX: 0 };\n    }\n  };\n\n  const variantStyles = {\n    default: '',\n    lifted: 'hover:shadow-2xl',\n    glow: 'shadow-[0_0_30px_rgba(59,130,246,0.3)]',\n    'gradient-border': '',\n  };\n\n  const handleInteraction = () => {\n    if (trigger === 'click') {\n      setIsFlipped(!isFlipped);\n    }\n  };\n\n  const handleHoverStart = () => {\n    if (trigger === 'hover') {\n      setIsFlipped(true);\n    }\n  };\n\n  const handleHoverEnd = () => {\n    if (trigger === 'hover') {\n      setIsFlipped(false);\n    }\n  };\n\n  return (\n    <div\n      className={`relative w-full h-full ${className}`}\n      style={{ perspective: '1000px' }}\n      onClick={handleInteraction}\n      onMouseEnter={handleHoverStart}\n      onMouseLeave={handleHoverEnd}\n    >\n      {variant === 'gradient-border' && (\n        <div className=\"absolute -inset-[2px] rounded-2xl bg-gradient-to-r from-purple-500 via-pink-500 to-orange-500 opacity-75 blur-sm\" />\n      )}\n\n      <motion.div\n        className=\"relative w-full h-full\"\n        style={{ transformStyle: 'preserve-3d' }}\n        initial={false}\n        animate={getRotation(isFlipped)}\n        transition={{\n          duration,\n          type: 'spring',\n          stiffness: 100,\n          damping: 15,\n        }}\n      >\n        {/* Front Face */}\n        <div\n          className={`\n            absolute inset-0 w-full h-full rounded-2xl overflow-hidden\n            ${variantStyles[variant]}\n          `}\n          style={{ backfaceVisibility: 'hidden' }}\n        >\n          {front}\n        </div>\n\n        {/* Back Face */}\n        <div\n          className={`\n            absolute inset-0 w-full h-full rounded-2xl overflow-hidden\n            ${variantStyles[variant]}\n          `}\n          style={{\n            backfaceVisibility: 'hidden',\n            transform:\n              flipDirection === 'vertical' ? 'rotateX(180deg)' : 'rotateY(180deg)',\n          }}\n        >\n          {back}\n        </div>\n      </motion.div>\n    </div>\n  );\n}\n",
+      "type": "registry:ui",
+      "target": "components/ui/flip-card.tsx"
+    }
+  ],
+  "tailwind": {},
+  "cssVars": {}
+}

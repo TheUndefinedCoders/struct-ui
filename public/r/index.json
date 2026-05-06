@@ -82,5 +82,14 @@
       "framer-motion"
     ],
     "registryDependencies": []
+  },
+  {
+    "name": "flip-card",
+    "type": "registry:ui",
+    "description": "A 3D flip card with realistic perspective transforms, multiple directions, and style variants.",
+    "dependencies": [
+      "framer-motion"
+    ],
+    "registryDependencies": []
   }
 ]
