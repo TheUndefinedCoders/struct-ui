@@ -24,6 +24,7 @@ const registryFileMap = {
     'registry/components/scroll-animation/framer-horizontal-scroll.tsx',
   ],
   'magnetic-button': ['registry/components/magnetic-button/magnetic-button.tsx'],
+  'flip-card': ['registry/components/flip-card/flip-card.tsx'],
 };
 
 const registryTargetMap = {
@@ -37,6 +38,7 @@ const registryTargetMap = {
   'motion-number': ['components/ui/motion-number.tsx'],
   'horizontal-scroll': ['components/ui/horizontal-scroll.tsx'],
   'magnetic-button': ['components/ui/magnetic-button.tsx'],
+  'flip-card': ['components/ui/flip-card.tsx'],
 };
 
 const registry = [
@@ -107,6 +109,13 @@ const registry = [
     name: 'magnetic-button',
     type: 'registry:ui',
     description: 'A button with magnetic pull effect that follows the cursor with elastic snap-back animation.',
+    dependencies: ['framer-motion'],
+    registryDependencies: [],
+  },
+  {
+    name: 'flip-card',
+    type: 'registry:ui',
+    description: 'A 3D flip card with realistic perspective transforms, multiple directions, and style variants.',
     dependencies: ['framer-motion'],
     registryDependencies: [],
   },

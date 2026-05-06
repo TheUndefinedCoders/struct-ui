@@ -12,6 +12,12 @@ export const basicComponents = [
     name: 'Clip Path',
   },
   {
+    href: '/components/flip-card',
+    name: 'Flip Card',
+    component: 'flip-card',
+    new: true,
+  },
+  {
     href: '/components/product-cards',
     name: 'Products-Cards',
     component: 'card',
