@@ -27,6 +27,7 @@ const registryFileMap = {
   'flip-card': ['registry/components/flip-card/flip-card.tsx'],
   'tilt-card': ['registry/components/tilt-card/tilt-card.tsx'],
   'particle-button': ['registry/components/particle-button/particle-button.tsx'],
+  'morph-blob': ['registry/components/morph-blob/morph-blob.tsx'],
 };
 
 const registryTargetMap = {
@@ -43,6 +44,7 @@ const registryTargetMap = {
   'flip-card': ['components/ui/flip-card.tsx'],
   'tilt-card': ['components/ui/tilt-card.tsx'],
   'particle-button': ['components/ui/particle-button.tsx'],
+  'morph-blob': ['components/ui/morph-blob.tsx'],
 };
 
 const registry = [
@@ -135,6 +137,13 @@ const registry = [
     type: 'registry:ui',
     description: 'A button that explodes into colorful particles on click with customizable shapes and effects.',
     dependencies: ['framer-motion', 'lucide-react'],
+    registryDependencies: [],
+  },
+  {
+    name: 'morph-blob',
+    type: 'registry:ui',
+    description: 'Liquid SVG blobs that continuously morph and flow with gradient colors and glow effects.',
+    dependencies: ['framer-motion'],
     registryDependencies: [],
   },
 ];

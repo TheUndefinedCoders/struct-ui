@@ -350,6 +350,83 @@
       "new": true
     },
     {
+      "name": "Morph Blob",
+      "componentArray": [
+        {
+          "componentName": "morph-blob",
+          "filesrc": "components/morph-blob/morph-blob.tsx",
+          "iframeSrc": "live-components/morph-blob",
+          "parentlink": "morph-blob",
+          "parentName": "Morph Blob"
+        },
+        {
+          "componentName": "morph-blob-default",
+          "filesrc": "components/morph-blob/morph-blob-default.tsx",
+          "iframeSrc": "live-components/morph-blob-default",
+          "parentlink": "morph-blob",
+          "parentName": "Morph Blob"
+        },
+        {
+          "componentName": "morph-blob-variants",
+          "filesrc": "components/morph-blob/morph-blob-variants.tsx",
+          "iframeSrc": "live-components/morph-blob-variants",
+          "parentlink": "morph-blob",
+          "parentName": "Morph Blob"
+        },
+        {
+          "componentName": "morph-blob-colors",
+          "filesrc": "components/morph-blob/morph-blob-colors.tsx",
+          "iframeSrc": "live-components/morph-blob-colors",
+          "parentlink": "morph-blob",
+          "parentName": "Morph Blob"
+        },
+        {
+          "componentName": "morph-blob-layered",
+          "filesrc": "components/morph-blob/morph-blob-layered.tsx",
+          "iframeSrc": "live-components/morph-blob-layered",
+          "parentlink": "morph-blob",
+          "parentName": "Morph Blob"
+        },
+        {
+          "componentName": "morph-blob-background",
+          "filesrc": "components/morph-blob/morph-blob-background.tsx",
+          "iframeSrc": "live-components/morph-blob-background",
+          "parentlink": "morph-blob",
+          "parentName": "Morph Blob"
+        },
+        {
+          "componentName": "morph-blob-card",
+          "filesrc": "components/morph-blob/morph-blob-card.tsx",
+          "iframeSrc": "live-components/morph-blob-card",
+          "parentlink": "morph-blob",
+          "parentName": "Morph Blob"
+        },
+        {
+          "componentName": "morph-blob-avatar",
+          "filesrc": "components/morph-blob/morph-blob-avatar.tsx",
+          "iframeSrc": "live-components/morph-blob-avatar",
+          "parentlink": "morph-blob",
+          "parentName": "Morph Blob"
+        },
+        {
+          "componentName": "morph-blob-loader",
+          "filesrc": "components/morph-blob/morph-blob-loader.tsx",
+          "iframeSrc": "live-components/morph-blob-loader",
+          "parentlink": "morph-blob",
+          "parentName": "Morph Blob"
+        },
+        {
+          "componentName": "morph-blob-speed",
+          "filesrc": "components/morph-blob/morph-blob-speed.tsx",
+          "iframeSrc": "live-components/morph-blob-speed",
+          "parentlink": "morph-blob",
+          "parentName": "Morph Blob"
+        }
+      ],
+      "type": "morph-blob",
+      "new": true
+    },
+    {
       "name": "Clip-Path",
       "componentArray": [
         {

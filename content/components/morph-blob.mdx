@@ -1,0 +1,158 @@
+export const metadata = {
+  title: "Morph Blob - Liquid SVG Shape Animation Component",
+  description: "Beautiful liquid SVG blobs that continuously morph and flow like organic shapes. Features multiple shape variants (organic, smooth, spiky, wave), gradient colors, glow effects, and customizable animation speed. Perfect for backgrounds, avatars, loaders, and creative UI accents.",
+  keywords: [
+    "Morph Blob",
+    "Liquid Shape",
+    "SVG Animation",
+    "Blob Animation",
+    "Organic Shapes",
+    "Background Effect",
+    "Framer Motion",
+    "React Animation",
+    "Gradient Blob",
+    "Morphing Shape",
+  ],
+  authors: [{ name: "Numan", url: "https://numan-dev.web.app" }],
+  creator: "@numan-dev",
+  publisher: "Struct-UI",
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1
+    }
+  },
+  category: "technology"
+};
+
+## Installation
+
+```bash
+npx shadcn@latest add "https://ui-struct.vercel.app/r/morph-blob"
+```
+
+## Usage
+
+```tsx
+import MorphBlob from "@/components/ui/morph-blob";
+
+<MorphBlob
+  size={300}
+  gradientColors={['#8B5CF6', '#EC4899']}
+  glow={true}
+/>
+```
+
+## Preview
+
+Watch the blob continuously morph and flow like liquid.
+
+<ComponentCodePreview name='morph-blob-default' hasReTrigger isFitheight isDefaultCodeTab={true} />
+
+## Shape Variants
+
+Four different blob shape styles for various aesthetics.
+
+<ComponentCodePreview name='morph-blob-variants' hasReTrigger isFitheight />
+
+| Variant | Description |
+|---------|-------------|
+| `organic` | Natural, irregular shapes |
+| `smooth` | Soft, flowing transitions |
+| `spiky` | Sharper, more angular edges |
+| `wave` | Wavy, undulating forms |
+
+## Colors & Gradients
+
+Solid colors, gradients, and glow effects.
+
+<ComponentCodePreview name='morph-blob-colors' hasReTrigger isFitheight />
+
+| Gradient Direction | Effect |
+|--------------------|--------|
+| `horizontal` | Left to right |
+| `vertical` | Top to bottom |
+| `diagonal` | Corner to corner |
+
+## Layered Blobs
+
+Stack multiple blobs for depth and visual richness.
+
+<ComponentCodePreview name='morph-blob-layered' hasReTrigger isFitheight />
+
+## Background Effect
+
+Create stunning hero sections with blob backgrounds.
+
+<ComponentCodePreview name='morph-blob-background' hasReTrigger isFitheight />
+
+## Card Accents
+
+Use blobs as decorative elements in cards.
+
+<ComponentCodePreview name='morph-blob-card' hasReTrigger isFitheight />
+
+## Avatar Backgrounds
+
+Dynamic backgrounds for user avatars.
+
+<ComponentCodePreview name='morph-blob-avatar' hasReTrigger isFitheight />
+
+## Loading States
+
+Creative loading indicators with morphing blobs.
+
+<ComponentCodePreview name='morph-blob-loader' hasReTrigger isFitheight />
+
+## Animation Speed
+
+Control how fast the blob morphs.
+
+<ComponentCodePreview name='morph-blob-speed' hasReTrigger isFitheight />
+
+## Props
+
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| `className` | `string` | `''` | Additional CSS classes |
+| `size` | `number` | `300` | Width and height in pixels |
+| `color` | `string` | `'#8B5CF6'` | Solid fill color |
+| `gradientColors` | `[string, string]` | - | Gradient start/end colors |
+| `gradientDirection` | `'horizontal' \| 'vertical' \| 'diagonal'` | `'diagonal'` | Gradient direction |
+| `duration` | `number` | `8` | Animation cycle in seconds |
+| `blur` | `number` | `0` | Blur amount in pixels |
+| `glow` | `boolean` | `false` | Enable glow effect |
+| `glowIntensity` | `number` | `20` | Glow blur radius |
+| `variant` | `'organic' \| 'smooth' \| 'spiky' \| 'wave'` | `'organic'` | Shape style |
+
+## Creative Tips
+
+### Background Composition
+
+```tsx
+// Multiple blobs with different positions and opacities
+<div className="relative overflow-hidden">
+  <div className="absolute -top-20 -left-20 opacity-40">
+    <MorphBlob size={400} gradientColors={['#3B82F6', '#8B5CF6']} blur={3} />
+  </div>
+  <div className="absolute -bottom-20 -right-20 opacity-40">
+    <MorphBlob size={400} gradientColors={['#EC4899', '#F97316']} blur={3} />
+  </div>
+  {/* Your content */}
+</div>
+```
+
+### Performance
+
+- Use `blur` sparingly as it can impact performance
+- Larger `size` values may slow down animations
+- Consider reducing `particleCount` on mobile devices
+
+## Full Code
+
+<ComponentCodePreview name='morph-blob' hasReTrigger isFitheight />

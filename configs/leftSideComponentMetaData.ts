@@ -9,12 +9,17 @@ export const basicComponents = [
     new: true
   },
   {
-    href: '/components/magnetic-button',
+    href: '/components/particle-button',
     name: 'Particle Burst Button'
   },
   {
     href: '/components/clip-path',
     name: 'Clip Path',
+  },
+  {
+    href: '/components/morph-blob',
+    name: 'Morph Blob',
+    new: true
   },
   {
     href: '/components/flip-card',
