@@ -110,5 +110,14 @@
       "lucide-react"
     ],
     "registryDependencies": []
+  },
+  {
+    "name": "morph-blob",
+    "type": "registry:ui",
+    "description": "Liquid SVG blobs that continuously morph and flow with gradient colors and glow effects.",
+    "dependencies": [
+      "framer-motion"
+    ],
+    "registryDependencies": []
   }
 ]

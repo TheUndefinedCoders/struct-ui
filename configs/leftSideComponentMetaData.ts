@@ -17,6 +17,11 @@ export const basicComponents = [
     name: 'Clip Path',
   },
   {
+    href: '/components/morph-blob',
+    name: 'Morph Blob',
+    new: true
+  },
+  {
     href: '/components/flip-card',
     name: 'Flip Card',
     component: 'flip-card',
