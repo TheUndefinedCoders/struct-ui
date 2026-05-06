@@ -13,6 +13,11 @@ export const basicComponents = [
     name: 'Particle Burst Button'
   },
   {
+    href: '/components/text-typing',
+    name: 'Text Typing',
+    new: true
+  },
+  {
     href: '/components/clip-path',
     name: 'Clip Path',
   },
