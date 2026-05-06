@@ -29,6 +29,7 @@ const registryFileMap = {
   'particle-button': ['registry/components/particle-button/particle-button.tsx'],
   'morph-blob': ['registry/components/morph-blob/morph-blob.tsx'],
   'text-typing': ['registry/components/text-typing/text-typing.tsx'],
+  'terminal': ['registry/components/terminal/terminal.tsx'],
 };
 
 const registryTargetMap = {
@@ -47,6 +48,7 @@ const registryTargetMap = {
   'particle-button': ['components/ui/particle-button.tsx'],
   'morph-blob': ['components/ui/morph-blob.tsx'],
   'text-typing': ['components/ui/text-typing.tsx'],
+  'terminal': ['components/ui/terminal.tsx'],
 };
 
 const registry = [
@@ -152,6 +154,13 @@ const registry = [
     name: 'text-typing',
     type: 'registry:ui',
     description: 'Smooth text typing animation that cycles through texts with typewriter effect and customizable cursor.',
+    dependencies: ['framer-motion'],
+    registryDependencies: [],
+  },
+  {
+    name: 'terminal',
+    type: 'registry:ui',
+    description: 'A customizable terminal component with typing animation, multiple themes (macOS, Windows, Linux), and support for various output types.',
     dependencies: ['framer-motion'],
     registryDependencies: [],
   },

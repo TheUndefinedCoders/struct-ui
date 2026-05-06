@@ -128,5 +128,14 @@
       "framer-motion"
     ],
     "registryDependencies": []
+  },
+  {
+    "name": "terminal",
+    "type": "registry:ui",
+    "description": "A customizable terminal component with typing animation, multiple themes (macOS, Windows, Linux), and support for various output types.",
+    "dependencies": [
+      "framer-motion"
+    ],
+    "registryDependencies": []
   }
 ]
