@@ -196,6 +196,83 @@
       "new": true
     },
     {
+      "name": "3D Tilt Card",
+      "componentArray": [
+        {
+          "componentName": "tilt-card",
+          "filesrc": "components/tilt-card/tilt-card.tsx",
+          "iframeSrc": "live-components/tilt-card",
+          "parentlink": "tilt-card",
+          "parentName": "3D Tilt Card"
+        },
+        {
+          "componentName": "tilt-card-default",
+          "filesrc": "components/tilt-card/tilt-card-default.tsx",
+          "iframeSrc": "live-components/tilt-card-default",
+          "parentlink": "tilt-card",
+          "parentName": "3D Tilt Card"
+        },
+        {
+          "componentName": "tilt-card-glare",
+          "filesrc": "components/tilt-card/tilt-card-glare.tsx",
+          "iframeSrc": "live-components/tilt-card-glare",
+          "parentlink": "tilt-card",
+          "parentName": "3D Tilt Card"
+        },
+        {
+          "componentName": "tilt-card-glow",
+          "filesrc": "components/tilt-card/tilt-card-glow.tsx",
+          "iframeSrc": "live-components/tilt-card-glow",
+          "parentlink": "tilt-card",
+          "parentName": "3D Tilt Card"
+        },
+        {
+          "componentName": "tilt-card-intensity",
+          "filesrc": "components/tilt-card/tilt-card-intensity.tsx",
+          "iframeSrc": "live-components/tilt-card-intensity",
+          "parentlink": "tilt-card",
+          "parentName": "3D Tilt Card"
+        },
+        {
+          "componentName": "tilt-card-profile",
+          "filesrc": "components/tilt-card/tilt-card-profile.tsx",
+          "iframeSrc": "live-components/tilt-card-profile",
+          "parentlink": "tilt-card",
+          "parentName": "3D Tilt Card"
+        },
+        {
+          "componentName": "tilt-card-product",
+          "filesrc": "components/tilt-card/tilt-card-product.tsx",
+          "iframeSrc": "live-components/tilt-card-product",
+          "parentlink": "tilt-card",
+          "parentName": "3D Tilt Card"
+        },
+        {
+          "componentName": "tilt-card-features",
+          "filesrc": "components/tilt-card/tilt-card-features.tsx",
+          "iframeSrc": "live-components/tilt-card-features",
+          "parentlink": "tilt-card",
+          "parentName": "3D Tilt Card"
+        },
+        {
+          "componentName": "tilt-card-image",
+          "filesrc": "components/tilt-card/tilt-card-image.tsx",
+          "iframeSrc": "live-components/tilt-card-image",
+          "parentlink": "tilt-card",
+          "parentName": "3D Tilt Card"
+        },
+        {
+          "componentName": "tilt-card-grid",
+          "filesrc": "components/tilt-card/tilt-card-grid.tsx",
+          "iframeSrc": "live-components/tilt-card-grid",
+          "parentlink": "tilt-card",
+          "parentName": "3D Tilt Card"
+        }
+      ],
+      "type": "tilt-card",
+      "new": true
+    },
+    {
       "name": "Clip-Path",
       "componentArray": [
         {
