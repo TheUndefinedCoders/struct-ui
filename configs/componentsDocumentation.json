@@ -273,6 +273,83 @@
       "new": true
     },
     {
+      "name": "Particle Button",
+      "componentArray": [
+        {
+          "componentName": "particle-button",
+          "filesrc": "components/particle-button/particle-button.tsx",
+          "iframeSrc": "live-components/particle-button",
+          "parentlink": "particle-button",
+          "parentName": "Particle Button"
+        },
+        {
+          "componentName": "particle-button-default",
+          "filesrc": "components/particle-button/particle-button-default.tsx",
+          "iframeSrc": "live-components/particle-button-default",
+          "parentlink": "particle-button",
+          "parentName": "Particle Button"
+        },
+        {
+          "componentName": "particle-button-variants",
+          "filesrc": "components/particle-button/particle-button-variants.tsx",
+          "iframeSrc": "live-components/particle-button-variants",
+          "parentlink": "particle-button",
+          "parentName": "Particle Button"
+        },
+        {
+          "componentName": "particle-button-shapes",
+          "filesrc": "components/particle-button/particle-button-shapes.tsx",
+          "iframeSrc": "live-components/particle-button-shapes",
+          "parentlink": "particle-button",
+          "parentName": "Particle Button"
+        },
+        {
+          "componentName": "particle-button-directions",
+          "filesrc": "components/particle-button/particle-button-directions.tsx",
+          "iframeSrc": "live-components/particle-button-directions",
+          "parentlink": "particle-button",
+          "parentName": "Particle Button"
+        },
+        {
+          "componentName": "particle-button-confetti",
+          "filesrc": "components/particle-button/particle-button-confetti.tsx",
+          "iframeSrc": "live-components/particle-button-confetti",
+          "parentlink": "particle-button",
+          "parentName": "Particle Button"
+        },
+        {
+          "componentName": "particle-button-like",
+          "filesrc": "components/particle-button/particle-button-like.tsx",
+          "iframeSrc": "live-components/particle-button-like",
+          "parentlink": "particle-button",
+          "parentName": "Particle Button"
+        },
+        {
+          "componentName": "particle-button-success",
+          "filesrc": "components/particle-button/particle-button-success.tsx",
+          "iframeSrc": "live-components/particle-button-success",
+          "parentlink": "particle-button",
+          "parentName": "Particle Button"
+        },
+        {
+          "componentName": "particle-button-gaming",
+          "filesrc": "components/particle-button/particle-button-gaming.tsx",
+          "iframeSrc": "live-components/particle-button-gaming",
+          "parentlink": "particle-button",
+          "parentName": "Particle Button"
+        },
+        {
+          "componentName": "particle-button-showcase",
+          "filesrc": "components/particle-button/particle-button-showcase.tsx",
+          "iframeSrc": "live-components/particle-button-showcase",
+          "parentlink": "particle-button",
+          "parentName": "Particle Button"
+        }
+      ],
+      "type": "particle-button",
+      "new": true
+    },
+    {
       "name": "Clip-Path",
       "componentArray": [
         {

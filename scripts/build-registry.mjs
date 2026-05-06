@@ -26,6 +26,7 @@ const registryFileMap = {
   'magnetic-button': ['registry/components/magnetic-button/magnetic-button.tsx'],
   'flip-card': ['registry/components/flip-card/flip-card.tsx'],
   'tilt-card': ['registry/components/tilt-card/tilt-card.tsx'],
+  'particle-button': ['registry/components/particle-button/particle-button.tsx'],
 };
 
 const registryTargetMap = {
@@ -41,6 +42,7 @@ const registryTargetMap = {
   'magnetic-button': ['components/ui/magnetic-button.tsx'],
   'flip-card': ['components/ui/flip-card.tsx'],
   'tilt-card': ['components/ui/tilt-card.tsx'],
+  'particle-button': ['components/ui/particle-button.tsx'],
 };
 
 const registry = [
@@ -126,6 +128,13 @@ const registry = [
     type: 'registry:ui',
     description: 'A 3D tilt card that rotates based on mouse position with glare and glow effects.',
     dependencies: ['framer-motion'],
+    registryDependencies: [],
+  },
+  {
+    name: 'particle-button',
+    type: 'registry:ui',
+    description: 'A button that explodes into colorful particles on click with customizable shapes and effects.',
+    dependencies: ['framer-motion', 'lucide-react'],
     registryDependencies: [],
   },
 ];

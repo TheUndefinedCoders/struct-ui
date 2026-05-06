@@ -1,0 +1,170 @@
+export const metadata = {
+  title: "Particle Burst Button - Interactive Click Animation Component",
+  description: "A stunning button component that explodes into colorful particles on click. Features customizable particle shapes (circles, squares, stars, hearts), multiple burst directions, various style variants, and smooth animations. Perfect for like buttons, CTAs, and gamified interactions.",
+  keywords: [
+    "Particle Button",
+    "Confetti Button",
+    "Click Animation",
+    "Burst Effect",
+    "Interactive Button",
+    "React Button",
+    "Framer Motion",
+    "Like Button",
+    "Celebration Effect",
+    "Gaming UI",
+  ],
+  authors: [{ name: "Numan", url: "https://numan-dev.web.app" }],
+  creator: "@numan-dev",
+  publisher: "Struct-UI",
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1
+    }
+  },
+  category: "technology"
+};
+
+## Installation
+
+```bash
+npx shadcn@latest add "https://ui-struct.vercel.app/r/particle-button"
+```
+
+## Usage
+
+```tsx
+import ParticleButton from "@/components/ui/particle-button";
+
+<ParticleButton>Click Me ✨</ParticleButton>
+```
+
+## Preview
+
+Click the button to see particles burst out!
+
+<ComponentCodePreview name='particle-button-default' hasReTrigger isFitheight />
+
+## Button Variants
+
+Five built-in style variants to match your design.
+
+<ComponentCodePreview name='particle-button-variants' hasReTrigger isFitheight />
+
+| Variant | Description |
+|---------|-------------|
+| `default` | Solid neutral colors |
+| `gradient` | Purple to orange gradient |
+| `outline` | Border only, fills on hover |
+| `neon` | Glowing cyan effect |
+| `glass` | Frosted glass appearance |
+
+## Particle Shapes
+
+Customize particle shapes for different vibes.
+
+<ComponentCodePreview name='particle-button-shapes' hasReTrigger isFitheight />
+
+| Shape | Best For |
+|-------|----------|
+| `circle` | Generic, clean effects |
+| `square` | Pixel art, retro style |
+| `star` | Celebrations, achievements |
+| `heart` | Like buttons, social interactions |
+| `mixed` | Party, confetti effects |
+
+## Burst Directions
+
+Control how particles spread when clicked.
+
+<ComponentCodePreview name='particle-button-directions' hasReTrigger isFitheight />
+
+| Direction | Effect |
+|-----------|--------|
+| `radial` | Even distribution around button |
+| `explosion` | Random chaotic burst |
+| `upward` | Fountain/firework effect |
+
+## Confetti Celebration
+
+Maximum party mode with mixed shapes and colors!
+
+<ComponentCodePreview name='particle-button-confetti' hasReTrigger isFitheight />
+
+## Like Button
+
+Perfect for social media interactions.
+
+<ComponentCodePreview name='particle-button-like' hasReTrigger isFitheight />
+
+## E-commerce & Subscribe
+
+Add to cart and newsletter subscription buttons.
+
+<ComponentCodePreview name='particle-button-success' hasReTrigger isFitheight />
+
+## Gaming Style
+
+Epic buttons for gaming interfaces.
+
+<ComponentCodePreview name='particle-button-gaming' hasReTrigger isFitheight />
+
+## Button Showcase
+
+Collection of themed particle buttons.
+
+<ComponentCodePreview name='particle-button-showcase' hasReTrigger isFitheight />
+
+## Props
+
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| `children` | `ReactNode` | - | Button content |
+| `className` | `string` | `''` | Additional CSS classes |
+| `particleCount` | `number` | `30` | Number of particles |
+| `particleSize` | `[number, number]` | `[4, 10]` | Min/max particle size |
+| `particleColors` | `string[]` | Rainbow colors | Array of particle colors |
+| `particleShape` | `'circle' \| 'square' \| 'star' \| 'heart' \| 'mixed'` | `'mixed'` | Particle shape |
+| `burstDirection` | `'radial' \| 'upward' \| 'explosion'` | `'radial'` | How particles spread |
+| `duration` | `number` | `800` | Animation duration (ms) |
+| `spread` | `number` | `120` | How far particles travel |
+| `variant` | `'default' \| 'gradient' \| 'outline' \| 'neon' \| 'glass'` | `'default'` | Button style |
+| `onClick` | `() => void` | - | Click handler |
+| `disabled` | `boolean` | `false` | Disable button |
+
+## Custom Colors
+
+Create themed particle effects:
+
+```tsx
+// Ocean theme
+<ParticleButton
+  particleColors={['#0EA5E9', '#06B6D4', '#22D3EE', '#67E8F9']}
+  particleShape="circle"
+>
+  Ocean Wave
+</ParticleButton>
+
+// Fire theme
+<ParticleButton
+  particleColors={['#EF4444', '#F97316', '#FBBF24', '#FCD34D']}
+  particleShape="star"
+>
+  Fire Burst
+</ParticleButton>
+```
+
+## Performance Tips
+
+1. Keep `particleCount` under 50 for smooth animations
+2. Lower `duration` for snappier feedback
+3. Use `spread` wisely - larger values need more particles
+
+## Full Code
+
+<ComponentCodePreview name='particle-button' hasReTrigger isFitheight isDefaultCodeTab={true} />

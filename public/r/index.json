@@ -100,5 +100,15 @@
       "framer-motion"
     ],
     "registryDependencies": []
+  },
+  {
+    "name": "particle-button",
+    "type": "registry:ui",
+    "description": "A button that explodes into colorful particles on click with customizable shapes and effects.",
+    "dependencies": [
+      "framer-motion",
+      "lucide-react"
+    ],
+    "registryDependencies": []
   }
 ]
