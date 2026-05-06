@@ -427,6 +427,76 @@
       "new": true
     },
     {
+      "name": "Terminal",
+      "componentArray": [
+        {
+          "componentName": "terminal",
+          "filesrc": "components/terminal/terminal.tsx",
+          "iframeSrc": "live-components/terminal",
+          "parentlink": "terminal",
+          "parentName": "Terminal"
+        },
+        {
+          "componentName": "terminal-default",
+          "filesrc": "components/terminal/terminal-default.tsx",
+          "iframeSrc": "live-components/terminal-default",
+          "parentlink": "terminal",
+          "parentName": "Terminal"
+        },
+        {
+          "componentName": "terminal-themes",
+          "filesrc": "components/terminal/terminal-themes.tsx",
+          "iframeSrc": "live-components/terminal-themes",
+          "parentlink": "terminal",
+          "parentName": "Terminal"
+        },
+        {
+          "componentName": "terminal-multiline",
+          "filesrc": "components/terminal/terminal-multiline.tsx",
+          "iframeSrc": "live-components/terminal-multiline",
+          "parentlink": "terminal",
+          "parentName": "Terminal"
+        },
+        {
+          "componentName": "terminal-npm",
+          "filesrc": "components/terminal/terminal-npm.tsx",
+          "iframeSrc": "live-components/terminal-npm",
+          "parentlink": "terminal",
+          "parentName": "Terminal"
+        },
+        {
+          "componentName": "terminal-error",
+          "filesrc": "components/terminal/terminal-error.tsx",
+          "iframeSrc": "live-components/terminal-error",
+          "parentlink": "terminal",
+          "parentName": "Terminal"
+        },
+        {
+          "componentName": "terminal-loop",
+          "filesrc": "components/terminal/terminal-loop.tsx",
+          "iframeSrc": "live-components/terminal-loop",
+          "parentlink": "terminal",
+          "parentName": "Terminal"
+        },
+        {
+          "componentName": "terminal-linenumbers",
+          "filesrc": "components/terminal/terminal-linenumbers.tsx",
+          "iframeSrc": "live-components/terminal-linenumbers",
+          "parentlink": "terminal",
+          "parentName": "Terminal"
+        },
+        {
+          "componentName": "terminal-deploy",
+          "filesrc": "components/terminal/terminal-deploy.tsx",
+          "iframeSrc": "live-components/terminal-deploy",
+          "parentlink": "terminal",
+          "parentName": "Terminal"
+        }
+      ],
+      "type": "terminal",
+      "new": true
+    },
+    {
       "name": "Text Typing",
       "componentArray": [
         {

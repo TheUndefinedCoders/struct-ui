@@ -18,6 +18,11 @@ export const basicComponents = [
     new: true
   },
   {
+    href: '/components/terminal',
+    name: 'Terminal',
+    new: true
+  },
+  {
     href: '/components/clip-path',
     name: 'Clip Path',
   },

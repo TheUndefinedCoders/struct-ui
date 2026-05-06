@@ -14,6 +14,13 @@ export const registryFileMap: Record<string, string[]> = {
   'horizontal-scroll': [
     'registry/components/scroll-animation/framer-horizontal-scroll.tsx',
   ],
+  'magnetic-button': ['registry/components/magnetic-button/magnetic-button.tsx'],
+  'flip-card': ['registry/components/flip-card/flip-card.tsx'],
+  'tilt-card': ['registry/components/tilt-card/tilt-card.tsx'],
+  'particle-button': ['registry/components/particle-button/particle-button.tsx'],
+  'morph-blob': ['registry/components/morph-blob/morph-blob.tsx'],
+  'text-typing': ['registry/components/text-typing/text-typing.tsx'],
+  'terminal': ['registry/components/terminal/terminal.tsx'],
 };
 
 /**
@@ -29,4 +36,11 @@ export const registryTargetMap: Record<string, string[]> = {
   'blur-vignette': ['components/ui/blur-vignette.tsx'],
   'motion-number': ['components/ui/motion-number.tsx'],
   'horizontal-scroll': ['components/ui/horizontal-scroll.tsx'],
+  'magnetic-button': ['components/ui/magnetic-button.tsx'],
+  'flip-card': ['components/ui/flip-card.tsx'],
+  'tilt-card': ['components/ui/tilt-card.tsx'],
+  'particle-button': ['components/ui/particle-button.tsx'],
+  'morph-blob': ['components/ui/morph-blob.tsx'],
+  'text-typing': ['components/ui/text-typing.tsx'],
+  'terminal': ['components/ui/terminal.tsx'],
 };

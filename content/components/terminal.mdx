@@ -1,0 +1,146 @@
+export const metadata = {
+  title: "Terminal - Animated Terminal Component",
+  description: "A customizable terminal component with typing animation, multiple themes (macOS, Windows, Linux), and support for various output types like commands, success, error, and info messages.",
+  keywords: [
+    "Terminal",
+    "Terminal React",
+    "CLI Component",
+    "Code Terminal",
+    "Typing Animation",
+    "Terminal UI",
+    "macOS Terminal",
+    "Command Line",
+  ],
+  authors: [{ name: "Numan", url: "https://numan-dev.web.app" }],
+  creator: "@numan-dev",
+  publisher: "Struct-UI",
+  robots: {
+    index: true,
+    follow: true,
+  },
+};
+
+## Installation
+
+```bash
+npx shadcn@latest add "https://ui-struct.vercel.app/r/terminal"
+```
+
+## Basic Usage
+
+```tsx
+import Terminal from '@/components/ui/terminal';
+
+export default function MyComponent() {
+  return (
+    <Terminal
+      lines={[
+        { type: 'command', content: 'npm install struct-ui', prompt: '~' },
+        { type: 'output', content: 'Installing dependencies...', delay: 500 },
+        { type: 'success', content: '✓ Installed successfully', delay: 800 },
+      ]}
+      title="Terminal"
+      theme="macos"
+    />
+  );
+}
+```
+
+## Preview
+
+<ComponentCodePreview name='terminal-default' hasReTrigger isFitheight />
+
+## Themes
+
+The terminal supports multiple OS themes - macOS, Windows, Linux, and a minimal theme.
+
+<ComponentCodePreview name='terminal-themes' hasReTrigger isFitheight />
+
+## Multi-line Commands
+
+Perfect for showcasing git workflows, file operations, or any multi-step commands.
+
+<ComponentCodePreview name='terminal-multiline' hasReTrigger isFitheight />
+
+## NPM Installation
+
+Show package installation with detailed output.
+
+<ComponentCodePreview name='terminal-npm' hasReTrigger isFitheight />
+
+## Error Handling
+
+Demonstrate build errors and their solutions.
+
+<ComponentCodePreview name='terminal-error' hasReTrigger isFitheight />
+
+## Loop Animation
+
+Perfect for hero sections or showcasing installation commands.
+
+<ComponentCodePreview name='terminal-loop' hasReTrigger isFitheight />
+
+## Line Numbers
+
+Enable line numbers for code output or file content display.
+
+<ComponentCodePreview name='terminal-linenumbers' hasReTrigger isFitheight />
+
+## Deployment Demo
+
+Show deployment workflows with progress updates.
+
+<ComponentCodePreview name='terminal-deploy' hasReTrigger isFitheight />
+
+## Props
+
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| `lines` | `TerminalLine[]` | Default sample lines | Array of terminal lines to display |
+| `title` | `string` | `'Terminal'` | Title shown in the terminal header |
+| `theme` | `'macos' \| 'windows' \| 'linux' \| 'minimal'` | `'macos'` | Terminal theme/style |
+| `typingSpeed` | `number` | `50` | Typing speed in milliseconds per character |
+| `showLineNumbers` | `boolean` | `false` | Show line numbers on the left |
+| `autoScroll` | `boolean` | `true` | Auto-scroll to bottom as content appears |
+| `loop` | `boolean` | `false` | Loop the animation when complete |
+| `startDelay` | `number` | `500` | Delay before typing starts (ms) |
+| `height` | `string` | `'auto'` | Height of the terminal content area |
+| `className` | `string` | `''` | Additional CSS classes |
+
+## TerminalLine Interface
+
+```typescript
+interface TerminalLine {
+  type: 'command' | 'output' | 'error' | 'success' | 'info';
+  content: string;
+  prompt?: string;  // Directory shown before command (e.g., '~', '~/project')
+  delay?: number;   // Delay before this line appears (ms)
+}
+```
+
+## Line Types
+
+| Type | Description | Color |
+|------|-------------|-------|
+| `command` | User input command (with typing animation) | White/Default |
+| `output` | Standard output | Gray |
+| `error` | Error messages | Red |
+| `success` | Success messages | Green |
+| `info` | Informational messages | Blue |
+
+## Themes Overview
+
+| Theme | Style | Use Case |
+|-------|-------|----------|
+| `macos` | macOS-style with traffic light buttons | Default, modern look |
+| `windows` | Windows Command Prompt style | Windows-focused demos |
+| `linux` | Ubuntu-inspired purple theme | Linux/Ubuntu content |
+| `minimal` | Clean, borderless dark theme | Minimalist designs |
+
+## Tips
+
+- Use `delay` on lines to create realistic timing between commands and their output
+- Set `loop={true}` for hero section animations
+- Combine with `startDelay` to sync with page animations
+- Use `showLineNumbers` when displaying file contents
+- The `prompt` prop customizes the directory shown before commands (default: `~`)
