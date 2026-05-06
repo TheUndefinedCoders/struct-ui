@@ -98,11 +98,6 @@ export default function OrbitingCirclesShowcase() {
         rings={rings}
         centerContent={
           <div className="flex flex-col items-center gap-2">
-            <div className="w-24 h-24 rounded-3xl bg-gradient-to-br from-violet-600 via-purple-600 to-indigo-600 flex items-center justify-center shadow-2xl shadow-violet-500/40">
-              <svg className="w-12 h-12 text-white" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
-              </svg>
-            </div>
             <span className="text-white font-semibold text-lg">Integrations</span>
           </div>
         }

@@ -1,7 +1,15 @@
 'use client';
 import { useState, useRef, useEffect, ReactNode } from 'react';
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from '@/components/ui/tooltip';
 
 interface OrbitItem {
+  id?: string;
+  title?: string;
   icon: ReactNode;
   className?: string;
 }
@@ -28,8 +36,8 @@ const defaultRings: OrbitRing[] = [
     radius: 80,
     duration: 20,
     items: [
-      { icon: <div className="w-8 h-8 rounded-full bg-white/20" /> },
-      { icon: <div className="w-8 h-8 rounded-full bg-white/20" /> },
+      { id: 'item-1', title: 'Item 1', icon: <div className="w-8 h-8 rounded-full bg-white/20" /> },
+      { id: 'item-2', title: 'Item 2', icon: <div className="w-8 h-8 rounded-full bg-white/20" /> },
     ],
   },
 ];
@@ -64,12 +72,13 @@ export default function OrbitingCircles({
   const maxRadius = Math.max(...safeRings.map((r) => r.radius));
 
   return (
-    <div
-      ref={containerRef}
-      className={`relative ${className}`}
-      style={{ width: maxRadius * 2 + 80, height: maxRadius * 2 + 80 }}
-      tabIndex={0}
-    >
+    <TooltipProvider delayDuration={100}>
+      <div
+        ref={containerRef}
+        className={`relative ${className}`}
+        style={{ width: maxRadius * 2 + 80, height: maxRadius * 2 + 80 }}
+        tabIndex={0}
+      >
       {/* Center Content */}
       {centerContent && (
         <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10">
@@ -114,9 +123,23 @@ export default function OrbitingCircles({
                 const x = Math.cos(radian) * radius;
                 const y = Math.sin(radian) * radius;
 
+                const iconContent = (
+                  <div
+                    className={`flex items-center justify-center transition-transform duration-300 cursor-pointer ${
+                      isThisRingPaused ? 'scale-110' : ''
+                    } ${item.className || ''}`}
+                    style={{
+                      animation: `orbit-spin ${duration}s linear infinite ${reverse ? 'normal' : 'reverse'}`,
+                      animationPlayState: isThisRingPaused ? 'paused' : 'running',
+                    }}
+                  >
+                    {item.icon}
+                  </div>
+                );
+
                 return (
                   <div
-                    key={itemIndex}
+                    key={item.id || itemIndex}
                     className="absolute left-1/2 top-1/2 pointer-events-auto"
                     style={{
                       transform: `translate(-50%, -50%) translate(${x}px, ${y}px)`,
@@ -124,18 +147,16 @@ export default function OrbitingCircles({
                     onMouseEnter={() => pauseOnHover && setPausedRingIndex(ringIndex)}
                     onMouseLeave={() => pauseOnHover && setPausedRingIndex(null)}
                   >
-                    {/* Counter-rotate to keep icons upright */}
-                    <div
-                      className={`flex items-center justify-center transition-transform duration-300 ${
-                        isThisRingPaused ? 'scale-110' : ''
-                      } ${item.className || ''}`}
-                      style={{
-                        animation: `orbit-spin ${duration}s linear infinite ${reverse ? 'normal' : 'reverse'}`,
-                        animationPlayState: isThisRingPaused ? 'paused' : 'running',
-                      }}
-                    >
-                      {item.icon}
-                    </div>
+                    {item.title ? (
+                      <Tooltip>
+                        <TooltipTrigger asChild>{iconContent}</TooltipTrigger>
+                        <TooltipContent side="top">
+                          <p>{item.title}</p>
+                        </TooltipContent>
+                      </Tooltip>
+                    ) : (
+                      iconContent
+                    )}
                   </div>
                 );
               })}
@@ -144,6 +165,7 @@ export default function OrbitingCircles({
         );
       })}
 
-    </div>
+      </div>
+    </TooltipProvider>
   );
 }

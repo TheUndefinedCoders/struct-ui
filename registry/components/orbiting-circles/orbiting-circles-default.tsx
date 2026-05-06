@@ -10,6 +10,8 @@ export default function OrbitingCirclesDefault() {
       reverse: false,
       items: [
         {
+          id: 'google-inner',
+          title: 'Google',
           icon: (
             <div className="w-10 h-10 rounded-xl bg-white p-1.5 shadow-lg">
               <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/google/google-original.svg" alt="Google" width={28} height={28} />
@@ -17,6 +19,8 @@ export default function OrbitingCirclesDefault() {
           ),
         },
         {
+          id: 'whatsapp-inner',
+          title: 'WhatsApp',
           icon: (
             <div className="w-10 h-10 rounded-xl bg-[#25D366] p-2 shadow-lg">
               <svg viewBox="0 0 24 24" fill="white">
@@ -26,6 +30,8 @@ export default function OrbitingCirclesDefault() {
           ),
         },
         {
+          id: 'openai-inner',
+          title: 'OpenAI',
           icon: (
             <div className="w-10 h-10 rounded-xl bg-neutral-900 p-2 shadow-lg border border-neutral-700">
               <svg viewBox="0 0 24 24" fill="white">
@@ -35,6 +41,8 @@ export default function OrbitingCirclesDefault() {
           ),
         },
         {
+          id: 'notion-inner',
+          title: 'Notion',
           icon: (
             <div className="w-10 h-10 rounded-xl bg-white p-1 shadow-lg">
               <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/notion/notion-original.svg" alt="Notion" width={32} height={32} />
@@ -49,6 +57,8 @@ export default function OrbitingCirclesDefault() {
       reverse: true,
       items: [
         {
+          id: 'google-drive',
+          title: 'Google Drive',
           icon: (
             <div className="w-12 h-12 rounded-xl bg-white p-1.5 shadow-lg">
               <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/google/google-original.svg" alt="Google Drive" width={36} height={36} />
@@ -56,6 +66,8 @@ export default function OrbitingCirclesDefault() {
           ),
         },
         {
+          id: 'whatsapp-outer',
+          title: 'WhatsApp',
           icon: (
             <div className="w-12 h-12 rounded-xl bg-[#25D366] p-2.5 shadow-lg">
               <svg viewBox="0 0 24 24" fill="white">
@@ -65,6 +77,8 @@ export default function OrbitingCirclesDefault() {
           ),
         },
         {
+          id: 'openai-outer',
+          title: 'ChatGPT',
           icon: (
             <div className="w-12 h-12 rounded-xl bg-neutral-900 p-2.5 shadow-lg border border-neutral-700">
               <svg viewBox="0 0 24 24" fill="white">
@@ -74,6 +88,8 @@ export default function OrbitingCirclesDefault() {
           ),
         },
         {
+          id: 'notion-outer',
+          title: 'Notion',
           icon: (
             <div className="w-12 h-12 rounded-xl bg-white p-1.5 shadow-lg">
               <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/notion/notion-original.svg" alt="Notion" width={36} height={36} />

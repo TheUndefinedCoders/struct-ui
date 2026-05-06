@@ -10,6 +10,8 @@ export default function OrbitingCirclesTech() {
       reverse: false,
       items: [
         {
+          id: 'react',
+          title: 'React',
           icon: (
             <div className="w-10 h-10 rounded-full bg-white p-2 shadow-lg">
               <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React" width={24} height={24} />
@@ -17,6 +19,8 @@ export default function OrbitingCirclesTech() {
           ),
         },
         {
+          id: 'vue',
+          title: 'Vue.js',
           icon: (
             <div className="w-10 h-10 rounded-full bg-white p-2 shadow-lg">
               <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg" alt="Vue" width={24} height={24} />
@@ -24,6 +28,8 @@ export default function OrbitingCirclesTech() {
           ),
         },
         {
+          id: 'angular',
+          title: 'Angular',
           icon: (
             <div className="w-10 h-10 rounded-full bg-white p-2 shadow-lg">
               <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg" alt="Angular" width={24} height={24} />
@@ -38,6 +44,8 @@ export default function OrbitingCirclesTech() {
       reverse: true,
       items: [
         {
+          id: 'nextjs',
+          title: 'Next.js',
           icon: (
             <div className="w-12 h-12 rounded-full bg-black p-2.5 shadow-lg border border-neutral-700">
               <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" alt="Next.js" width={28} height={28} className="invert" />
@@ -45,6 +53,8 @@ export default function OrbitingCirclesTech() {
           ),
         },
         {
+          id: 'typescript',
+          title: 'TypeScript',
           icon: (
             <div className="w-12 h-12 rounded-full bg-white p-2.5 shadow-lg">
               <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="TypeScript" width={28} height={28} />
@@ -52,6 +62,8 @@ export default function OrbitingCirclesTech() {
           ),
         },
         {
+          id: 'nodejs',
+          title: 'Node.js',
           icon: (
             <div className="w-12 h-12 rounded-full bg-white p-2.5 shadow-lg">
               <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js" width={28} height={28} />
@@ -59,6 +71,8 @@ export default function OrbitingCirclesTech() {
           ),
         },
         {
+          id: 'tailwind',
+          title: 'Tailwind CSS',
           icon: (
             <div className="w-12 h-12 rounded-full bg-[#06B6D4] p-2.5 shadow-lg">
               <svg viewBox="0 0 24 24" fill="white">
@@ -75,6 +89,8 @@ export default function OrbitingCirclesTech() {
       reverse: false,
       items: [
         {
+          id: 'docker',
+          title: 'Docker',
           icon: (
             <div className="w-11 h-11 rounded-full bg-white p-2 shadow-lg">
               <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker" width={28} height={28} />
@@ -82,6 +98,8 @@ export default function OrbitingCirclesTech() {
           ),
         },
         {
+          id: 'aws',
+          title: 'AWS',
           icon: (
             <div className="w-11 h-11 rounded-full bg-[#FF9900] p-2 shadow-lg">
               <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-plain-wordmark.svg" alt="AWS" width={28} height={28} />
@@ -89,6 +107,8 @@ export default function OrbitingCirclesTech() {
           ),
         },
         {
+          id: 'github',
+          title: 'GitHub',
           icon: (
             <div className="w-11 h-11 rounded-full bg-white p-2 shadow-lg">
               <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" width={28} height={28} />
@@ -96,6 +116,8 @@ export default function OrbitingCirclesTech() {
           ),
         },
         {
+          id: 'mongodb',
+          title: 'MongoDB',
           icon: (
             <div className="w-11 h-11 rounded-full bg-white p-2 shadow-lg">
               <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="MongoDB" width={28} height={28} />
@@ -103,6 +125,8 @@ export default function OrbitingCirclesTech() {
           ),
         },
         {
+          id: 'postgresql',
+          title: 'PostgreSQL',
           icon: (
             <div className="w-11 h-11 rounded-full bg-white p-2 shadow-lg">
               <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" alt="PostgreSQL" width={28} height={28} />
