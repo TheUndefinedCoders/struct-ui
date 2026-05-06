@@ -91,5 +91,14 @@
       "framer-motion"
     ],
     "registryDependencies": []
+  },
+  {
+    "name": "tilt-card",
+    "type": "registry:ui",
+    "description": "A 3D tilt card that rotates based on mouse position with glare and glow effects.",
+    "dependencies": [
+      "framer-motion"
+    ],
+    "registryDependencies": []
   }
 ]

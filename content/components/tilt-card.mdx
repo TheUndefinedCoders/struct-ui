@@ -1,0 +1,164 @@
+export const metadata = {
+  title: "3D Tilt Card - Interactive Perspective Card Component",
+  description: "A stunning 3D tilt card component that rotates based on mouse position, creating an immersive parallax effect. Features customizable tilt intensity, glare overlay, border glow, and smooth spring animations. Perfect for portfolios, product showcases, and interactive UI elements.",
+  keywords: [
+    "3D Tilt Card",
+    "Perspective Card",
+    "Mouse Tracking",
+    "Parallax Effect",
+    "Interactive Card",
+    "React Card",
+    "Hover Effect",
+    "Framer Motion",
+    "3D Transform",
+    "Glare Effect",
+  ],
+  authors: [{ name: "Numan", url: "https://numan-dev.web.app" }],
+  creator: "@numan-dev",
+  publisher: "Struct-UI",
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1
+    }
+  },
+  category: "technology"
+};
+
+## Installation
+
+```bash
+npx shadcn@latest add "https://ui-struct.vercel.app/r/tilt-card"
+```
+
+## Usage
+
+```tsx
+import TiltCard from "@/components/ui/tilt-card";
+
+<TiltCard className="w-80 h-96 rounded-2xl">
+  <div className="w-full h-full bg-gradient-to-br from-blue-600 to-purple-700">
+    Your content here
+  </div>
+</TiltCard>
+```
+
+## Preview
+
+Move your mouse around the card to see the 3D tilt effect.
+
+<ComponentCodePreview name='tilt-card-default' hasReTrigger isFitheight />
+
+## With Glare Effect
+
+Add a realistic light reflection that follows your cursor.
+
+<ComponentCodePreview name='tilt-card-glare' hasReTrigger isFitheight />
+
+## Border Glow
+
+Glowing border effect that activates on hover.
+
+<ComponentCodePreview name='tilt-card-glow' hasReTrigger isFitheight />
+
+## Tilt Intensity
+
+Control how dramatically the card tilts with `tiltMaxAngle`.
+
+<ComponentCodePreview name='tilt-card-intensity' hasReTrigger isFitheight />
+
+| Angle | Effect |
+|-------|--------|
+| `5°` | Subtle, barely noticeable |
+| `15°` | Normal, balanced effect |
+| `25°` | Strong, very noticeable |
+| `40°` | Extreme, dramatic effect |
+
+## Profile Card Design
+
+Beautiful profile card with social stats.
+
+<ComponentCodePreview name='tilt-card-profile' hasReTrigger isFitheight />
+
+## Product Card Design
+
+E-commerce product showcase with ratings and actions.
+
+<ComponentCodePreview name='tilt-card-product' hasReTrigger isFitheight />
+
+## Feature Cards
+
+Display features or services in an engaging way.
+
+<ComponentCodePreview name='tilt-card-features' hasReTrigger isFitheight />
+
+## Image Card
+
+Full-bleed image card with overlay content.
+
+<ComponentCodePreview name='tilt-card-image' hasReTrigger isFitheight />
+
+## Responsive Grid
+
+Fully responsive grid layout for portfolios and galleries.
+
+<ComponentCodePreview name='tilt-card-grid' hasReTrigger isFitheight />
+
+## Props
+
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| `children` | `ReactNode` | - | Card content |
+| `className` | `string` | `''` | Container CSS classes |
+| `tiltMaxAngle` | `number` | `15` | Maximum tilt angle in degrees |
+| `perspective` | `number` | `1000` | CSS perspective value |
+| `scale` | `number` | `1.02` | Scale factor on hover |
+| `speed` | `number` | `400` | Animation spring stiffness |
+| `glare` | `boolean` | `false` | Enable glare overlay effect |
+| `glareMaxOpacity` | `number` | `0.35` | Maximum glare opacity |
+| `glareColor` | `string` | `'white'` | Glare color |
+| `borderGlow` | `boolean` | `false` | Enable border glow effect |
+| `borderGlowColor` | `string` | `'rgba(255,255,255,0.5)'` | Border glow color |
+| `disabled` | `boolean` | `false` | Disable tilt effect |
+
+## Mobile Responsiveness
+
+The tilt effect works best on desktop with mouse interaction. For mobile devices:
+- The card displays normally without tilt
+- Consider using `disabled={true}` on small screens
+- All content remains fully accessible
+
+```tsx
+// Example: Disable on mobile
+const isMobile = typeof window !== 'undefined' && window.innerWidth < 768;
+
+<TiltCard disabled={isMobile}>
+  ...
+</TiltCard>
+```
+
+## Combining Effects
+
+You can combine multiple effects for richer interactions:
+
+```tsx
+<TiltCard
+  glare={true}
+  glareMaxOpacity={0.3}
+  borderGlow={true}
+  borderGlowColor="rgba(168, 85, 247, 0.5)"
+  tiltMaxAngle={12}
+  scale={1.05}
+>
+  ...
+</TiltCard>
+```
+
+## Full Code
+
+<ComponentCodePreview name='tilt-card' hasReTrigger isFitheight isDefaultCodeTab={false} />
