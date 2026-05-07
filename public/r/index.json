@@ -137,5 +137,12 @@
       "framer-motion"
     ],
     "registryDependencies": []
+  },
+  {
+    "name": "orbiting-circles",
+    "type": "registry:ui",
+    "description": "Animated orbiting circles with icons rotating in opposite directions, pause on hover, and customizable speeds.",
+    "dependencies": [],
+    "registryDependencies": []
   }
 ]

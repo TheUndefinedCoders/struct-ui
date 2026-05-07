@@ -1,0 +1,158 @@
+export const metadata = {
+  title: "Orbiting Circles - Animated Rotating Icons Component",
+  description: "A mesmerizing orbiting circles component with icons rotating in opposite directions on multiple rings. Features infinite animation, pause on hover/focus, customizable speed, and center content. Perfect for showcasing integrations, tech stacks, and social links.",
+  keywords: ["orbiting circles", "rotating icons", "orbit animation", "css animation", "integration showcase", "tech stack", "social icons", "react animation", "infinite loop"],
+  author: "Struct UI",
+};
+
+# Orbiting Circles
+
+An animated component featuring icons that orbit around a center point on multiple rings. Supports opposite rotation directions, customizable speeds, and pauses on hover for better interaction.
+
+## Installation
+
+```bash
+npx shadcn@latest add "https://ui-struct.vercel.app/r/orbiting-circles"
+```
+
+## Usage
+
+```tsx
+import OrbitingCircles from "@/components/ui/orbiting-circles";
+
+const rings = [
+  {
+    radius: 80,
+    duration: 20,
+    reverse: false,
+    items: [
+      { icon: <YourIcon /> },
+      { icon: <YourIcon /> },
+    ],
+  },
+  {
+    radius: 150,
+    duration: 30,
+    reverse: true,
+    items: [
+      { icon: <YourIcon /> },
+      { icon: <YourIcon /> },
+    ],
+  },
+];
+
+<OrbitingCircles
+  rings={rings}
+  centerContent={<CenterIcon />}
+  pauseOnHover={true}
+/>
+```
+
+## Preview
+
+Icons orbit in opposite directions and pause when you hover over them.
+
+<ComponentCodePreview name='orbiting-circles-default' hasReTrigger isFitheight />
+
+## Tech Stack
+
+Showcase your technology stack with orbiting framework and tool icons.
+
+<ComponentCodePreview name='orbiting-circles-tech' hasReTrigger isFitheight />
+
+## Social Links
+
+Display social media icons in a dynamic, attention-grabbing way.
+
+<ComponentCodePreview name='orbiting-circles-social' hasReTrigger isFitheight />
+
+## Animation Speed
+
+Control the speed of each ring independently for visual hierarchy.
+
+<ComponentCodePreview name='orbiting-circles-speed' hasReTrigger isFitheight />
+
+## Minimal Style
+
+A clean, minimal design with simple dots orbiting the center.
+
+<ComponentCodePreview name='orbiting-circles-minimal' hasReTrigger isFitheight />
+
+## Gradient Icons
+
+Beautiful gradient icons with glow effects for a modern look.
+
+<ComponentCodePreview name='orbiting-circles-gradient' hasReTrigger isFitheight />
+
+## Integration Showcase
+
+Perfect for landing pages to showcase product integrations.
+
+<ComponentCodePreview name='orbiting-circles-showcase' hasReTrigger isFitheight />
+
+## Ring Configuration
+
+Each ring in the `rings` array can be configured independently:
+
+```tsx
+const rings = [
+  {
+    radius: 80,           // Distance from center in pixels
+    duration: 20,         // Animation duration in seconds (slower = higher)
+    reverse: false,       // Rotation direction (false = clockwise)
+    initialRotation: 45,  // Starting angle in degrees
+    items: [
+      {
+        icon: <Icon />,   // Any React node
+        className: '',    // Optional additional classes
+      },
+    ],
+  },
+];
+```
+
+## Props
+
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| `rings` | `OrbitRing[]` | Required | Array of orbit ring configurations |
+| `centerContent` | `ReactNode` | `undefined` | Content to display at the center |
+| `pauseOnHover` | `boolean` | `true` | Pause animation on hover/focus |
+| `showOrbits` | `boolean` | `true` | Show orbit path circles |
+| `orbitClassName` | `string` | `""` | Additional classes for orbit paths |
+| `className` | `string` | `""` | Additional classes for container |
+
+### OrbitRing Interface
+
+```tsx
+interface OrbitRing {
+  radius: number;           // Distance from center
+  items: OrbitItem[];       // Icons/elements on this ring
+  duration?: number;        // Animation duration (default: 20s)
+  reverse?: boolean;        // Reverse direction (default: false)
+  initialRotation?: number; // Starting angle (default: 0)
+}
+
+interface OrbitItem {
+  icon: ReactNode;
+  className?: string;
+}
+```
+
+## Tips
+
+1. **Opposite Directions**: Alternate `reverse` between rings for visual interest
+2. **Speed Variation**: Inner rings faster, outer rings slower creates depth
+3. **Icon Count**: More icons on outer rings maintain visual balance
+4. **Pause on Hover**: Allows users to focus on specific icons
+5. **Center Content**: Use for logos, CTAs, or key messaging
+
+## Accessibility
+
+- Component is focusable with `tabIndex={0}`
+- Animation pauses on focus for keyboard users
+- Icons remain upright (counter-rotated) for readability
+
+## Code
+
+<ComponentCodePreview name='orbiting-circles' isCode />

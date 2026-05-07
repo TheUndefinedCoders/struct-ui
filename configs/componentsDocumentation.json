@@ -497,6 +497,69 @@
       "new": true
     },
     {
+      "name": "Orbiting Circles",
+      "componentArray": [
+        {
+          "componentName": "orbiting-circles",
+          "filesrc": "components/orbiting-circles/orbiting-circles.tsx",
+          "iframeSrc": "live-components/orbiting-circles",
+          "parentlink": "orbiting-circles",
+          "parentName": "Orbiting Circles"
+        },
+        {
+          "componentName": "orbiting-circles-default",
+          "filesrc": "components/orbiting-circles/orbiting-circles-default.tsx",
+          "iframeSrc": "live-components/orbiting-circles-default",
+          "parentlink": "orbiting-circles",
+          "parentName": "Orbiting Circles"
+        },
+        {
+          "componentName": "orbiting-circles-tech",
+          "filesrc": "components/orbiting-circles/orbiting-circles-tech.tsx",
+          "iframeSrc": "live-components/orbiting-circles-tech",
+          "parentlink": "orbiting-circles",
+          "parentName": "Orbiting Circles"
+        },
+        {
+          "componentName": "orbiting-circles-social",
+          "filesrc": "components/orbiting-circles/orbiting-circles-social.tsx",
+          "iframeSrc": "live-components/orbiting-circles-social",
+          "parentlink": "orbiting-circles",
+          "parentName": "Orbiting Circles"
+        },
+        {
+          "componentName": "orbiting-circles-speed",
+          "filesrc": "components/orbiting-circles/orbiting-circles-speed.tsx",
+          "iframeSrc": "live-components/orbiting-circles-speed",
+          "parentlink": "orbiting-circles",
+          "parentName": "Orbiting Circles"
+        },
+        {
+          "componentName": "orbiting-circles-minimal",
+          "filesrc": "components/orbiting-circles/orbiting-circles-minimal.tsx",
+          "iframeSrc": "live-components/orbiting-circles-minimal",
+          "parentlink": "orbiting-circles",
+          "parentName": "Orbiting Circles"
+        },
+        {
+          "componentName": "orbiting-circles-gradient",
+          "filesrc": "components/orbiting-circles/orbiting-circles-gradient.tsx",
+          "iframeSrc": "live-components/orbiting-circles-gradient",
+          "parentlink": "orbiting-circles",
+          "parentName": "Orbiting Circles"
+        },
+        {
+          "componentName": "orbiting-circles-showcase",
+          "filesrc": "components/orbiting-circles/orbiting-circles-showcase.tsx",
+          "iframeSrc": "live-components/orbiting-circles-showcase",
+          "parentlink": "orbiting-circles",
+          "parentName": "Orbiting Circles"
+        }
+      ],
+      "type": "orbiting-circles",
+      "new": true
+    },
+    {
       "name": "Text Typing",
       "componentArray": [
         {
