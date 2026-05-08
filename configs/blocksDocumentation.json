@@ -14,6 +14,55 @@
       "type": "demo"
     },
     {
+      "name": "Hero Sections",
+      "componentArray": [
+        {
+          "componentName": "hero-gradient",
+          "filesrc": "blocks/hero/hero-gradient.tsx",
+          "iframeSrc": "live-blocks/hero-gradient",
+          "parentlink": "hero-sections",
+          "parentName": "Hero Sections"
+        },
+        {
+          "componentName": "hero-spotlight",
+          "filesrc": "blocks/hero/hero-spotlight.tsx",
+          "iframeSrc": "live-blocks/hero-spotlight",
+          "parentlink": "hero-sections",
+          "parentName": "Hero Sections"
+        },
+        {
+          "componentName": "hero-grid",
+          "filesrc": "blocks/hero/hero-grid.tsx",
+          "iframeSrc": "live-blocks/hero-grid",
+          "parentlink": "hero-sections",
+          "parentName": "Hero Sections"
+        },
+        {
+          "componentName": "hero-particles",
+          "filesrc": "blocks/hero/hero-particles.tsx",
+          "iframeSrc": "live-blocks/hero-particles",
+          "parentlink": "hero-sections",
+          "parentName": "Hero Sections"
+        },
+        {
+          "componentName": "hero-aurora",
+          "filesrc": "blocks/hero/hero-aurora.tsx",
+          "iframeSrc": "live-blocks/hero-aurora",
+          "parentlink": "hero-sections",
+          "parentName": "Hero Sections"
+        },
+        {
+          "componentName": "hero-minimal",
+          "filesrc": "blocks/hero/hero-minimal.tsx",
+          "iframeSrc": "live-blocks/hero-minimal",
+          "parentlink": "hero-sections",
+          "parentName": "Hero Sections"
+        }
+      ],
+      "type": "hero",
+      "new": true
+    },
+    {
       "name": "Product Cards",
       "componentArray": [
         {

@@ -1,6 +1,6 @@
 import React, { Suspense } from 'react';
 import { notFound } from 'next/navigation';
-import docs from '@/configs/componentsDocumentation.json';
+import docs from '@/configs/blocksDocumentation.json';
 import dynamic from 'next/dynamic';
 
 export const dynamicParams = true;
@@ -14,48 +14,39 @@ export async function generateStaticParams() {
   return paths;
 }
 
-export default async function SectionPage({
+export default async function BlockPage({
   params,
 }: {
   params: Promise<{ componentName: string }>;
 }) {
   const { componentName } = await params;
 
-  // Find the component data based on componentName
   const component = docs.dataArray.reduce((found, category) => {
     if (found) return found;
-    // console.log(category);
-
     return category.componentArray.find(
       (comp) => comp.componentName === componentName
     );
   }, null as any);
-  // console.log(component);
-
-  // console.log(componentName);
 
   if (!component) {
     notFound();
   }
-  const isFramerScrolling = componentName === 'framerhorizontalscroll';
 
   const ComponentPreview = component?.filesrc
     ? dynamic(() => import(`../../../registry/${component.filesrc}`), {
-        loading: () => <div>Loading preview...</div>,
+        loading: () => <div className="flex items-center justify-center min-h-screen">Loading preview...</div>,
       })
     : null;
 
   return (
-    <section
-      className={`${isFramerScrolling ? '' : 'flex justify-center items-center '} min-h-screen rounded-md  dark:bg-[#000000] bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:20px_20px]`}
-    >
-      <div className='px-4 w-full'>
+    <section className="min-h-screen w-full dark:bg-[#000000] bg-white">
+      <div className="w-full">
         {ComponentPreview ? (
-          <Suspense fallback={<div>Loading preview...</div>}>
+          <Suspense fallback={<div className="flex items-center justify-center min-h-screen">Loading preview...</div>}>
             <ComponentPreview />
           </Suspense>
         ) : (
-          <div>Component not found</div>
+          <div className="flex items-center justify-center min-h-screen">Block not found</div>
         )}
       </div>
     </section>
