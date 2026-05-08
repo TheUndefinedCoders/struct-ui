@@ -1,5 +1,10 @@
 export const basicBlocks = [
   {
+    href: '/blocks/hero-sections',
+    name: 'Hero Sections',
+    component: 'hero',
+  },
+  {
     href: '/blocks/product-cards',
     name: 'Product Cards',
     component: 'card',

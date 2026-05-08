@@ -1,0 +1,160 @@
+export const metadata = {
+  title: "Hero Sections - Animated Landing Page Blocks",
+  description: "A collection of stunning hero section blocks with animated backgrounds, gradient effects, particle systems, and smooth motion animations. Perfect for landing pages and marketing sites.",
+  keywords: [
+    "Hero Section",
+    "Landing Page",
+    "Animated Hero",
+    "Gradient Background",
+    "Framer Motion",
+    "Particle Animation",
+    "Aurora Effect",
+    "Spotlight Effect",
+    "Grid Animation",
+    "React Hero",
+  ],
+  authors: [{ name: "Numan", url: "https://numan-dev.web.app" }],
+  creator: "@numan-dev",
+  publisher: "Struct-UI",
+  robots: {
+    index: true,
+    follow: true,
+  },
+};
+
+# Hero Sections
+
+A collection of beautiful, animated hero sections for your landing pages. Built with Framer Motion for smooth animations and stunning visual effects.
+
+## Gradient Hero
+
+A vibrant hero section with animated gradient orbs, grid pattern overlay, and smooth entrance animations.
+
+<ComponentCodePreview documentationType="blocks" name='hero-gradient' hasReTrigger responsive />
+
+**Features:**
+- Animated gradient background orbs
+- Subtle grid pattern overlay
+- Stats section with staggered animations
+- Gradient text effects
+- CTA buttons with hover effects
+
+---
+
+## Spotlight Hero
+
+An interactive hero with a mouse-following spotlight effect and code preview card.
+
+<ComponentCodePreview documentationType="blocks" name='hero-spotlight' hasReTrigger responsive />
+
+**Features:**
+- Mouse-tracking spotlight effect
+- Animated code preview mockup
+- Floating feature badges
+- Two-column responsive layout
+- Subtle background grid
+
+---
+
+## Grid Hero
+
+A futuristic hero with animated SVG grid lines and glowing orbs.
+
+<ComponentCodePreview documentationType="blocks" name='hero-grid' hasReTrigger responsive />
+
+**Features:**
+- Animated SVG grid lines
+- Pulsing announcement badge
+- Social proof avatars
+- Gradient button hover effects
+- Radial gradient mask
+
+---
+
+## Particles Hero
+
+A dynamic hero section with floating animated particles and 3D decorative elements.
+
+<ComponentCodePreview documentationType="blocks" name='hero-particles' hasReTrigger responsive />
+
+**Features:**
+- 50+ animated particles
+- Email signup form
+- Feature highlight cards
+- Floating 3D elements
+- Gradient overlays
+
+---
+
+## Aurora Hero
+
+A mesmerizing hero with aurora borealis/northern lights effect and twinkling stars.
+
+<ComponentCodePreview documentationType="blocks" name='hero-aurora' hasReTrigger responsive />
+
+**Features:**
+- Multi-layer aurora animation
+- Animated star field
+- Gradient border buttons
+- Feature checklist
+- Brand showcase section
+
+---
+
+## Minimal Hero
+
+A clean, typography-focused hero with letter-by-letter text animation.
+
+<ComponentCodePreview documentationType="blocks" name='hero-minimal' hasReTrigger responsive />
+
+**Features:**
+- Character-by-character text animation
+- Browser mockup preview
+- Floating feature badges
+- Light/dark mode support
+- Minimal aesthetic design
+
+---
+
+## Usage
+
+All hero sections are built with React and Framer Motion. Install the required dependencies:
+
+```bash
+npm install framer-motion lucide-react
+```
+
+Import and use any hero section:
+
+```tsx
+import HeroGradient from '@/components/blocks/hero/hero-gradient';
+
+export default function LandingPage() {
+  return (
+    <main>
+      <HeroGradient />
+      {/* Rest of your page */}
+    </main>
+  );
+}
+```
+
+## Customization
+
+Each hero section is fully customizable:
+
+- **Colors**: Update gradient colors in the Tailwind classes
+- **Content**: Modify headlines, descriptions, and CTAs
+- **Animations**: Adjust timing, delays, and easing in Framer Motion props
+- **Layout**: Responsive by default, easily adjustable with Tailwind
+
+## Props Reference
+
+| Hero | Key Features |
+|------|--------------|
+| Gradient | Animated orbs, grid overlay, stats |
+| Spotlight | Mouse tracking, code preview |
+| Grid | SVG animations, social proof |
+| Particles | Floating particles, email form |
+| Aurora | Northern lights effect, stars |
+| Minimal | Text animation, browser mockup |
