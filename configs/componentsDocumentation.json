@@ -497,6 +497,69 @@
       "new": true
     },
     {
+      "name": "Animated Beam",
+      "componentArray": [
+        {
+          "componentName": "animated-beam",
+          "filesrc": "components/animated-beam/animated-beam.tsx",
+          "iframeSrc": "live-components/animated-beam",
+          "parentlink": "animated-beam",
+          "parentName": "Animated Beam"
+        },
+        {
+          "componentName": "animated-beam-default",
+          "filesrc": "components/animated-beam/animated-beam-default.tsx",
+          "iframeSrc": "live-components/animated-beam-default",
+          "parentlink": "animated-beam",
+          "parentName": "Animated Beam"
+        },
+        {
+          "componentName": "animated-beam-one-to-one",
+          "filesrc": "components/animated-beam/animated-beam-one-to-one.tsx",
+          "iframeSrc": "live-components/animated-beam-one-to-one",
+          "parentlink": "animated-beam",
+          "parentName": "Animated Beam"
+        },
+        {
+          "componentName": "animated-beam-bidirectional",
+          "filesrc": "components/animated-beam/animated-beam-bidirectional.tsx",
+          "iframeSrc": "live-components/animated-beam-bidirectional",
+          "parentlink": "animated-beam",
+          "parentName": "Animated Beam"
+        },
+        {
+          "componentName": "animated-beam-many-to-one",
+          "filesrc": "components/animated-beam/animated-beam-many-to-one.tsx",
+          "iframeSrc": "live-components/animated-beam-many-to-one",
+          "parentlink": "animated-beam",
+          "parentName": "Animated Beam"
+        },
+        {
+          "componentName": "animated-beam-one-to-many",
+          "filesrc": "components/animated-beam/animated-beam-one-to-many.tsx",
+          "iframeSrc": "live-components/animated-beam-one-to-many",
+          "parentlink": "animated-beam",
+          "parentName": "Animated Beam"
+        },
+        {
+          "componentName": "animated-beam-multiple",
+          "filesrc": "components/animated-beam/animated-beam-multiple.tsx",
+          "iframeSrc": "live-components/animated-beam-multiple",
+          "parentlink": "animated-beam",
+          "parentName": "Animated Beam"
+        },
+        {
+          "componentName": "animated-beam-showcase",
+          "filesrc": "components/animated-beam/animated-beam-showcase.tsx",
+          "iframeSrc": "live-components/animated-beam-showcase",
+          "parentlink": "animated-beam",
+          "parentName": "Animated Beam"
+        }
+      ],
+      "type": "animated-beam",
+      "new": true
+    },
+    {
       "name": "Orbiting Circles",
       "componentArray": [
         {
