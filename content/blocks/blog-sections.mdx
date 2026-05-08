@@ -1,0 +1,175 @@
+export const metadata = {
+  title: "Blog Sections - Animated Blog Layout Blocks",
+  description: "A collection of beautiful, animated blog section blocks with grid layouts, featured posts, magazine styles, and smooth hover effects. Perfect for blogs, news sites, and content platforms.",
+  keywords: [
+    "Blog Section",
+    "Blog Grid",
+    "Blog Cards",
+    "Featured Posts",
+    "Magazine Layout",
+    "Framer Motion",
+    "React Blog",
+    "Responsive Blog",
+    "Dark Mode Blog",
+    "Article List",
+  ],
+  authors: [{ name: "Numan", url: "https://numan-dev.web.app" }],
+  creator: "@numan-dev",
+  publisher: "Struct-UI",
+  robots: {
+    index: true,
+    follow: true,
+  },
+};
+
+# Blog Sections
+
+A collection of beautiful, animated blog section blocks for your websites. Built with Framer Motion for smooth animations, responsive layouts, and light/dark theme support.
+
+## Grid Layout
+
+A classic responsive grid layout with cards, author avatars, and staggered entrance animations.
+
+<ComponentCodePreview documentationType="blocks" name='blog-grid' hasReTrigger responsive />
+
+**Features:**
+- 3-column responsive grid
+- Category badges
+- Author avatars and read time
+- Staggered entrance animations
+- Image hover zoom effect
+- "View All" CTA button
+
+---
+
+## Featured Layout
+
+A hero-style layout with one large featured post and smaller side posts.
+
+<ComponentCodePreview documentationType="blocks" name='blog-featured' hasReTrigger responsive />
+
+**Features:**
+- Large featured hero post
+- Gradient overlay on image
+- Author info with role
+- Side post list with thumbnails
+- Bookmark button with hover effect
+- Date and read time metadata
+
+---
+
+## Minimal List
+
+A clean, typography-focused list layout with numbered entries.
+
+<ComponentCodePreview documentationType="blocks" name='blog-minimal' hasReTrigger responsive />
+
+**Features:**
+- Numbered post entries
+- Clean typography focus
+- Arrow animation on hover
+- Minimal aesthetic
+- Border dividers
+- "Load more" button
+
+---
+
+## Magazine Layout
+
+A multi-section magazine-style layout with trending sidebar and latest posts.
+
+<ComponentCodePreview documentationType="blocks" name='blog-magazine' hasReTrigger responsive />
+
+**Features:**
+- Large main featured article
+- Trending sidebar with view counts
+- Percentage trend indicators
+- Secondary post row
+- Latest posts widget
+- Multi-section design
+
+---
+
+## Cards with Filters
+
+Interactive cards with category filtering and colorful gradient hover effects.
+
+<ComponentCodePreview documentationType="blocks" name='blog-cards' hasReTrigger responsive />
+
+**Features:**
+- Category filter buttons
+- Animated filter transitions
+- Gradient overlay on hover
+- Arrow icon reveal
+- Tag badges on images
+- Shadow hover effects
+
+---
+
+## List Layout
+
+A detailed list layout with horizontal cards, tags, and action buttons.
+
+<ComponentCodePreview documentationType="blocks" name='blog-list' hasReTrigger responsive />
+
+**Features:**
+- Horizontal card layout
+- Full metadata display
+- Hashtag styling
+- Bookmark and share buttons
+- Numbered pagination
+- Image hover zoom
+
+---
+
+## Usage
+
+All blog sections are built with React and Framer Motion. Install the required dependencies:
+
+```bash
+npm install framer-motion lucide-react
+```
+
+Import and use any blog section:
+
+```tsx
+import BlogGrid from '@/components/blocks/blog/blog-grid';
+
+export default function BlogPage() {
+  return (
+    <main>
+      <BlogGrid />
+    </main>
+  );
+}
+```
+
+## Customization
+
+Each blog section is fully customizable:
+
+- **Posts Data**: Replace the sample posts array with your actual blog data
+- **Images**: Update image URLs to your hosted images or use a CMS
+- **Categories**: Modify category names and colors
+- **Animations**: Adjust timing and effects in Framer Motion props
+- **Styling**: Update colors and spacing with Tailwind classes
+
+## Blog Section Comparison
+
+| Section | Best For | Key Feature |
+|---------|----------|-------------|
+| Grid | General blogs | Classic 3-column layout |
+| Featured | Highlighting content | Hero post emphasis |
+| Minimal | Personal blogs | Typography focus |
+| Magazine | News/Media | Multi-section layout |
+| Cards | Filtered content | Category filtering |
+| List | Detailed listings | Full metadata display |
+
+## Integration Tips
+
+1. **CMS Integration**: Replace static posts with data from your CMS (Contentful, Sanity, Strapi)
+2. **Image Optimization**: Use Next.js Image component for optimized images
+3. **Pagination**: Connect pagination to your API or use infinite scroll
+4. **Categories**: Link category filters to actual category pages
+5. **Read Time**: Calculate read time based on actual content length
+6. **Author Data**: Pull author information from your user/author database

@@ -112,6 +112,55 @@
       "new": true
     },
     {
+      "name": "Blog Sections",
+      "componentArray": [
+        {
+          "componentName": "blog-grid",
+          "filesrc": "blocks/blog/blog-grid.tsx",
+          "iframeSrc": "live-blocks/blog-grid",
+          "parentlink": "blog-sections",
+          "parentName": "Blog Sections"
+        },
+        {
+          "componentName": "blog-featured",
+          "filesrc": "blocks/blog/blog-featured.tsx",
+          "iframeSrc": "live-blocks/blog-featured",
+          "parentlink": "blog-sections",
+          "parentName": "Blog Sections"
+        },
+        {
+          "componentName": "blog-minimal",
+          "filesrc": "blocks/blog/blog-minimal.tsx",
+          "iframeSrc": "live-blocks/blog-minimal",
+          "parentlink": "blog-sections",
+          "parentName": "Blog Sections"
+        },
+        {
+          "componentName": "blog-magazine",
+          "filesrc": "blocks/blog/blog-magazine.tsx",
+          "iframeSrc": "live-blocks/blog-magazine",
+          "parentlink": "blog-sections",
+          "parentName": "Blog Sections"
+        },
+        {
+          "componentName": "blog-cards",
+          "filesrc": "blocks/blog/blog-cards.tsx",
+          "iframeSrc": "live-blocks/blog-cards",
+          "parentlink": "blog-sections",
+          "parentName": "Blog Sections"
+        },
+        {
+          "componentName": "blog-list",
+          "filesrc": "blocks/blog/blog-list.tsx",
+          "iframeSrc": "live-blocks/blog-list",
+          "parentlink": "blog-sections",
+          "parentName": "Blog Sections"
+        }
+      ],
+      "type": "blog",
+      "new": true
+    },
+    {
       "name": "Product Cards",
       "componentArray": [
         {
