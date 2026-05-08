@@ -10,6 +10,11 @@ export const basicBlocks = [
     component: 'hero',
   },
   {
+    href: '/blocks/blog-sections',
+    name: 'Blog',
+    component: 'blog',
+  },
+  {
     href: '/blocks/footers',
     name: 'Footers',
     component: 'footers',
