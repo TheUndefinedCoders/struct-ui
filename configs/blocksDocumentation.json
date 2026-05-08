@@ -63,6 +63,55 @@
       "new": true
     },
     {
+      "name": "Headers",
+      "componentArray": [
+        {
+          "componentName": "header-gradient",
+          "filesrc": "blocks/headers/header-gradient.tsx",
+          "iframeSrc": "live-blocks/header-gradient",
+          "parentlink": "headers",
+          "parentName": "Headers"
+        },
+        {
+          "componentName": "header-minimal",
+          "filesrc": "blocks/headers/header-minimal.tsx",
+          "iframeSrc": "live-blocks/header-minimal",
+          "parentlink": "headers",
+          "parentName": "Headers"
+        },
+        {
+          "componentName": "header-floating",
+          "filesrc": "blocks/headers/header-floating.tsx",
+          "iframeSrc": "live-blocks/header-floating",
+          "parentlink": "headers",
+          "parentName": "Headers"
+        },
+        {
+          "componentName": "header-mega",
+          "filesrc": "blocks/headers/header-mega.tsx",
+          "iframeSrc": "live-blocks/header-mega",
+          "parentlink": "headers",
+          "parentName": "Headers"
+        },
+        {
+          "componentName": "header-centered",
+          "filesrc": "blocks/headers/header-centered.tsx",
+          "iframeSrc": "live-blocks/header-centered",
+          "parentlink": "headers",
+          "parentName": "Headers"
+        },
+        {
+          "componentName": "header-underline",
+          "filesrc": "blocks/headers/header-underline.tsx",
+          "iframeSrc": "live-blocks/header-underline",
+          "parentlink": "headers",
+          "parentName": "Headers"
+        }
+      ],
+      "type": "headers",
+      "new": true
+    },
+    {
       "name": "Product Cards",
       "componentArray": [
         {
