@@ -1,0 +1,179 @@
+export const metadata = {
+  title: "Header Blocks - Animated Navigation Components",
+  description: "A collection of beautiful, animated header/navigation blocks with dropdown menus, mobile responsiveness, theme support, and smooth animations. Perfect for modern websites and applications.",
+  keywords: [
+    "Header",
+    "Navigation",
+    "Navbar",
+    "Animated Header",
+    "Mega Menu",
+    "Dropdown Menu",
+    "Framer Motion",
+    "React Header",
+    "Responsive Navigation",
+    "Dark Mode Header",
+  ],
+  authors: [{ name: "Numan", url: "https://numan-dev.web.app" }],
+  creator: "@numan-dev",
+  publisher: "Struct-UI",
+  robots: {
+    index: true,
+    follow: true,
+  },
+};
+
+# Header Blocks
+
+A collection of beautiful, animated header/navigation components for your websites. Built with Framer Motion for smooth animations, full mobile responsiveness, and light/dark theme support.
+
+## Gradient Header
+
+A vibrant header with animated gradient orbs, dropdown menus, and gradient CTA button.
+
+<ComponentCodePreview documentationType="blocks" name='header-gradient' hasReTrigger responsive />
+
+**Features:**
+- Animated gradient background orbs
+- Dropdown menus with descriptions
+- Animated mobile menu
+- Gradient CTA button with sparkle icon
+- Smooth entrance animations
+
+---
+
+## Minimal Header
+
+A clean, typography-focused header with elegant underline animations.
+
+<ComponentCodePreview documentationType="blocks" name='header-minimal' hasReTrigger responsive />
+
+**Features:**
+- Minimal clean design
+- Animated underline on hover
+- Arrow CTA animation
+- Responsive mobile menu
+- Light/dark mode support
+
+---
+
+## Floating Header
+
+A sticky header that floats, blurs, and hides/shows on scroll with theme toggle.
+
+<ComponentCodePreview documentationType="blocks" name='header-floating' hasReTrigger responsive />
+
+**Features:**
+- Hides on scroll down, shows on scroll up
+- Glassmorphism blur effect when scrolled
+- Built-in theme toggle (sun/moon animation)
+- Floating rounded container
+- Hover background animations
+
+---
+
+## Mega Menu Header
+
+An enterprise-style header with rich mega menu dropdowns featuring icons and descriptions.
+
+<ComponentCodePreview documentationType="blocks" name='header-mega' hasReTrigger responsive />
+
+**Features:**
+- Rich mega menu with icons
+- Product descriptions and colors
+- Staggered dropdown animations
+- Resource links dropdown
+- Mobile-friendly accordion style
+
+---
+
+## Centered Header
+
+An elegant e-commerce style header with centered logo and split navigation.
+
+<ComponentCodePreview documentationType="blocks" name='header-centered' hasReTrigger responsive />
+
+**Features:**
+- Centered logo with letter-spacing animation
+- Split navigation (left/right)
+- Search, account, cart icons
+- Desktop icon bar
+- Uppercase tracking typography
+
+---
+
+## Underline Header
+
+A creative agency style header with shared animated underline using layoutId.
+
+<ComponentCodePreview documentationType="blocks" name='header-underline' hasReTrigger responsive />
+
+**Features:**
+- Shared animated underline (layoutId)
+- Hiring badge indicator
+- Social media links
+- Bordered rounded CTA button
+- Studio branding style
+
+---
+
+## Usage
+
+All header blocks are built with React and Framer Motion. Install the required dependencies:
+
+```bash
+npm install framer-motion lucide-react
+```
+
+Import and use any header block:
+
+```tsx
+import HeaderGradient from '@/components/blocks/headers/header-gradient';
+
+export default function Page() {
+  return (
+    <>
+      <HeaderGradient />
+      <main>
+        {/* Your page content */}
+      </main>
+    </>
+  );
+}
+```
+
+## Customization
+
+Each header block is fully customizable:
+
+- **Colors**: Update gradient and accent colors in Tailwind classes
+- **Links**: Modify navigation links and dropdown items
+- **Logo**: Replace logo text/icon with your brand
+- **CTA**: Customize call-to-action buttons
+- **Animations**: Adjust timing, delays, and easing in Framer Motion props
+
+## Header Comparison
+
+| Header | Best For | Key Feature |
+|--------|----------|-------------|
+| Gradient | SaaS / Tech | Animated gradient orbs |
+| Minimal | Portfolio / Personal | Clean underline hover |
+| Floating | Blog / Content | Hide/show on scroll |
+| Mega | Enterprise / Complex | Rich dropdown menus |
+| Centered | E-commerce / Fashion | Elegant centered logo |
+| Underline | Agency / Creative | Shared animated underline |
+
+## Mobile Responsiveness
+
+All headers include:
+- **Hamburger menu** for mobile devices
+- **Animated mobile navigation** with staggered items
+- **Touch-friendly** tap targets
+- **Optimized layout** for small screens
+
+## Tips
+
+1. **Sticky Positioning**: For headers that should stay at the top, add `position: sticky` or use the Floating Header variant
+2. **Z-Index**: Headers should have a high z-index to stay above page content
+3. **Active States**: Add active link styling by comparing `pathname` with `href`
+4. **Auth Integration**: Replace sign-in links with your auth provider
+5. **Theme Toggle**: The Floating Header includes a built-in theme toggle you can adapt
