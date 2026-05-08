@@ -1,19 +1,6 @@
 {
   "dataArray": [
     {
-      "name": "demo",
-      "componentArray": [
-        {
-          "componentName": "democomponent",
-          "filesrc": "blocks/demo/index.tsx",
-          "iframeSrc": "live-blocks/democomponent",
-          "parentlink": "demo",
-          "parentName": "demo"
-        }
-      ],
-      "type": "demo"
-    },
-    {
       "name": "Hero Sections",
       "componentArray": [
         {
@@ -333,30 +320,6 @@
           "componentName": "footer-wave",
           "filesrc": "blocks/footers/footer-wave.tsx",
           "iframeSrc": "live-blocks/footer-wave",
-          "parentlink": "footers",
-          "parentName": "Footers"
-        },
-        {
-          "componentName": "animated-logo-footer",
-          "filesrc": "blocks/footers/footer1.tsx",
-          "iframeSrc": "live-blocks/animated-logo-footer",
-          "parentlink": "footers",
-          "parentName": "Footers"
-        },
-        {
-          "componentName": "hover-footer",
-          "iframeSrc": "live-blocks/hover-footer",
-          "filesrc": "blocks/footers/hover-footer.tsx",
-          "filesArray": [
-            {
-              "name": "index.tsx",
-              "filesrc": "registry/blocks/footers/hover-footer.tsx"
-            },
-            {
-              "name": "cursor-follow-text.tsx",
-              "filesrc": "blocks/core/cursor-follow-text.tsx"
-            }
-          ],
           "parentlink": "footers",
           "parentName": "Footers"
         }
