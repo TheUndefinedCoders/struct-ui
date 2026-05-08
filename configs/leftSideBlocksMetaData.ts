@@ -5,6 +5,12 @@ export const basicBlocks = [
     component: 'hero',
   },
   {
+    href: '/blocks/footers',
+    name: 'Footers',
+    component: 'footers',
+    new: true,
+  },
+  {
     href: '/blocks/product-cards',
     name: 'Product Cards',
     component: 'card',
