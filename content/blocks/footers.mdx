@@ -1,0 +1,174 @@
+export const metadata = {
+  title: "Footer Blocks - Animated Website Footers",
+  description: "A collection of beautiful, animated footer blocks with gradient effects, newsletter forms, social icons, and smooth animations. Perfect for modern websites and landing pages.",
+  keywords: [
+    "Footer",
+    "Website Footer",
+    "Animated Footer",
+    "Newsletter Footer",
+    "Social Footer",
+    "Gradient Footer",
+    "Framer Motion",
+    "React Footer",
+    "Responsive Footer",
+    "Dark Mode Footer",
+  ],
+  authors: [{ name: "Numan", url: "https://numan-dev.web.app" }],
+  creator: "@numan-dev",
+  publisher: "Struct-UI",
+  robots: {
+    index: true,
+    follow: true,
+  },
+};
+
+# Footer Blocks
+
+A collection of beautiful, animated footer blocks for your websites. Built with Framer Motion for smooth animations and modern design patterns.
+
+## Gradient Footer
+
+A stunning dark footer with animated gradient orbs, grid pattern overlay, and newsletter subscription form.
+
+<ComponentCodePreview documentationType="blocks" name='footer-gradient' hasReTrigger responsive />
+
+**Features:**
+- Animated gradient background orbs
+- Grid pattern overlay
+- Newsletter subscription form
+- Multi-column link navigation
+- Animated social icons
+- Underline hover effects on links
+
+---
+
+## Minimal Footer
+
+A clean, centered footer with elegant typography and simple navigation.
+
+<ComponentCodePreview documentationType="blocks" name='footer-minimal' hasReTrigger responsive />
+
+**Features:**
+- Centered layout design
+- Animated underline on hover
+- Subtle divider animation
+- Light/dark mode support
+- Minimal aesthetic
+
+---
+
+## Links Footer
+
+A comprehensive footer with contact information, multiple link columns, and animated badges.
+
+<ComponentCodePreview documentationType="blocks" name='footer-links' hasReTrigger responsive />
+
+**Features:**
+- Contact information section
+- Multi-column link grid
+- Arrow animation on link hover
+- Hiring badge indicator
+- Staggered entrance animations
+- Rounded social icons
+
+---
+
+## Newsletter Footer
+
+A focused newsletter-centric footer with animated form states and gradient effects.
+
+<ComponentCodePreview documentationType="blocks" name='footer-newsletter' hasReTrigger responsive />
+
+**Features:**
+- Prominent newsletter signup
+- Loading and success states
+- Animated gradient glow effect
+- Purple/violet color scheme
+- Sparkle icon animation
+- Centered navigation links
+
+---
+
+## Social Footer
+
+A social-media focused footer with colorful animated icons and brand showcase.
+
+<ComponentCodePreview documentationType="blocks" name='footer-social' hasReTrigger responsive />
+
+**Features:**
+- 8 social platform icons
+- Unique hover colors per platform
+- Icon rotation animation
+- Gradient divider
+- Animated heart icon
+- Grid social layout
+
+---
+
+## Wave Footer
+
+A modern footer with animated SVG wave decoration and newsletter mini-form.
+
+<ComponentCodePreview documentationType="blocks" name='footer-wave' hasReTrigger responsive />
+
+**Features:**
+- Animated SVG wave at top
+- Pulsing logo ring effect
+- Chevron animation on links
+- External link indicators
+- Newsletter mini-form
+- Smooth entrance animations
+
+---
+
+## Usage
+
+All footer blocks are built with React and Framer Motion. Install the required dependencies:
+
+```bash
+npm install framer-motion lucide-react
+```
+
+Import and use any footer block:
+
+```tsx
+import FooterGradient from '@/components/blocks/footers/footer-gradient';
+
+export default function Page() {
+  return (
+    <main>
+      {/* Your page content */}
+      <FooterGradient />
+    </main>
+  );
+}
+```
+
+## Customization
+
+Each footer block is fully customizable:
+
+- **Colors**: Update gradient and accent colors in Tailwind classes
+- **Content**: Modify links, company info, and social URLs
+- **Animations**: Adjust timing, delays, and easing in Framer Motion props
+- **Layout**: Responsive by default, easily adjustable with Tailwind
+- **Icons**: Swap Lucide icons for your preferred icon library
+
+## Footer Comparison
+
+| Footer | Best For | Key Feature |
+|--------|----------|-------------|
+| Gradient | SaaS / Tech | Animated gradient orbs |
+| Minimal | Personal / Portfolio | Centered elegant design |
+| Links | Corporate / Business | Comprehensive navigation |
+| Newsletter | Marketing / Blog | Newsletter emphasis |
+| Social | Creative / Agency | Social icon showcase |
+| Wave | Modern / Startup | Animated wave decoration |
+
+## Tips
+
+1. **Newsletter Integration**: Replace the mock form submission with your actual email service (Mailchimp, ConvertKit, etc.)
+2. **Link Updates**: Update all `href="#"` placeholders with your actual page links
+3. **Social URLs**: Replace placeholder social links with your real profiles
+4. **Copyright Year**: All footers automatically display the current year
+5. **Dark Mode**: All footers support dark mode out of the box with Tailwind's dark: variants

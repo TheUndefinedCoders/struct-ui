@@ -99,6 +99,48 @@
       "name": "Footers",
       "componentArray": [
         {
+          "componentName": "footer-gradient",
+          "filesrc": "blocks/footers/footer-gradient.tsx",
+          "iframeSrc": "live-blocks/footer-gradient",
+          "parentlink": "footers",
+          "parentName": "Footers"
+        },
+        {
+          "componentName": "footer-minimal",
+          "filesrc": "blocks/footers/footer-minimal.tsx",
+          "iframeSrc": "live-blocks/footer-minimal",
+          "parentlink": "footers",
+          "parentName": "Footers"
+        },
+        {
+          "componentName": "footer-links",
+          "filesrc": "blocks/footers/footer-links.tsx",
+          "iframeSrc": "live-blocks/footer-links",
+          "parentlink": "footers",
+          "parentName": "Footers"
+        },
+        {
+          "componentName": "footer-newsletter",
+          "filesrc": "blocks/footers/footer-newsletter.tsx",
+          "iframeSrc": "live-blocks/footer-newsletter",
+          "parentlink": "footers",
+          "parentName": "Footers"
+        },
+        {
+          "componentName": "footer-social",
+          "filesrc": "blocks/footers/footer-social.tsx",
+          "iframeSrc": "live-blocks/footer-social",
+          "parentlink": "footers",
+          "parentName": "Footers"
+        },
+        {
+          "componentName": "footer-wave",
+          "filesrc": "blocks/footers/footer-wave.tsx",
+          "iframeSrc": "live-blocks/footer-wave",
+          "parentlink": "footers",
+          "parentName": "Footers"
+        },
+        {
           "componentName": "animated-logo-footer",
           "filesrc": "blocks/footers/footer1.tsx",
           "iframeSrc": "live-blocks/animated-logo-footer",
@@ -123,7 +165,8 @@
           "parentName": "Footers"
         }
       ],
-      "type": "footers"
+      "type": "footers",
+      "new": true
     }
   ]
 }
