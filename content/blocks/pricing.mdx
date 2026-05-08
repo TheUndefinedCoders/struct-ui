@@ -1,0 +1,177 @@
+export const metadata = {
+  title: "Pricing Sections - Animated Pricing Blocks",
+  description: "A collection of beautiful, animated pricing section blocks with tiered plans, comparison tables, monthly/yearly toggles, and smooth animations. Perfect for SaaS, apps, and subscription services.",
+  keywords: [
+    "Pricing Section",
+    "Pricing Cards",
+    "Pricing Table",
+    "Pricing Comparison",
+    "SaaS Pricing",
+    "Framer Motion",
+    "React Pricing",
+    "Responsive Pricing",
+    "Dark Mode Pricing",
+    "Subscription Plans",
+  ],
+  authors: [{ name: "Numan", url: "https://numan-dev.web.app" }],
+  creator: "@numan-dev",
+  publisher: "Struct-UI",
+  robots: {
+    index: true,
+    follow: true,
+  },
+};
+
+# Pricing Sections
+
+A collection of beautiful, animated pricing section blocks for your websites. Built with Framer Motion for smooth animations, responsive layouts, and light/dark theme support.
+
+## Tiered Cards
+
+Classic 3-tier pricing cards with icons, feature lists, and popular plan highlight.
+
+<ComponentCodePreview documentationType="blocks" name='pricing-cards' hasReTrigger responsive />
+
+**Features:**
+- 3-tier card layout (Starter, Pro, Enterprise)
+- Plan icons with gradient backgrounds
+- "Most Popular" badge animation
+- Feature checkmarks with gradients
+- Gradient CTA buttons
+- Staggered entrance animations
+
+---
+
+## Gradient Background
+
+Dark themed pricing with animated gradient orbs and monthly/yearly toggle.
+
+<ComponentCodePreview documentationType="blocks" name='pricing-gradient' hasReTrigger responsive />
+
+**Features:**
+- Animated gradient orbs background
+- Grid pattern overlay
+- Monthly/yearly toggle with animation
+- Animated price transition
+- Check/X feature indicators
+- "Save 30%" badge
+
+---
+
+## Comparison Table
+
+Detailed feature comparison table across all plans with category sections.
+
+<ComponentCodePreview documentationType="blocks" name='pricing-comparison' hasReTrigger responsive />
+
+**Features:**
+- Full feature comparison grid
+- Category sections (Core, Features, Support)
+- Boolean check/dash indicators
+- Popular plan column highlight
+- Help icons for features
+- Responsive table design
+
+---
+
+## Toggle Switch
+
+Animated billing toggle with spring animation and price transitions.
+
+<ComponentCodePreview documentationType="blocks" name='pricing-toggle' hasReTrigger responsive />
+
+**Features:**
+- Pill-style toggle with layoutId animation
+- Price number animation on toggle
+- Plan icons (Star, Rocket, Crown)
+- "-17%" discount badge
+- Card hover lift effect
+- Color-coded features
+
+---
+
+## Minimal Design
+
+Clean, typography-focused pricing with inverted highlight card.
+
+<ComponentCodePreview documentationType="blocks" name='pricing-minimal' hasReTrigger responsive />
+
+**Features:**
+- Minimal clean design
+- Inverted colors for highlight plan
+- Arrow CTA buttons
+- No border card dividers
+- "forever" / "per month" labels
+- FAQ link section
+
+---
+
+## Horizontal Accordion
+
+Expandable horizontal cards with accordion-style feature reveal.
+
+<ComponentCodePreview documentationType="blocks" name='pricing-horizontal' hasReTrigger responsive />
+
+**Features:**
+- Accordion-style expansion
+- Sparkle header icon
+- Toggle switch with 20% badge
+- Expandable feature list
+- Color-coded by plan tier
+- Animated chevron rotation
+
+---
+
+## Usage
+
+All pricing sections are built with React and Framer Motion. Install the required dependencies:
+
+```bash
+npm install framer-motion lucide-react
+```
+
+Import and use any pricing section:
+
+```tsx
+import PricingCards from '@/components/blocks/pricing/pricing-cards';
+
+export default function PricingPage() {
+  return (
+    <main>
+      <PricingCards />
+    </main>
+  );
+}
+```
+
+## Customization
+
+Each pricing section is fully customizable:
+
+- **Plans Data**: Update plan names, prices, and features
+- **Colors**: Modify gradient and accent colors
+- **Currency**: Change currency symbol and formatting
+- **Features**: Add or remove feature items
+- **CTAs**: Customize button text and actions
+- **Toggle Logic**: Connect to actual billing calculations
+
+## Pricing Section Comparison
+
+| Section | Best For | Key Feature |
+|---------|----------|-------------|
+| Cards | General SaaS | Classic 3-tier layout |
+| Gradient | Premium products | Dark animated background |
+| Comparison | Complex products | Full feature matrix |
+| Toggle | Subscription services | Animated billing switch |
+| Minimal | Simple products | Clean typography |
+| Horizontal | Mobile-first | Accordion expansion |
+
+## Integration Tips
+
+1. **Billing Toggle**: Connect toggle state to actual price calculations
+2. **Stripe Integration**: Link CTA buttons to Stripe Checkout or Payment Links
+3. **Auth State**: Show different CTAs based on user authentication
+4. **Custom Pricing**: Replace "Custom" price with contact form modal
+5. **Feature Tooltips**: Add tooltips to explain complex features
+6. **Currency Selection**: Add currency dropdown for international pricing
+7. **Annual Discount**: Calculate and display savings for yearly plans

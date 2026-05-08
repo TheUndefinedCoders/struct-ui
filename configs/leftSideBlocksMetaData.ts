@@ -15,6 +15,12 @@ export const basicBlocks = [
     component: 'blog',
   },
   {
+    href: '/blocks/pricing',
+    name: 'Pricing',
+    component: 'pricing',
+    new: true,
+  },
+  {
     href: '/blocks/footers',
     name: 'Footers',
     component: 'footers',

@@ -161,6 +161,55 @@
       "new": true
     },
     {
+      "name": "Pricing",
+      "componentArray": [
+        {
+          "componentName": "pricing-cards",
+          "filesrc": "blocks/pricing/pricing-cards.tsx",
+          "iframeSrc": "live-blocks/pricing-cards",
+          "parentlink": "pricing",
+          "parentName": "Pricing"
+        },
+        {
+          "componentName": "pricing-gradient",
+          "filesrc": "blocks/pricing/pricing-gradient.tsx",
+          "iframeSrc": "live-blocks/pricing-gradient",
+          "parentlink": "pricing",
+          "parentName": "Pricing"
+        },
+        {
+          "componentName": "pricing-comparison",
+          "filesrc": "blocks/pricing/pricing-comparison.tsx",
+          "iframeSrc": "live-blocks/pricing-comparison",
+          "parentlink": "pricing",
+          "parentName": "Pricing"
+        },
+        {
+          "componentName": "pricing-toggle",
+          "filesrc": "blocks/pricing/pricing-toggle.tsx",
+          "iframeSrc": "live-blocks/pricing-toggle",
+          "parentlink": "pricing",
+          "parentName": "Pricing"
+        },
+        {
+          "componentName": "pricing-minimal",
+          "filesrc": "blocks/pricing/pricing-minimal.tsx",
+          "iframeSrc": "live-blocks/pricing-minimal",
+          "parentlink": "pricing",
+          "parentName": "Pricing"
+        },
+        {
+          "componentName": "pricing-horizontal",
+          "filesrc": "blocks/pricing/pricing-horizontal.tsx",
+          "iframeSrc": "live-blocks/pricing-horizontal",
+          "parentlink": "pricing",
+          "parentName": "Pricing"
+        }
+      ],
+      "type": "pricing",
+      "new": true
+    },
+    {
       "name": "Product Cards",
       "componentArray": [
         {
