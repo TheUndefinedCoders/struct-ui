@@ -1,0 +1,156 @@
+export const metadata = {
+  title: "Animated Beam - Animated Light Path Component",
+  description: "An animated beam of light which travels along a path. Perfect for showcasing integrations, API connections, data flow, and AI workflows on landing pages.",
+  keywords: [
+    "Animated Beam",
+    "Integration Animation",
+    "Data Flow",
+    "SVG Path Animation",
+    "Connection Lines",
+    "API Integration",
+    "AI Workflow",
+    "React Animation",
+    "Gradient Animation",
+  ],
+  authors: [{ name: "Numan", url: "https://numan-dev.web.app" }],
+  creator: "@numan-dev",
+  publisher: "Struct-UI",
+  robots: {
+    index: true,
+    follow: true,
+  },
+};
+
+# Animated Beam
+
+An animated beam of light which travels along a path. Useful for showcasing the "integration" features of a website, API connections, data flow, and AI workflows.
+
+## Installation
+
+```bash
+npx shadcn@latest add "https://ui-struct.vercel.app/r/animated-beam"
+```
+
+## Usage
+
+```tsx
+import { AnimatedBeam } from '@/components/ui/animated-beam';
+
+const containerRef = useRef<HTMLDivElement>(null);
+const fromRef = useRef<HTMLDivElement>(null);
+const toRef = useRef<HTMLDivElement>(null);
+
+<div ref={containerRef} className="relative">
+  <div ref={fromRef}>From</div>
+  <div ref={toRef}>To</div>
+  <AnimatedBeam
+    containerRef={containerRef}
+    fromRef={fromRef}
+    toRef={toRef}
+  />
+</div>
+```
+
+## Preview
+
+### Default (Bidirectional Integration)
+
+A complete integration showcase with icons on both sides connected through a central AI element.
+
+<ComponentCodePreview name='animated-beam-default' hasReTrigger isFitheight />
+
+### One to One
+
+Simple beam connecting two elements horizontally.
+
+<ComponentCodePreview name='animated-beam-one-to-one' hasReTrigger isFitheight />
+
+### Bidirectional
+
+Two beams traveling in opposite directions with curved paths creating an elliptical effect.
+
+<ComponentCodePreview name='animated-beam-bidirectional' hasReTrigger isFitheight />
+
+### Many to One
+
+Multiple input sources connecting to a central processing node, then to a single output.
+
+<ComponentCodePreview name='animated-beam-many-to-one' hasReTrigger isFitheight />
+
+### One to Many (with Gradient Colors)
+
+Single input distributing to multiple outputs with custom gradient colors per beam.
+
+<ComponentCodePreview name='animated-beam-one-to-many' hasReTrigger isFitheight />
+
+### Multiple Beams
+
+Complex network with multiple interconnected beams, staggered animations, and various colors.
+
+<ComponentCodePreview name='animated-beam-multiple' hasReTrigger isFitheight />
+
+### Showcase
+
+A professional integration showcase with styled nodes and gradient beams.
+
+<ComponentCodePreview name='animated-beam-showcase' hasReTrigger isFitheight />
+
+## Props
+
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| `containerRef` | `RefObject<HTMLElement>` | Required | Reference to the container element |
+| `fromRef` | `RefObject<HTMLElement>` | Required | Reference to the start element |
+| `toRef` | `RefObject<HTMLElement>` | Required | Reference to the end element |
+| `curvature` | `number` | `0` | Curve amount of the beam path (negative for up, positive for down) |
+| `reverse` | `boolean` | `false` | Reverse the animation direction |
+| `pathColor` | `string` | `"gray"` | Color of the static path |
+| `pathWidth` | `number` | `2` | Width of the path stroke |
+| `pathOpacity` | `number` | `0.2` | Opacity of the static path |
+| `gradientStartColor` | `string` | `"#ffaa40"` | Starting color of the animated gradient |
+| `gradientStopColor` | `string` | `"#9c40ff"` | Ending color of the animated gradient |
+| `delay` | `number` | `0` | Animation start delay in seconds |
+| `duration` | `number` | `2` | Animation duration in seconds |
+| `startXOffset` | `number` | `0` | X offset for the start position |
+| `startYOffset` | `number` | `0` | Y offset for the start position |
+| `endXOffset` | `number` | `0` | X offset for the end position |
+| `endYOffset` | `number` | `0` | Y offset for the end position |
+| `className` | `string` | `""` | Additional CSS classes |
+
+## Features
+
+- **SVG-based**: Clean, scalable paths with smooth animations
+- **Customizable curvature**: Create straight or curved beam paths
+- **Gradient animation**: Smooth animated gradient that travels along the path
+- **Multiple beams**: Support for complex integration diagrams
+- **Staggered animations**: Use delay prop for sequential animations
+- **Responsive**: Automatically updates path on container resize
+- **Dark mode compatible**: Works with both light and dark themes
+
+## Use Cases
+
+| Use Case | Description |
+|----------|-------------|
+| Integration Pages | Showcase how your product connects with other services |
+| AI Workflows | Visualize data flow through AI/ML pipelines |
+| API Documentation | Illustrate request/response flows |
+| Data Pipelines | Show how data moves through your system |
+| Architecture Diagrams | Animated system architecture visualizations |
+
+## Tips
+
+1. **Container positioning**: The container must have `position: relative` for beams to render correctly.
+
+2. **Element centering**: Beams connect to the center of referenced elements. Use `startXOffset`/`endYOffset` props to fine-tune positions.
+
+3. **Curved paths**: Use positive `curvature` values to curve downward, negative values to curve upward.
+
+4. **Multiple beams**: Create complex diagrams by adding multiple `AnimatedBeam` components with different refs and settings.
+
+5. **Staggered animations**: Use the `delay` prop to create sequential beam animations for a more dynamic effect.
+
+6. **Custom colors**: Use `gradientStartColor` and `gradientStopColor` to match your brand colors.
+
+## Code
+
+<ComponentCodePreview name='animated-beam' isCode />
