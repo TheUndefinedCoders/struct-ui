@@ -1,0 +1,185 @@
+export const metadata = {
+  title: "Steps Sections - Animated Process & Timeline Blocks",
+  description: "A collection of beautiful, animated steps/process section blocks with timelines, numbered cards, icon cards, and smooth animations. Perfect for showcasing workflows, onboarding, and how-it-works sections.",
+  keywords: [
+    "Steps Section",
+    "Process Steps",
+    "Timeline",
+    "How It Works",
+    "Onboarding Steps",
+    "Workflow",
+    "Framer Motion",
+    "React Steps",
+    "Responsive Steps",
+    "Dark Mode Steps",
+  ],
+  authors: [{ name: "Numan", url: "https://numan-dev.web.app" }],
+  creator: "@numan-dev",
+  publisher: "Struct-UI",
+  robots: {
+    index: true,
+    follow: true,
+  },
+};
+
+# Steps Sections
+
+A collection of beautiful, animated steps/process section blocks for your websites. Perfect for showcasing workflows, onboarding processes, and how-it-works sections. Built with Framer Motion for smooth animations.
+
+## Vertical Timeline
+
+A classic vertical timeline design with alternating cards and animated connecting line.
+
+<ComponentCodePreview documentationType="blocks" name='steps-vertical' hasReTrigger responsive />
+
+**Features:**
+- Alternating left/right layout
+- Vertical gradient connecting line
+- Animated icon badges with glow
+- Color-coded step indicators
+- Staggered entrance animations
+- CTA button at bottom
+
+---
+
+## Horizontal Cards
+
+Horizontal numbered cards with icon badges and connecting lines.
+
+<ComponentCodePreview documentationType="blocks" name='steps-horizontal' hasReTrigger responsive />
+
+**Features:**
+- 4-column responsive grid
+- Large numbered watermarks
+- Icon rotation on hover
+- Animated connector lines
+- Card hover lift effect
+- Clean minimal design
+
+---
+
+## Gradient Background
+
+Dark themed steps with animated gradient orbs and stats section.
+
+<ComponentCodePreview documentationType="blocks" name='steps-gradient' hasReTrigger responsive />
+
+**Features:**
+- Animated gradient orbs background
+- Grid pattern overlay
+- Status badge animation
+- Glow effect on hover
+- Stats section at bottom
+- Glass-morphism cards
+
+---
+
+## Minimal Design
+
+Clean, typography-focused steps with circular number badges.
+
+<ComponentCodePreview documentationType="blocks" name='steps-minimal' hasReTrigger responsive />
+
+**Features:**
+- Circular number badges
+- Arrow connectors between steps
+- Hover color transitions
+- Animated divider line
+- CTA row at bottom
+- Light/dark mode support
+
+---
+
+## Icon Cards
+
+Colorful icon cards with step numbers and progress indicators.
+
+<ComponentCodePreview documentationType="blocks" name='steps-cards' hasReTrigger responsive />
+
+**Features:**
+- Color-coded icon cards
+- Step number badges
+- Progress dot indicators
+- Connection line (desktop)
+- Icon hover animation
+- Gradient CTA banner
+
+---
+
+## Zigzag Layout
+
+Alternating image and content layout with learn more links.
+
+<ComponentCodePreview documentationType="blocks" name='steps-zigzag' hasReTrigger responsive />
+
+**Features:**
+- Alternating image/content layout
+- Large step number overlays
+- Real image placeholders
+- Learn more animated arrows
+- Scroll down indicator
+- Badge header
+
+---
+
+## Usage
+
+All steps sections are built with React and Framer Motion. Install the required dependencies:
+
+```bash
+npm install framer-motion lucide-react
+```
+
+Import and use any steps section:
+
+```tsx
+import StepsVertical from '@/components/blocks/steps/steps-vertical';
+
+export default function HowItWorksPage() {
+  return (
+    <main>
+      <StepsVertical />
+    </main>
+  );
+}
+```
+
+## Customization
+
+Each steps section is fully customizable:
+
+- **Steps Data**: Update step titles, descriptions, and icons
+- **Colors**: Modify gradient and accent colors
+- **Icons**: Swap Lucide icons for your preferred icons
+- **Images**: Replace placeholder images (zigzag variant)
+- **Animations**: Adjust timing and effects in Framer Motion props
+- **Layout**: Change number of steps or grid columns
+
+## Steps Section Comparison
+
+| Section | Best For | Key Feature |
+|---------|----------|-------------|
+| Vertical | Classic timelines | Alternating layout |
+| Horizontal | Process overview | Numbered cards |
+| Gradient | Premium products | Animated background |
+| Minimal | Clean designs | Typography focus |
+| Cards | Feature showcase | Color-coded icons |
+| Zigzag | Visual storytelling | Image + content |
+
+## Use Cases
+
+- **Onboarding**: Guide new users through setup
+- **How It Works**: Explain product/service process
+- **Getting Started**: Quick start documentation
+- **Checkout Flow**: E-commerce purchase steps
+- **Timeline**: Company history or milestones
+- **Tutorials**: Step-by-step instructions
+
+## Tips
+
+1. **Keep It Simple**: 3-5 steps is ideal for user comprehension
+2. **Clear Titles**: Use action-oriented step titles
+3. **Icons**: Choose icons that clearly represent each step
+4. **Mobile First**: All variants stack properly on mobile
+5. **Animations**: Viewport-based animations trigger as users scroll
+6. **CTAs**: Include a clear call-to-action after the final step

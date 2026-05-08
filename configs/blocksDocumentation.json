@@ -210,6 +210,55 @@
       "new": true
     },
     {
+      "name": "Steps",
+      "componentArray": [
+        {
+          "componentName": "steps-vertical",
+          "filesrc": "blocks/steps/steps-vertical.tsx",
+          "iframeSrc": "live-blocks/steps-vertical",
+          "parentlink": "steps",
+          "parentName": "Steps"
+        },
+        {
+          "componentName": "steps-horizontal",
+          "filesrc": "blocks/steps/steps-horizontal.tsx",
+          "iframeSrc": "live-blocks/steps-horizontal",
+          "parentlink": "steps",
+          "parentName": "Steps"
+        },
+        {
+          "componentName": "steps-gradient",
+          "filesrc": "blocks/steps/steps-gradient.tsx",
+          "iframeSrc": "live-blocks/steps-gradient",
+          "parentlink": "steps",
+          "parentName": "Steps"
+        },
+        {
+          "componentName": "steps-minimal",
+          "filesrc": "blocks/steps/steps-minimal.tsx",
+          "iframeSrc": "live-blocks/steps-minimal",
+          "parentlink": "steps",
+          "parentName": "Steps"
+        },
+        {
+          "componentName": "steps-cards",
+          "filesrc": "blocks/steps/steps-cards.tsx",
+          "iframeSrc": "live-blocks/steps-cards",
+          "parentlink": "steps",
+          "parentName": "Steps"
+        },
+        {
+          "componentName": "steps-zigzag",
+          "filesrc": "blocks/steps/steps-zigzag.tsx",
+          "iframeSrc": "live-blocks/steps-zigzag",
+          "parentlink": "steps",
+          "parentName": "Steps"
+        }
+      ],
+      "type": "steps",
+      "new": true
+    },
+    {
       "name": "Product Cards",
       "componentArray": [
         {

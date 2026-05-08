@@ -21,6 +21,11 @@ export const basicBlocks = [
     new: true,
   },
   {
+    href: '/blocks/steps',
+    name: 'Steps',
+    component: 'steps',
+  },
+  {
     href: '/blocks/footers',
     name: 'Footers',
     component: 'footers',
