@@ -49,12 +49,12 @@ function Header() {
             <Link href='/components' className='flex gap-2 group font-medium items-center py-1  transition-all text-slate-600 hover:text-slate-900  dark:text-slate-300 dark:hover:text-white'>
               Components
             </Link>
-            <Link href='/templates' className='flex gap-2 group font-medium items-center py-1  transition-all text-slate-600 hover:text-slate-900  dark:text-slate-300 dark:hover:text-white'>
-              Templates
-            </Link>
             <Link href="/blocks" className="flex gap-2 group font-medium items-center py-1  transition-all text-slate-600 hover:text-slate-900  dark:text-slate-300 dark:hover:text-white">
               Blocks
-              {/* <span className="text-xs font-normal inline-block -translate-y-2 italic text-blue-600">New</span> */}
+            </Link>
+            <Link href='/templates' className='flex gap-2 group font-medium items-center py-1  transition-all text-slate-600 hover:text-slate-900  dark:text-slate-300 dark:hover:text-white'>
+              Templates
+              <span className="text-xs font-normal inline-block -translate-y-2 italic text-blue-600">New</span>
             </Link>
 
           </div>
