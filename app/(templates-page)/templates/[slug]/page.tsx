@@ -1,7 +1,7 @@
 import { notFound } from 'next/navigation';
 import Image from 'next/image';
 import Link from 'next/link';
-import { ArrowLeft, ExternalLink, Check, ChevronRight } from 'lucide-react';
+import { ArrowLeft, Check } from 'lucide-react';
 import {
   templates,
   getTemplateBySlug,
@@ -9,6 +9,7 @@ import {
   categoryLabels,
   TechStack,
 } from '@/configs/templatesData';
+import { TemplateCTASection } from '@/components/website/template-cta-section';
 
 export async function generateStaticParams() {
   return templates.map((template) => ({
@@ -66,11 +67,11 @@ export default async function TemplatePage({ params }: { params: Promise<{ slug:
         {/* Left: Info */}
         <div className='flex flex-col'>
           <div className='flex items-center gap-3 mb-4'>
-            <span className='text-sm font-medium text-orange-500 uppercase tracking-wider'>
+            <span className='text-sm font-medium text-cyan-400 uppercase tracking-wider'>
               {categoryLabels[template.category]}
             </span>
             {template.isNew && (
-              <span className='px-2 py-1 text-xs font-medium bg-orange-500 text-white rounded-md'>
+              <span className='px-2 py-1 text-xs font-medium bg-cyan-600 text-white rounded-md'>
                 New
               </span>
             )}
@@ -112,38 +113,7 @@ export default async function TemplatePage({ params }: { params: Promise<{ slug:
           </div>
 
           {/* CTA Buttons */}
-          <div className='flex flex-wrap gap-4 mb-8'>
-            {template.pricing.isFree ? (
-              <a
-                href={template.previewUrl}
-                target='_blank'
-                rel='noopener noreferrer'
-                className='inline-flex items-center justify-center gap-2 px-6 py-3 text-base font-medium bg-orange-500 hover:bg-orange-600 text-white rounded-lg transition-colors'
-              >
-                Download Free
-                <ChevronRight className='w-5 h-5' />
-              </a>
-            ) : (
-              <a
-                href={template.purchaseUrl}
-                target='_blank'
-                rel='noopener noreferrer'
-                className='inline-flex items-center justify-center gap-2 px-6 py-3 text-base font-medium bg-orange-500 hover:bg-orange-600 text-white rounded-lg transition-colors'
-              >
-                Get Access - {priceDisplay}
-                <ChevronRight className='w-5 h-5' />
-              </a>
-            )}
-            <a
-              href={template.previewUrl}
-              target='_blank'
-              rel='noopener noreferrer'
-              className='inline-flex items-center justify-center gap-2 px-6 py-3 text-base font-medium border border-zinc-700 hover:border-zinc-500 text-white rounded-lg transition-colors hover:bg-zinc-800'
-            >
-              Live Preview
-              <ExternalLink className='w-5 h-5' />
-            </a>
-          </div>
+          <TemplateCTASection template={template} variant='hero' />
 
           {/* Tech Stack */}
           <div>
@@ -180,8 +150,8 @@ export default async function TemplatePage({ params }: { params: Promise<{ slug:
               className='p-5 bg-zinc-900/50 border border-zinc-800 rounded-xl'
             >
               <div className='flex items-start gap-3'>
-                <div className='flex-shrink-0 w-6 h-6 rounded-full bg-orange-500/20 flex items-center justify-center'>
-                  <Check className='w-4 h-4 text-orange-500' />
+                <div className='flex-shrink-0 w-6 h-6 rounded-full bg-cyan-600/20 flex items-center justify-center'>
+                  <Check className='w-4 h-4 text-cyan-400' />
                 </div>
                 <div>
                   <h3 className='font-medium text-white mb-1'>
@@ -275,39 +245,7 @@ export default async function TemplatePage({ params }: { params: Promise<{ slug:
       </section>
 
       {/* Final CTA */}
-      <section className='p-8 rounded-2xl bg-gradient-to-br from-orange-500/10 to-zinc-950 border border-orange-500/20'>
-        <div className='text-center max-w-2xl mx-auto'>
-          <h2 className='text-2xl font-semibold text-white mb-3'>
-            Ready to get started?
-          </h2>
-          <p className='text-zinc-400 mb-6'>
-            Get {template.name} and start building your project today.
-          </p>
-          <div className='flex justify-center gap-4'>
-            {template.pricing.isFree ? (
-              <a
-                href={template.previewUrl}
-                target='_blank'
-                rel='noopener noreferrer'
-                className='inline-flex items-center justify-center gap-2 px-8 py-3 text-base font-medium bg-orange-500 hover:bg-orange-600 text-white rounded-lg transition-colors'
-              >
-                Download Free
-                <ChevronRight className='w-5 h-5' />
-              </a>
-            ) : (
-              <a
-                href={template.purchaseUrl}
-                target='_blank'
-                rel='noopener noreferrer'
-                className='inline-flex items-center justify-center gap-2 px-8 py-3 text-base font-medium bg-orange-500 hover:bg-orange-600 text-white rounded-lg transition-colors'
-              >
-                Get Access - {priceDisplay}
-                <ChevronRight className='w-5 h-5' />
-              </a>
-            )}
-          </div>
-        </div>
-      </section>
+      <TemplateCTASection template={template} variant='footer' />
     </div>
   );
 }

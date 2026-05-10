@@ -12,6 +12,7 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from '@/components/ui/tooltip';
+import { TemplateDownloadButton } from './template-download-button';
 
 const TechStackIcon = ({ tech }: { tech: TechStack }) => {
   const icons: Record<TechStack, React.ReactNode> = {
@@ -99,7 +100,7 @@ export function TemplateCard({ template, className }: TemplateCardProps) {
   return (
     <div
       className={cn(
-        'group relative flex flex-col bg-zinc-950 dark:bg-zinc-900/80 border border-zinc-800 rounded-xl overflow-hidden transition-all duration-300 hover:border-zinc-700 hover:shadow-2xl hover:shadow-orange-500/5',
+        'group relative flex flex-col bg-zinc-950 dark:bg-zinc-900/80 border border-zinc-800 rounded-xl overflow-hidden transition-all duration-300 hover:border-zinc-700 hover:shadow-2xl hover:shadow-cyan-500/5',
         className
       )}
     >
@@ -121,7 +122,7 @@ export function TemplateCard({ template, className }: TemplateCardProps) {
         {/* Badges */}
         <div className="absolute top-3 left-3 flex gap-2">
           {template.isNew && (
-            <span className="px-2 py-1 text-xs font-medium bg-orange-500 text-white rounded-md">
+            <span className="px-2 py-1 text-xs font-medium bg-cyan-600 text-white rounded-md">
               New
             </span>
           )}
@@ -141,12 +142,12 @@ export function TemplateCard({ template, className }: TemplateCardProps) {
       {/* Content */}
       <div className="flex flex-col flex-1 p-5">
         {/* Category Label */}
-        <span className="text-xs font-medium text-orange-500 uppercase tracking-wider mb-2">
+        <span className="text-xs font-medium text-cyan-400 uppercase tracking-wider mb-2">
           Template
         </span>
 
         {/* Title */}
-        <h3 className="text-xl font-semibold text-white mb-2 group-hover:text-orange-400 transition-colors">
+        <h3 className="text-xl font-semibold text-white mb-2 group-hover:text-cyan-400 transition-colors">
           {template.name}
         </h3>
 
@@ -157,25 +158,7 @@ export function TemplateCard({ template, className }: TemplateCardProps) {
 
         {/* Buttons */}
         <div className="flex gap-3 mb-4">
-          {template.pricing.isFree ? (
-            <Link
-              href={`/templates/${template.slug}`}
-              className="flex-1 inline-flex items-center justify-center gap-2 px-4 py-2.5 text-sm font-medium bg-orange-500 hover:bg-orange-600 text-white rounded-lg transition-colors"
-            >
-              Get Access - Free
-              <ChevronRight className="w-4 h-4" />
-            </Link>
-          ) : (
-            <a
-              href={template.purchaseUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex-1 inline-flex items-center justify-center gap-2 px-4 py-2.5 text-sm font-medium bg-orange-500 hover:bg-orange-600 text-white rounded-lg transition-colors"
-            >
-              Get Access - {priceDisplay}
-              <ChevronRight className="w-4 h-4" />
-            </a>
-          )}
+          <TemplateDownloadButton template={template} />
           
           <a
             href={template.previewUrl}
@@ -230,7 +213,7 @@ export function TemplateCardCompact({ template, className }: TemplateCardCompact
       </div>
       
       <div className="flex-1 min-w-0">
-        <h4 className="font-medium text-white truncate group-hover:text-orange-400 transition-colors">
+        <h4 className="font-medium text-white truncate group-hover:text-cyan-400 transition-colors">
           {template.name}
         </h4>
         <p className="text-sm text-zinc-400 truncate">
@@ -240,7 +223,7 @@ export function TemplateCardCompact({ template, className }: TemplateCardCompact
         </p>
       </div>
 
-      <ChevronRight className="w-5 h-5 text-zinc-500 group-hover:text-orange-400 transition-colors" />
+      <ChevronRight className="w-5 h-5 text-zinc-500 group-hover:text-cyan-400 transition-colors" />
     </Link>
   );
 }

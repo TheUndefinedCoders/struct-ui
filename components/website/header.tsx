@@ -16,12 +16,15 @@ import {
   MoonIcon,
   Sun,
   SunIcon,
+  LogIn,
 } from 'lucide-react';
 import { SearchDialog } from './searchbar';
+import { SignInButton, UserButton, useAuth } from '@clerk/nextjs';
 // import MobileHeader from './moibile-header'
 
 function Header() {
   const { setTheme } = useTheme();
+  const { isSignedIn, isLoaded } = useAuth();
 
   return (
     <>
@@ -127,6 +130,27 @@ function Header() {
                 </DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>
+
+            {/* Auth */}
+            {isLoaded && (
+              isSignedIn ? (
+                <UserButton
+                  afterSignOutUrl='/'
+                  appearance={{
+                    elements: {
+                      avatarBox: 'w-10 h-10',
+                    },
+                  }}
+                />
+              ) : (
+                <SignInButton mode='modal'>
+                  <button className='inline-flex items-center gap-2 px-4 py-2 text-sm font-medium bg-cyan-600 hover:bg-cyan-700 text-white rounded-md transition-colors'>
+                    <LogIn className='w-4 h-4' />
+                    <span className='hidden sm:inline'>Sign In</span>
+                  </button>
+                </SignInButton>
+              )
+            )}
           </div>
         </div>
       </header>

@@ -49,7 +49,7 @@ function TemplatesContent() {
           <h1 className='sm:text-3xl text-2xl font-semibold tracking-tight'>
             {title}
           </h1>
-          <span className='px-2 py-1 text-xs font-medium bg-orange-500/10 text-orange-500 rounded-full'>
+          <span className='px-2 py-1 text-xs font-medium bg-cyan-500/10 text-cyan-400 rounded-full'>
             {displayTemplates.length} templates
           </span>
         </div>
@@ -62,7 +62,7 @@ function TemplatesContent() {
       {featuredTemplates.length > 0 && (
         <section className='mb-12'>
           <h2 className='text-xl font-semibold mb-4 flex items-center gap-2'>
-            <span className='w-2 h-2 rounded-full bg-orange-500' />
+            <span className='w-2 h-2 rounded-full bg-cyan-500' />
             Featured
           </h2>
           <div className='grid lg:grid-cols-2 gap-6'>
@@ -128,7 +128,7 @@ function TemplatesContent() {
           </div>
           <a
             href='mailto:contact@structui.com'
-            className='inline-flex items-center justify-center gap-2 px-6 py-3 text-sm font-medium bg-orange-500 hover:bg-orange-600 text-white rounded-lg transition-colors whitespace-nowrap'
+            className='inline-flex items-center justify-center gap-2 px-6 py-3 text-sm font-medium bg-cyan-600 hover:bg-cyan-700 text-white rounded-lg transition-colors whitespace-nowrap'
           >
             Contact Us
             <svg

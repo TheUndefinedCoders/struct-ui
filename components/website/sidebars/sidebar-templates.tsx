@@ -135,7 +135,7 @@ function TemplatesSidebar() {
                 >
                   {link.name}
                   {link?.new && (
-                    <span className='2xl:text-xs text-[0.74em] bg-orange-500 text-white px-1 ml-2 rounded-sm'>
+                    <span className='2xl:text-xs text-[0.74em] bg-cyan-500 text-white px-1 ml-2 rounded-sm'>
                       New
                     </span>
                   )}
