@@ -109,7 +109,7 @@ function TemplatesContent() {
             No templates found
           </h3>
           <p className='text-zinc-400 max-w-sm'>
-            We're working on adding more templates to this category. Check back
+            We are working on adding more templates to this category. Check back
             soon!
           </p>
         </div>
