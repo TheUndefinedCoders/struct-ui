@@ -1,9 +1,8 @@
 import './globals.css';
 import type { Metadata } from 'next';
 import { Poppins } from 'next/font/google';
-import Script from 'next/script';
+import { ClerkProvider } from '@clerk/nextjs';
 import { ThemeProvider } from '@/components/website/theme-provider';
-import { GeistMono } from 'geist/font/mono';
 import Progressbar from '@/lib/progressbar';
 import { siteConfig } from '@/lib/utils';
 
@@ -78,7 +77,42 @@ export default async function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <>
+    <ClerkProvider
+      appearance={{
+        variables: {
+          colorPrimary: '#ea580c',
+          colorBackground: '#18181b',
+          colorInputBackground: '#27272a',
+          colorInputText: '#ffffff',
+          colorText: '#ffffff',
+          colorTextSecondary: '#a1a1aa',
+          colorDanger: '#ef4444',
+          colorSuccess: '#22c55e',
+          colorWarning: '#f59e0b',
+          colorNeutral: '#71717a',
+          borderRadius: '0.5rem',
+        },
+        elements: {
+          card: 'bg-zinc-900 border border-zinc-800 shadow-xl',
+          headerTitle: 'text-white',
+          headerSubtitle: 'text-zinc-400',
+          socialButtonsBlockButton: 'bg-zinc-800 border-zinc-700 text-white hover:bg-zinc-700',
+          socialButtonsBlockButtonText: 'text-white',
+          formFieldLabel: 'text-zinc-300',
+          formFieldInput: 'bg-zinc-800 border-zinc-700 text-white',
+          footerActionLink: 'text-orange-500 hover:text-orange-400',
+          formButtonPrimary: 'bg-orange-500 hover:bg-orange-600 text-white',
+          userButtonPopoverCard: 'bg-zinc-900 border border-zinc-800',
+          userButtonPopoverActionButton: 'text-zinc-300 hover:text-white hover:bg-zinc-800',
+          userButtonPopoverActionButtonText: 'text-zinc-300',
+          userButtonPopoverActionButtonIcon: 'text-zinc-400',
+          userButtonPopoverFooter: 'hidden',
+          userPreviewMainIdentifier: 'text-white',
+          userPreviewSecondaryIdentifier: 'text-zinc-400',
+          avatarBox: 'border-2 border-zinc-700',
+        },
+      }}
+    >
       <html lang='en' suppressHydrationWarning>
         <body className={poppins.className}>
           <Progressbar>
@@ -90,6 +124,6 @@ export default async function RootLayout({
           </Progressbar>
         </body>
       </html>
-    </>
+    </ClerkProvider>
   );
 }
