@@ -1,14 +1,27 @@
 import { Footer } from '@/components/website/footer';
 import Header from '@/components/website/header';
-import HeroSec from '@/components/website/hero-sec';
-import { OWNER_URL } from '@/components/website/utils/websiteConstants';
+import {
+  HeroSection,
+  ComponentsShowcase,
+  BlocksShowcase,
+  TemplatesShowcase,
+  InstallationSection,
+  FeaturesSection,
+  CTASection,
+} from '@/components/website/landing';
 
 export default function Home() {
   return (
     <>
       <Header />
       <main className='relative'>
-        <HeroSec />
+        <HeroSection />
+        <InstallationSection />
+        <ComponentsShowcase />
+        <BlocksShowcase />
+        <TemplatesShowcase />
+        <FeaturesSection />
+        <CTASection />
       </main>
       <Footer />
     </>
