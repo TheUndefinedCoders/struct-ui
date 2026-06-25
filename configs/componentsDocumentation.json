@@ -997,6 +997,69 @@
       ],
       "type": "creative",
       "new": true
+    },
+    {
+      "name": "Floating Buttons",
+      "componentArray": [
+        {
+          "componentName": "floating-buttons",
+          "filesrc": "components/floating-buttons/floating-buttons.tsx",
+          "iframeSrc": "live-components/floating-buttons",
+          "parentlink": "floating-buttons",
+          "parentName": "Floating Buttons"
+        },
+        {
+          "componentName": "floating-buttons-default",
+          "filesrc": "components/floating-buttons/floating-buttons-default.tsx",
+          "iframeSrc": "live-components/floating-buttons-default",
+          "parentlink": "floating-buttons",
+          "parentName": "Floating Buttons"
+        },
+        {
+          "componentName": "floating-buttons-single",
+          "filesrc": "components/floating-buttons/floating-buttons-single.tsx",
+          "iframeSrc": "live-components/floating-buttons-single",
+          "parentlink": "floating-buttons",
+          "parentName": "Floating Buttons"
+        },
+        {
+          "componentName": "floating-buttons-social",
+          "filesrc": "components/floating-buttons/floating-buttons-social.tsx",
+          "iframeSrc": "live-components/floating-buttons-social",
+          "parentlink": "floating-buttons",
+          "parentName": "Floating Buttons"
+        },
+        {
+          "componentName": "floating-buttons-outline",
+          "filesrc": "components/floating-buttons/floating-buttons-outline.tsx",
+          "iframeSrc": "live-components/floating-buttons-outline",
+          "parentlink": "floating-buttons",
+          "parentName": "Floating Buttons"
+        },
+        {
+          "componentName": "floating-buttons-gradient",
+          "filesrc": "components/floating-buttons/floating-buttons-gradient.tsx",
+          "iframeSrc": "live-components/floating-buttons-gradient",
+          "parentlink": "floating-buttons",
+          "parentName": "Floating Buttons"
+        },
+        {
+          "componentName": "floating-buttons-horizontal",
+          "filesrc": "components/floating-buttons/floating-buttons-horizontal.tsx",
+          "iframeSrc": "live-components/floating-buttons-horizontal",
+          "parentlink": "floating-buttons",
+          "parentName": "Floating Buttons"
+        },
+        {
+          "componentName": "floating-buttons-positions",
+          "filesrc": "components/floating-buttons/floating-buttons-positions.tsx",
+          "iframeSrc": "live-components/floating-buttons-positions",
+          "parentlink": "floating-buttons",
+          "parentName": "Floating Buttons"
+        }
+      ],
+      "type": "creative",
+      "new": true
     }
   ]
 }

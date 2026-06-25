@@ -95,10 +95,15 @@ export const creativeComponents = [
     component: 'creative',
     new: true,
   },
-
   {
     href: '/components/motion-number',
     name: 'Motion Number',
+    component: 'creative',
+    new: true,
+  },
+  {
+    href: '/components/floating-buttons',
+    name: 'Floating Buttons',
     component: 'creative',
     new: true,
   },

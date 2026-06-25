@@ -1,0 +1,198 @@
+export const metadata = {
+  title: "Floating Buttons - Sticky Action Buttons Component",
+  description: "A customizable floating action button component that sticks to the side of the screen. Supports multiple buttons, expand on hover, various positions, and multiple style variants.",
+  keywords: [
+    "Floating Buttons",
+    "FAB",
+    "Floating Action Button",
+    "Sticky Buttons",
+    "Side Buttons",
+    "Contact Buttons",
+    "Social Buttons",
+    "Framer Motion",
+    "React Component",
+    "Accessible UI",
+  ],
+  authors: [{ name: "Numan", url: "https://numan-dev.web.app" }],
+  creator: "@numan-dev",
+  publisher: "Struct-UI",
+  robots: {
+    index: true,
+    follow: true,
+  },
+};
+
+# Floating Buttons
+
+A customizable floating action button component that sticks to the side of the screen. Perfect for contact options, social links, quick actions, or any sticky navigation needs.
+
+## Default - Multiple Buttons
+
+Multiple buttons that expand on hover to show labels. By default shows only icons, expands with motion on hover.
+
+<ComponentCodePreview name='floating-buttons-default' hasReTrigger />
+
+---
+
+## Single Button
+
+Single button variant that always shows icon and label together.
+
+<ComponentCodePreview name='floating-buttons-single' hasReTrigger />
+
+---
+
+## Social Links
+
+Social media buttons positioned on the left side with brand colors.
+
+<ComponentCodePreview name='floating-buttons-social' hasReTrigger />
+
+---
+
+## Outline Variant
+
+Outline style buttons with fill on hover effect.
+
+<ComponentCodePreview name='floating-buttons-outline' hasReTrigger />
+
+---
+
+## Gradient Variant
+
+Gradient background buttons with glow effect, perfect for dark themes.
+
+<ComponentCodePreview name='floating-buttons-gradient' hasReTrigger />
+
+---
+
+## Horizontal Layout
+
+Horizontal button layout, useful for bottom positioning.
+
+<ComponentCodePreview name='floating-buttons-horizontal' hasReTrigger />
+
+---
+
+## Custom Positions
+
+Customize vertical position using `vh` values (20vh, 50vh, 80vh examples).
+
+<ComponentCodePreview name='floating-buttons-positions' hasReTrigger />
+
+---
+
+## Installation
+
+```bash
+npx shadcn@latest add "https://ui-struct.vercel.app/r/floating-buttons"
+```
+
+## Usage
+
+```tsx
+import FloatingButtons from '@/components/floating-buttons/floating-buttons';
+import { MessageCircle, Phone, Mail } from 'lucide-react';
+
+export default function MyPage() {
+  const buttons = [
+    {
+      id: 'chat',
+      icon: <MessageCircle className="h-5 w-5" />,
+      label: 'Chat',
+      tooltip: 'Live Chat',
+      onClick: () => console.log('Chat clicked'),
+      color: '#6366f1',
+      hoverColor: '#4f46e5',
+    },
+    {
+      id: 'call',
+      icon: <Phone className="h-5 w-5" />,
+      label: 'Call Us',
+      tooltip: 'Call Us',
+      href: 'tel:+1234567890',
+      color: '#22c55e',
+    },
+    {
+      id: 'email',
+      icon: <Mail className="h-5 w-5" />,
+      label: 'Email',
+      tooltip: 'Send Email',
+      href: 'mailto:hello@example.com',
+      color: '#f59e0b',
+    },
+  ];
+
+  return (
+    <FloatingButtons
+      buttons={buttons}
+      position="right"
+      verticalPosition={50}
+      expandOnHover
+      expandDirection="vertical"
+      variant="solid"
+    />
+  );
+}
+```
+
+## Props
+
+### FloatingButtonsProps
+
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| `buttons` | `FloatingButtonItem[]` | required | Array of button configurations |
+| `position` | `'left' \| 'right'` | `'right'` | Horizontal position on screen |
+| `verticalPosition` | `number` | `50` | Vertical position in vh units |
+| `size` | `'sm' \| 'md' \| 'lg'` | `'md'` | Button size |
+| `gap` | `number` | `3` | Gap between buttons (multiplied by 4px) |
+| `showLabels` | `boolean` | `false` | Always show labels |
+| `expandOnHover` | `boolean` | `true` | Expand buttons on hover |
+| `expandDirection` | `'horizontal' \| 'vertical'` | `'vertical'` | Direction of button layout |
+| `variant` | `'solid' \| 'outline' \| 'ghost' \| 'gradient'` | `'solid'` | Visual style variant |
+| `primaryColor` | `string` | `'#6366f1'` | Default primary color |
+| `secondaryColor` | `string` | `'#8b5cf6'` | Default secondary/hover color |
+| `backdropBlur` | `boolean` | `true` | Enable backdrop blur |
+| `shadow` | `'none' \| 'sm' \| 'md' \| 'lg' \| 'xl'` | `'lg'` | Shadow size |
+| `borderRadius` | `'sm' \| 'md' \| 'lg' \| 'full'` | `'full'` | Border radius |
+| `animation` | `'slide' \| 'scale' \| 'fade'` | `'slide'` | Entry animation type |
+| `pulse` | `boolean` | `false` | Enable pulse animation |
+| `className` | `string` | - | Additional CSS classes |
+
+### FloatingButtonItem
+
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| `id` | `string` | required | Unique identifier |
+| `icon` | `React.ReactNode` | required | Icon element |
+| `label` | `string` | required | Button label text |
+| `onClick` | `() => void` | - | Click handler |
+| `href` | `string` | - | Link URL (renders as anchor) |
+| `color` | `string` | - | Custom button color |
+| `hoverColor` | `string` | - | Custom hover color |
+| `textColor` | `string` | `'#ffffff'` | Text/icon color |
+| `tooltip` | `string` | - | Tooltip text on hover |
+
+## Features
+
+- **Sticky Positioning**: Stays fixed on left or right side of screen
+- **Customizable Position**: Set vertical position using vh values
+- **Multiple Variants**: Solid, outline, ghost, and gradient styles
+- **Expand on Hover**: Shows labels only when hovered (multiple buttons)
+- **Single Button Mode**: Always shows icon + label for single button
+- **Tooltips**: Optional tooltips when labels are hidden
+- **Link Support**: Buttons can be links or click handlers
+- **Animations**: Slide, scale, or fade entry animations
+- **Responsive**: Works on all screen sizes
+- **Accessible**: Proper focus states and keyboard navigation
+- **Dark Mode**: Full dark mode support
+
+## Use Cases
+
+- **Contact Options**: Chat, phone, email buttons
+- **Social Links**: Social media profile links
+- **Quick Actions**: Bookmark, share, settings
+- **Navigation**: Scroll to top, menu toggles
+- **Support**: Help, feedback, support chat
+- **E-commerce**: Cart, wishlist, compare
