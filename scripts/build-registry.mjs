@@ -32,6 +32,7 @@ const registryFileMap = {
   'terminal': ['registry/components/terminal/terminal.tsx'],
   'orbiting-circles': ['registry/components/orbiting-circles/orbiting-circles.tsx'],
   'animated-beam': ['registry/components/animated-beam/animated-beam.tsx'],
+  'floating-buttons': ['registry/components/floating-buttons/floating-buttons.tsx'],
 };
 
 const registryTargetMap = {
@@ -53,6 +54,7 @@ const registryTargetMap = {
   'terminal': ['components/ui/terminal.tsx'],
   'orbiting-circles': ['components/ui/orbiting-circles.tsx'],
   'animated-beam': ['components/ui/animated-beam.tsx'],
+  'floating-buttons': ['components/ui/floating-buttons.tsx'],
 };
 
 const registry = [
@@ -180,6 +182,13 @@ const registry = [
     type: 'registry:ui',
     description: 'An animated beam of light that travels along a path, perfect for showcasing integrations and connections.',
     dependencies: [],
+    registryDependencies: [],
+  },
+  {
+    name: 'floating-buttons',
+    type: 'registry:ui',
+    description: 'A customizable floating action button component that sticks to the side of the screen with expand on hover and multiple variants.',
+    dependencies: ['framer-motion', 'lucide-react'],
     registryDependencies: [],
   },
 ];
