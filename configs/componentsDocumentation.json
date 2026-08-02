@@ -1109,6 +1109,62 @@
       ],
       "type": "creative",
       "new": true
+    },
+    {
+      "name": "Dock",
+      "componentArray": [
+        {
+          "componentName": "dock",
+          "filesrc": "components/dock/dock.tsx",
+          "iframeSrc": "live-components/dock",
+          "parentlink": "dock",
+          "parentName": "Dock"
+        },
+        {
+          "componentName": "dock-default",
+          "filesrc": "components/dock/dock-default.tsx",
+          "iframeSrc": "live-components/dock-default",
+          "parentlink": "dock",
+          "parentName": "Dock"
+        },
+        {
+          "componentName": "dock-magnification",
+          "filesrc": "components/dock/dock-magnification.tsx",
+          "iframeSrc": "live-components/dock-magnification",
+          "parentlink": "dock",
+          "parentName": "Dock"
+        },
+        {
+          "componentName": "dock-variants",
+          "filesrc": "components/dock/dock-variants.tsx",
+          "iframeSrc": "live-components/dock-variants",
+          "parentlink": "dock",
+          "parentName": "Dock"
+        },
+        {
+          "componentName": "dock-sizes",
+          "filesrc": "components/dock/dock-sizes.tsx",
+          "iframeSrc": "live-components/dock-sizes",
+          "parentlink": "dock",
+          "parentName": "Dock"
+        },
+        {
+          "componentName": "dock-position",
+          "filesrc": "components/dock/dock-position.tsx",
+          "iframeSrc": "live-components/dock-position",
+          "parentlink": "dock",
+          "parentName": "Dock"
+        },
+        {
+          "componentName": "dock-navigation",
+          "filesrc": "components/dock/dock-navigation.tsx",
+          "iframeSrc": "live-components/dock-navigation",
+          "parentlink": "dock",
+          "parentName": "Dock"
+        }
+      ],
+      "type": "creative",
+      "new": true
     }
   ]
 }

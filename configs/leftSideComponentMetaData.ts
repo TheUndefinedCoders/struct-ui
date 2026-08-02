@@ -112,4 +112,10 @@ export const creativeComponents = [
     component: 'creative',
     new: true,
   },
+  {
+    href: '/components/dock',
+    name: 'Dock',
+    component: 'creative',
+    new: true,
+  },
 ];

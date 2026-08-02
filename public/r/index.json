@@ -163,6 +163,16 @@
     "registryDependencies": []
   },
   {
+    "name": "dock",
+    "type": "registry:ui",
+    "description": "A macOS-inspired dock with magnification hover, tooltips, dividers, and style variants powered by Framer Motion springs.",
+    "dependencies": [
+      "framer-motion",
+      "@radix-ui/react-tooltip"
+    ],
+    "registryDependencies": []
+  },
+  {
     "name": "tooltip",
     "type": "registry:ui",
     "description": "An accessible tooltip with dark and white variants, arrow pointer, and configurable placement sides.",
