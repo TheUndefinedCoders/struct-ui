@@ -33,6 +33,7 @@ const registryFileMap = {
   'orbiting-circles': ['registry/components/orbiting-circles/orbiting-circles.tsx'],
   'animated-beam': ['registry/components/animated-beam/animated-beam.tsx'],
   'floating-buttons': ['registry/components/floating-buttons/floating-buttons.tsx'],
+  tooltip: ['registry/components/tooltip/tooltip.tsx'],
 };
 
 const registryTargetMap = {
@@ -55,6 +56,7 @@ const registryTargetMap = {
   'orbiting-circles': ['components/ui/orbiting-circles.tsx'],
   'animated-beam': ['components/ui/animated-beam.tsx'],
   'floating-buttons': ['components/ui/floating-buttons.tsx'],
+  tooltip: ['components/ui/tooltip.tsx'],
 };
 
 const registry = [
@@ -191,6 +193,13 @@ const registry = [
     dependencies: ['framer-motion', 'lucide-react'],
     registryDependencies: [],
   },
+  {
+    name: 'tooltip',
+    type: 'registry:ui',
+    description: 'An accessible tooltip with dark and white variants, arrow pointer, and configurable placement sides.',
+    dependencies: ['@radix-ui/react-tooltip'],
+    registryDependencies: [],
+  },
 ];
 
 function cleanComponentForRegistry(content, componentName) {
@@ -208,6 +217,14 @@ function cleanComponentForRegistry(content, componentName) {
     content = content.replace(/tabsConfig\?\s*:/g, 'tabsConfig:');
     content = content.replace(/selectedTab\?\s*:/g, 'selectedTab:');
     content = content.replace(/setSelectedTab\?\s*:/g, 'setSelectedTab:');
+  }
+
+  if (componentName === 'tooltip') {
+    // Strip docs-only default preview from the installable source
+    content = content.replace(
+      /\n\/\/ @docs-preview-start[\s\S]*?\/\/ @docs-preview-end\n?/g,
+      '\n'
+    );
   }
 
   return content;

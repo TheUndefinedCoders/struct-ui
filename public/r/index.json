@@ -151,5 +151,24 @@
     "description": "An animated beam of light that travels along a path, perfect for showcasing integrations and connections.",
     "dependencies": [],
     "registryDependencies": []
+  },
+  {
+    "name": "floating-buttons",
+    "type": "registry:ui",
+    "description": "A customizable floating action button component that sticks to the side of the screen with expand on hover and multiple variants.",
+    "dependencies": [
+      "framer-motion",
+      "lucide-react"
+    ],
+    "registryDependencies": []
+  },
+  {
+    "name": "tooltip",
+    "type": "registry:ui",
+    "description": "An accessible tooltip with dark and white variants, arrow pointer, and configurable placement sides.",
+    "dependencies": [
+      "@radix-ui/react-tooltip"
+    ],
+    "registryDependencies": []
   }
 ]

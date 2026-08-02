@@ -4,6 +4,11 @@ export const basicComponents = [
     name: 'Buttons'
   },
   {
+    href: '/components/tooltip',
+    name: 'Tooltip',
+    new: true,
+  },
+  {
     href: '/components/magnetic-button',
     name: 'Magnetic Button',
     new: true

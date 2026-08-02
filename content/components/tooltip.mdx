@@ -1,0 +1,122 @@
+export const metadata = {
+  title: "Tooltip - Accessible Tooltip Component",
+  description: "A Radix-based tooltip with dark and white variants, arrow pointer, and configurable placement sides. Perfect for icon labels, dock items, and contextual help.",
+  keywords: [
+    "Tooltip",
+    "React Tooltip",
+    "Radix Tooltip",
+    "Tooltip Arrow",
+    "Dark Tooltip",
+    "White Tooltip",
+    "Accessible Tooltip",
+  ],
+  authors: [{ name: "Numan", url: "https://numan-dev.web.app" }],
+  creator: "@numan-dev",
+  publisher: "Struct-UI",
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1
+    }
+  },
+  category: "technology"
+};
+
+## Installation
+
+```bash
+npx shadcn@latest add "https://ui-struct.vercel.app/r/tooltip"
+```
+
+## Usage
+
+```tsx
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
+
+<TooltipProvider>
+  <Tooltip>
+    <TooltipTrigger asChild>
+      <button>Hover me</button>
+    </TooltipTrigger>
+    <TooltipContent>Tooltip text</TooltipContent>
+  </Tooltip>
+</TooltipProvider>
+```
+
+## Preview
+
+Hover the button to see the default dark tooltip with arrow.
+
+<ComponentCodePreview name='tooltip-default' hasReTrigger isFitheight isDefaultCodeTab={false} />
+
+## Variants
+
+Use `variant="dark"` (default) or `variant="white"`.
+
+<ComponentCodePreview name='tooltip-variants' hasReTrigger isFitheight />
+
+### Variant Options
+
+| Variant | Description |
+|---------|-------------|
+| `dark` | Black background with light text (default) |
+| `white` | White background with dark text |
+
+## White Variant
+
+Ideal on dark surfaces — matches docks and dark UI chrome.
+
+<ComponentCodePreview name='tooltip-white' hasReTrigger isFitheight />
+
+## Placement Sides
+
+Control where the tooltip appears with the `side` prop.
+
+<ComponentCodePreview name='tooltip-sides' hasReTrigger isFitheight />
+
+### Side Options
+
+| Side | Description |
+|------|-------------|
+| `top` | Above the trigger (default) |
+| `right` | To the right of the trigger |
+| `bottom` | Below the trigger |
+| `left` | To the left of the trigger |
+
+## Delay
+
+Adjust open delay via `TooltipProvider` `delayDuration`.
+
+<ComponentCodePreview name='tooltip-with-delay' hasReTrigger isFitheight />
+
+## TooltipContent Props
+
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| `variant` | `'dark' \| 'white'` | `'dark'` | Color style for content and arrow |
+| `side` | `'top' \| 'right' \| 'bottom' \| 'left'` | `'top'` | Placement relative to trigger |
+| `sideOffset` | `number` | `8` | Distance from the trigger in pixels |
+| `className` | `string` | - | Additional CSS classes |
+| `children` | `ReactNode` | - | Tooltip content |
+
+## Features
+
+- **Arrow** — Built-in pointer that matches the tooltip color
+- **Variants** — Dark and white themes
+- **Accessible** — Powered by Radix UI
+- **Animated** — Fade and zoom enter/exit transitions
+- **Flexible** — Works with any trigger via `asChild`
+
+## Full Code
+
+<ComponentCodePreview name='tooltip' hasReTrigger isFitheight isDefaultCodeTab={true} />

@@ -70,6 +70,55 @@
       "type": "buttons"
     },
     {
+      "name": "Tooltip",
+      "componentArray": [
+        {
+          "componentName": "tooltip",
+          "filesrc": "components/tooltip/tooltip.tsx",
+          "iframeSrc": "live-components/tooltip",
+          "parentlink": "tooltip",
+          "parentName": "Tooltip"
+        },
+        {
+          "componentName": "tooltip-default",
+          "filesrc": "components/tooltip/tooltip-default.tsx",
+          "iframeSrc": "live-components/tooltip-default",
+          "parentlink": "tooltip",
+          "parentName": "Tooltip"
+        },
+        {
+          "componentName": "tooltip-variants",
+          "filesrc": "components/tooltip/tooltip-variants.tsx",
+          "iframeSrc": "live-components/tooltip-variants",
+          "parentlink": "tooltip",
+          "parentName": "Tooltip"
+        },
+        {
+          "componentName": "tooltip-white",
+          "filesrc": "components/tooltip/tooltip-white.tsx",
+          "iframeSrc": "live-components/tooltip-white",
+          "parentlink": "tooltip",
+          "parentName": "Tooltip"
+        },
+        {
+          "componentName": "tooltip-sides",
+          "filesrc": "components/tooltip/tooltip-sides.tsx",
+          "iframeSrc": "live-components/tooltip-sides",
+          "parentlink": "tooltip",
+          "parentName": "Tooltip"
+        },
+        {
+          "componentName": "tooltip-with-delay",
+          "filesrc": "components/tooltip/tooltip-with-delay.tsx",
+          "iframeSrc": "live-components/tooltip-with-delay",
+          "parentlink": "tooltip",
+          "parentName": "Tooltip"
+        }
+      ],
+      "type": "tooltip",
+      "new": true
+    },
+    {
       "name": "Magnetic Button",
       "componentArray": [
         {
