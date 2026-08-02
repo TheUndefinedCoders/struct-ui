@@ -1161,6 +1161,13 @@
           "iframeSrc": "live-components/dock-navigation",
           "parentlink": "dock",
           "parentName": "Dock"
+        },
+        {
+          "componentName": "dock-labels",
+          "filesrc": "components/dock/dock-labels.tsx",
+          "iframeSrc": "live-components/dock-labels",
+          "parentlink": "dock",
+          "parentName": "Dock"
         }
       ],
       "type": "creative",

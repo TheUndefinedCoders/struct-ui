@@ -31,15 +31,17 @@ export interface DockProps {
   distance?: number;
   size?: 'sm' | 'md' | 'lg';
   variant?: 'default' | 'glass' | 'outline';
+  /** How labels are shown: tooltip only, always below icons, or below icons on mobile only */
+  labelMode?: 'tooltip' | 'below' | 'responsive';
   position?: 'bottom' | 'top';
   tooltipSide?: 'top' | 'bottom';
   className?: string;
 }
 
 const sizeConfig = {
-  sm: { base: 32, pad: 'px-2 py-1.5', gap: 'gap-0.5' },
-  md: { base: 40, pad: 'px-2.5 py-2', gap: 'gap-1' },
-  lg: { base: 48, pad: 'px-3 py-2.5', gap: 'gap-1' },
+  sm: { base: 32, pad: 'px-2 py-1.5', gap: 'gap-0.5', label: 'text-[9px]' },
+  md: { base: 40, pad: 'px-2.5 py-2', gap: 'gap-1', label: 'text-[10px]' },
+  lg: { base: 48, pad: 'px-3 py-2.5', gap: 'gap-1', label: 'text-xs' },
 };
 
 const variantConfig = {
@@ -57,6 +59,8 @@ function DockIcon({
   magnification,
   distance,
   baseSize,
+  labelClass,
+  labelMode,
   tooltipSide,
 }: {
   item: DockItem;
@@ -64,9 +68,14 @@ function DockIcon({
   magnification: number;
   distance: number;
   baseSize: number;
+  labelClass: string;
+  labelMode: 'tooltip' | 'below' | 'responsive';
   tooltipSide: 'top' | 'bottom';
 }) {
   const ref = useRef<HTMLDivElement>(null);
+  const showLabelAlways = labelMode === 'below';
+  const showLabelMobile = labelMode === 'responsive';
+  const enableTooltip = labelMode === 'tooltip' || labelMode === 'responsive';
 
   const distanceCalc = useTransform(mouseX, (val) => {
     const bounds = ref.current?.getBoundingClientRect() ?? { x: 0, width: 0 };
@@ -87,13 +96,12 @@ function DockIcon({
 
   const iconSize = useTransform(size, (s) => s * 0.5);
 
-  const sharedClassName = cn(
+  const iconBubbleClass = cn(
     'relative flex aspect-square items-center justify-center rounded-full',
     'text-zinc-700 dark:text-zinc-200',
     'transition-colors duration-150',
     'hover:bg-zinc-200/80 dark:hover:bg-zinc-700/80',
-    'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-400 dark:focus-visible:ring-zinc-500',
-    'cursor-pointer'
+    'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-400 dark:focus-visible:ring-zinc-500'
   );
 
   const icon = (
@@ -105,6 +113,42 @@ function DockIcon({
     </motion.span>
   );
 
+  const labelEl = (
+    <>
+      {showLabelAlways && (
+        <span
+          className={cn(
+            'mt-0.5 max-w-[4.5rem] truncate text-center font-medium leading-tight text-zinc-600 dark:text-zinc-300',
+            labelClass
+          )}
+        >
+          {item.label}
+        </span>
+      )}
+      {showLabelMobile && (
+        <span
+          className={cn(
+            'mt-0.5 max-w-[4.5rem] truncate text-center font-medium leading-tight text-zinc-600 dark:text-zinc-300 md:hidden',
+            labelClass
+          )}
+        >
+          {item.label}
+        </span>
+      )}
+    </>
+  );
+
+  const interactiveClass = cn(
+    'flex cursor-pointer flex-col items-center justify-end outline-none',
+    (showLabelAlways || showLabelMobile) && 'min-w-[3.25rem] px-0.5'
+  );
+
+  const bubble = (
+    <motion.span className={iconBubbleClass} style={{ width: size, height: size }}>
+      {icon}
+    </motion.span>
+  );
+
   const trigger = item.href ? (
     <motion.a
       href={item.href}
@@ -112,20 +156,20 @@ function DockIcon({
       rel="noopener noreferrer"
       onClick={item.onClick}
       aria-label={item.label}
-      className={sharedClassName}
-      style={{ width: size, height: size }}
+      className={interactiveClass}
     >
-      {icon}
+      {bubble}
+      {labelEl}
     </motion.a>
   ) : (
     <motion.button
       type="button"
       onClick={item.onClick}
       aria-label={item.label}
-      className={sharedClassName}
-      style={{ width: size, height: size }}
+      className={interactiveClass}
     >
-      {icon}
+      {bubble}
+      {labelEl}
     </motion.button>
   );
 
@@ -133,14 +177,27 @@ function DockIcon({
     <motion.div
       ref={ref}
       className="relative flex items-end justify-center"
-      style={{ width: size, height: size }}
+      style={
+        showLabelAlways || showLabelMobile
+          ? undefined
+          : { width: size, height: size }
+      }
     >
-      <Tooltip>
-        <TooltipTrigger asChild>{trigger}</TooltipTrigger>
-        <TooltipContent side={tooltipSide} sideOffset={8} variant="white">
-          {item.label}
-        </TooltipContent>
-      </Tooltip>
+      {enableTooltip ? (
+        <Tooltip>
+          <TooltipTrigger asChild>{trigger}</TooltipTrigger>
+          <TooltipContent
+            side={tooltipSide}
+            sideOffset={8}
+            variant="white"
+            className={cn(showLabelMobile && 'hidden md:block')}
+          >
+            {item.label}
+          </TooltipContent>
+        </Tooltip>
+      ) : (
+        trigger
+      )}
     </motion.div>
   );
 }
@@ -151,6 +208,7 @@ export default function Dock({
   distance = 100,
   size = 'md',
   variant = 'default',
+  labelMode = 'tooltip',
   position = 'bottom',
   tooltipSide,
   className,
@@ -159,6 +217,7 @@ export default function Dock({
   const config = sizeConfig[size];
   const resolvedTooltipSide =
     tooltipSide ?? (position === 'top' ? 'bottom' : 'top');
+  const isLabeled = labelMode === 'below' || labelMode === 'responsive';
 
   return (
     <TooltipProvider delayDuration={100}>
@@ -166,7 +225,8 @@ export default function Dock({
         onMouseMove={(e) => mouseX.set(e.clientX)}
         onMouseLeave={() => mouseX.set(Infinity)}
         className={cn(
-          'mx-auto flex h-fit w-max items-end rounded-full border shadow-lg',
+          'mx-auto flex h-fit w-max items-end border shadow-lg',
+          isLabeled ? 'rounded-2xl' : 'rounded-full',
           config.pad,
           config.gap,
           variantConfig[variant],
@@ -183,11 +243,16 @@ export default function Dock({
               magnification={magnification}
               distance={distance}
               baseSize={config.base}
+              labelClass={config.label}
+              labelMode={labelMode}
               tooltipSide={resolvedTooltipSide}
             />
             {item.dividerAfter && (
               <div
-                className="mx-1 h-5 w-px self-center bg-zinc-300 dark:bg-zinc-600"
+                className={cn(
+                  'mx-1 w-px self-center bg-zinc-300 dark:bg-zinc-600',
+                  isLabeled ? 'h-8' : 'h-5'
+                )}
                 aria-hidden="true"
               />
             )}

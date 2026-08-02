@@ -101,6 +101,28 @@ Use the dock as a compact app navigation bar.
 
 <ComponentCodePreview name='dock-navigation' hasReTrigger isFitheight />
 
+## Labels Below Icons
+
+Show labels under each icon — always, or only on mobile screens.
+
+<ComponentCodePreview name='dock-labels' hasReTrigger isFitheight />
+
+### Label Mode Options
+
+| Mode | Description |
+|------|-------------|
+| `tooltip` | Icons only; label appears in a tooltip (default) |
+| `below` | Always show the label under the icon (no tooltip) |
+| `responsive` | Labels under icons on mobile; tooltips on `md+` screens |
+
+```tsx
+// Always show labels (great for mobile nav)
+<Dock items={items} labelMode="below" />
+
+// Labels on mobile, tooltips on desktop
+<Dock items={items} labelMode="responsive" />
+```
+
 ## DockItem Props
 
 | Prop | Type | Default | Description |
@@ -121,6 +143,7 @@ Use the dock as a compact app navigation bar.
 | `distance` | `number` | `100` | Influence radius for neighbor scaling |
 | `size` | `'sm' \| 'md' \| 'lg'` | `'md'` | Icon and padding size |
 | `variant` | `'default' \| 'glass' \| 'outline'` | `'default'` | Visual style |
+| `labelMode` | `'tooltip' \| 'below' \| 'responsive'` | `'tooltip'` | How labels are displayed |
 | `position` | `'bottom' \| 'top'` | `'bottom'` | Dock placement hint (affects default tooltip side) |
 | `tooltipSide` | `'top' \| 'bottom'` | auto | Force tooltip direction |
 | `className` | `string` | - | Additional CSS classes |
@@ -129,6 +152,7 @@ Use the dock as a compact app navigation bar.
 
 - **Magnification** — Smooth spring-based scaling that ripples to neighbors
 - **Tooltips** — Animated labels with caret, above or below icons
+- **Labels below** — Always-visible or mobile-only text under icons
 - **Dividers** — Group icons with optional separators
 - **Light & Dark** — Theme-aware styles out of the box
 - **Accessible** — `aria-label` on items, keyboard-focusable controls
