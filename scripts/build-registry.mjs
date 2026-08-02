@@ -33,6 +33,7 @@ const registryFileMap = {
   'orbiting-circles': ['registry/components/orbiting-circles/orbiting-circles.tsx'],
   'animated-beam': ['registry/components/animated-beam/animated-beam.tsx'],
   'floating-buttons': ['registry/components/floating-buttons/floating-buttons.tsx'],
+  dock: ['registry/components/dock/dock.tsx'],
   tooltip: ['registry/components/tooltip/tooltip.tsx'],
 };
 
@@ -56,6 +57,7 @@ const registryTargetMap = {
   'orbiting-circles': ['components/ui/orbiting-circles.tsx'],
   'animated-beam': ['components/ui/animated-beam.tsx'],
   'floating-buttons': ['components/ui/floating-buttons.tsx'],
+  dock: ['components/ui/dock.tsx'],
   tooltip: ['components/ui/tooltip.tsx'],
 };
 
@@ -191,6 +193,13 @@ const registry = [
     type: 'registry:ui',
     description: 'A customizable floating action button component that sticks to the side of the screen with expand on hover and multiple variants.',
     dependencies: ['framer-motion', 'lucide-react'],
+    registryDependencies: [],
+  },
+  {
+    name: 'dock',
+    type: 'registry:ui',
+    description: 'A macOS-inspired dock with magnification hover, tooltips, dividers, and style variants powered by Framer Motion springs.',
+    dependencies: ['framer-motion', '@radix-ui/react-tooltip'],
     registryDependencies: [],
   },
   {

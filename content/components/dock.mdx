@@ -1,0 +1,163 @@
+export const metadata = {
+  title: "Dock - macOS Style Animated Navigation Dock",
+  description: "A macOS-inspired dock component with smooth magnification on hover, tooltips, dividers, and multiple style variants. Built with Framer Motion spring physics for fluid icon scaling.",
+  keywords: [
+    "Dock",
+    "macOS Dock",
+    "Navigation Dock",
+    "Magnification Effect",
+    "Framer Motion Dock",
+    "Animated Toolbar",
+    "React Dock",
+    "Floating Navigation",
+  ],
+  authors: [{ name: "Numan", url: "https://numan-dev.web.app" }],
+  creator: "@numan-dev",
+  publisher: "Struct-UI",
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1
+    }
+  },
+  category: "technology"
+};
+
+## Installation
+
+```bash
+npx shadcn@latest add "https://ui-struct.vercel.app/r/dock"
+```
+
+## Usage
+
+```tsx
+import Dock from "@/components/ui/dock";
+import { Home, Pencil, Github, Mail } from "lucide-react";
+
+<Dock
+  items={[
+    { id: "home", icon: <Home />, label: "Home", href: "/" },
+    { id: "blog", icon: <Pencil />, label: "Blog", href: "/blog", dividerAfter: true },
+    { id: "github", icon: <Github />, label: "GitHub", href: "https://github.com" },
+    { id: "email", icon: <Mail />, label: "Email", href: "mailto:hello@example.com" },
+  ]}
+/>
+```
+
+## Preview
+
+Hover icons to see magnification and tooltips — inspired by the macOS dock.
+
+<ComponentCodePreview name='dock-default' hasReTrigger isFitheight isDefaultCodeTab={false} />
+
+## Magnification
+
+Control how strongly icons scale toward the cursor with `magnification` and `distance`.
+
+<ComponentCodePreview name='dock-magnification' hasReTrigger isFitheight />
+
+### Magnification Props
+
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| `magnification` | `number` | `1.35` | Max scale multiplier when the cursor is centered on an icon |
+| `distance` | `number` | `100` | Pixel radius where neighboring icons begin to scale |
+
+## Variants
+
+Three built-in style variants that support light and dark themes.
+
+<ComponentCodePreview name='dock-variants' hasReTrigger isFitheight />
+
+### Variant Options
+
+| Variant | Description |
+|---------|-------------|
+| `default` | Solid capsule with subtle border |
+| `glass` | Frosted glass with backdrop blur |
+| `outline` | Transparent background with border only |
+
+## Sizes
+
+Three size options for different layouts.
+
+<ComponentCodePreview name='dock-sizes' hasReTrigger isFitheight />
+
+## Position & Tooltips
+
+Place the dock at the top or bottom and control tooltip direction.
+
+<ComponentCodePreview name='dock-position' hasReTrigger isFitheight />
+
+## Navigation Use Case
+
+Use the dock as a compact app navigation bar.
+
+<ComponentCodePreview name='dock-navigation' hasReTrigger isFitheight />
+
+## Labels Below Icons
+
+Show labels under each icon — always, or only on mobile screens.
+
+<ComponentCodePreview name='dock-labels' hasReTrigger isFitheight />
+
+### Label Mode Options
+
+| Mode | Description |
+|------|-------------|
+| `tooltip` | Icons only; label appears in a tooltip (default) |
+| `below` | Always show the label under the icon (no tooltip) |
+| `responsive` | Labels under icons on mobile; tooltips on `md+` screens |
+
+```tsx
+// Always show labels (great for mobile nav)
+<Dock items={items} labelMode="below" />
+
+// Labels on mobile, tooltips on desktop
+<Dock items={items} labelMode="responsive" />
+```
+
+## DockItem Props
+
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| `id` | `string` | - | Unique item key |
+| `icon` | `ReactNode` | - | Icon element to render |
+| `label` | `string` | - | Tooltip text and accessible label |
+| `href` | `string` | - | Optional link URL (renders as `<a>`) |
+| `onClick` | `() => void` | - | Click handler (renders as `<button>` when no `href`) |
+| `dividerAfter` | `boolean` | `false` | Show a vertical divider after this item |
+
+## Dock Props
+
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| `items` | `DockItem[]` | - | Array of dock items |
+| `magnification` | `number` | `1.35` | Max icon scale on hover |
+| `distance` | `number` | `100` | Influence radius for neighbor scaling |
+| `size` | `'sm' \| 'md' \| 'lg'` | `'md'` | Icon and padding size |
+| `variant` | `'default' \| 'glass' \| 'outline'` | `'default'` | Visual style |
+| `labelMode` | `'tooltip' \| 'below' \| 'responsive'` | `'tooltip'` | How labels are displayed |
+| `position` | `'bottom' \| 'top'` | `'bottom'` | Dock placement hint (affects default tooltip side) |
+| `tooltipSide` | `'top' \| 'bottom'` | auto | Force tooltip direction |
+| `className` | `string` | - | Additional CSS classes |
+
+## Features
+
+- **Magnification** — Smooth spring-based scaling that ripples to neighbors
+- **Tooltips** — Animated labels with caret, above or below icons
+- **Labels below** — Always-visible or mobile-only text under icons
+- **Dividers** — Group icons with optional separators
+- **Light & Dark** — Theme-aware styles out of the box
+- **Accessible** — `aria-label` on items, keyboard-focusable controls
+- **Flexible** — Links or buttons, nav or social use cases
+
+## Full Code
+
+<ComponentCodePreview name='dock' hasReTrigger isFitheight isDefaultCodeTab={true} />
