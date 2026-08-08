@@ -35,6 +35,7 @@ const registryFileMap = {
   'floating-buttons': ['registry/components/floating-buttons/floating-buttons.tsx'],
   dock: ['registry/components/dock/dock.tsx'],
   tooltip: ['registry/components/tooltip/tooltip.tsx'],
+  marquee: ['registry/components/marquee/marquee.tsx'],
 };
 
 const registryTargetMap = {
@@ -59,6 +60,7 @@ const registryTargetMap = {
   'floating-buttons': ['components/ui/floating-buttons.tsx'],
   dock: ['components/ui/dock.tsx'],
   tooltip: ['components/ui/tooltip.tsx'],
+  marquee: ['components/ui/marquee.tsx'],
 };
 
 const registry = [
@@ -209,6 +211,13 @@ const registry = [
     dependencies: ['@radix-ui/react-tooltip'],
     registryDependencies: [],
   },
+  {
+    name: 'marquee',
+    type: 'registry:ui',
+    description: 'An infinite scrolling marquee for text, images, or any HTML with left, right, up, and down directions.',
+    dependencies: [],
+    registryDependencies: [],
+  },
 ];
 
 function cleanComponentForRegistry(content, componentName) {
@@ -228,11 +237,19 @@ function cleanComponentForRegistry(content, componentName) {
     content = content.replace(/setSelectedTab\?\s*:/g, 'setSelectedTab:');
   }
 
-  if (componentName === 'tooltip') {
+  if (componentName === 'tooltip' || componentName === 'marquee') {
     // Strip docs-only default preview from the installable source
     content = content.replace(
       /\n\/\/ @docs-preview-start[\s\S]*?\/\/ @docs-preview-end\n?/g,
       '\n'
+    );
+  }
+
+  if (componentName === 'marquee') {
+    // Installable file should default-export the Marquee component
+    content = content.replace(
+      /export \{ Marquee \};/,
+      'export { Marquee };\nexport default Marquee;'
     );
   }
 

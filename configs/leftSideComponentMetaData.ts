@@ -118,4 +118,10 @@ export const creativeComponents = [
     component: 'creative',
     new: true,
   },
+  {
+    href: '/components/marquee',
+    name: 'Marquee',
+    component: 'creative',
+    new: true,
+  },
 ];

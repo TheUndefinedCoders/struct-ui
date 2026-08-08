@@ -1,0 +1,18 @@
+{
+  "name": "marquee",
+  "type": "registry:ui",
+  "description": "An infinite scrolling marquee for text, images, or any HTML with left, right, up, and down directions.",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "components/ui/marquee.tsx",
+      "content": "'use client';\n\nimport React from 'react';\nimport { cn } from '@/lib/utils';\n\nexport type MarqueeDirection = 'left' | 'right' | 'up' | 'down';\n\nexport interface MarqueeProps {\n  children: React.ReactNode;\n  className?: string;\n  /** Scroll direction. Overrides `vertical` / `reverse` when set. */\n  direction?: MarqueeDirection;\n  /** Vertical scroll (ignored when `direction` is set) */\n  vertical?: boolean;\n  /** Reverse animation direction (ignored when `direction` is set) */\n  reverse?: boolean;\n  /** Pause animation while hovered */\n  pauseOnHover?: boolean;\n  /** How many times to repeat children for a seamless loop */\n  repeat?: number;\n  /** Animation duration in seconds */\n  duration?: number;\n  /** Gap between items (CSS length) */\n  gap?: string;\n  /** Fade edges with a mask */\n  fade?: boolean;\n}\n\nfunction resolveOrientation(\n  direction: MarqueeDirection | undefined,\n  vertical: boolean,\n  reverse: boolean\n) {\n  if (direction) {\n    return {\n      isVertical: direction === 'up' || direction === 'down',\n      isReverse: direction === 'right' || direction === 'down',\n    };\n  }\n  return { isVertical: vertical, isReverse: reverse };\n}\n\nfunction Marquee({\n  children,\n  className,\n  direction,\n  vertical = false,\n  reverse = false,\n  pauseOnHover = false,\n  repeat = 4,\n  duration = 40,\n  gap = '1rem',\n  fade = true,\n}: MarqueeProps) {\n  const { isVertical, isReverse } = resolveOrientation(\n    direction,\n    vertical,\n    reverse\n  );\n\n  const maskImage = fade\n    ? isVertical\n      ? 'linear-gradient(to bottom, transparent, black 12%, black 88%, transparent)'\n      : 'linear-gradient(to right, transparent, black 12%, black 88%, transparent)'\n    : undefined;\n\n  return (\n    <div\n      className={cn(\n        'group flex overflow-hidden p-2',\n        isVertical ? 'flex-col' : 'flex-row',\n        className\n      )}\n      style={\n        {\n          '--duration': `${duration}s`,\n          '--gap': gap,\n          gap: 'var(--gap)',\n          maskImage,\n          WebkitMaskImage: maskImage,\n        } as React.CSSProperties\n      }\n    >\n      {Array.from({ length: repeat }).map((_, i) => (\n        <div\n          key={i}\n          className={cn(\n            'flex shrink-0 justify-around',\n            isVertical\n              ? 'animate-marquee-vertical flex-col'\n              : 'animate-marquee flex-row',\n            isReverse && '[animation-direction:reverse]',\n            pauseOnHover && 'group-hover:[animation-play-state:paused]'\n          )}\n          style={{ gap: 'var(--gap)' }}\n          aria-hidden={i > 0 || undefined}\n        >\n          {children}\n        </div>\n      ))}\n    </div>\n  );\n}\n\nexport { Marquee };\nexport default Marquee;\n\n",
+      "type": "registry:ui",
+      "target": "components/ui/marquee.tsx"
+    }
+  ],
+  "tailwind": {},
+  "cssVars": {}
+}
