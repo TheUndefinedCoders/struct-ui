@@ -1172,6 +1172,62 @@
       ],
       "type": "creative",
       "new": true
+    },
+    {
+      "name": "Marquee",
+      "componentArray": [
+        {
+          "componentName": "marquee",
+          "filesrc": "components/marquee/marquee.tsx",
+          "iframeSrc": "live-components/marquee",
+          "parentlink": "marquee",
+          "parentName": "Marquee"
+        },
+        {
+          "componentName": "marquee-default",
+          "filesrc": "components/marquee/marquee-default.tsx",
+          "iframeSrc": "live-components/marquee-default",
+          "parentlink": "marquee",
+          "parentName": "Marquee"
+        },
+        {
+          "componentName": "marquee-directions",
+          "filesrc": "components/marquee/marquee-directions.tsx",
+          "iframeSrc": "live-components/marquee-directions",
+          "parentlink": "marquee",
+          "parentName": "Marquee"
+        },
+        {
+          "componentName": "marquee-vertical",
+          "filesrc": "components/marquee/marquee-vertical.tsx",
+          "iframeSrc": "live-components/marquee-vertical",
+          "parentlink": "marquee",
+          "parentName": "Marquee"
+        },
+        {
+          "componentName": "marquee-3d",
+          "filesrc": "components/marquee/marquee-3d.tsx",
+          "iframeSrc": "live-components/marquee-3d",
+          "parentlink": "marquee",
+          "parentName": "Marquee"
+        },
+        {
+          "componentName": "marquee-logos",
+          "filesrc": "components/marquee/marquee-logos.tsx",
+          "iframeSrc": "live-components/marquee-logos",
+          "parentlink": "marquee",
+          "parentName": "Marquee"
+        },
+        {
+          "componentName": "marquee-skills",
+          "filesrc": "components/marquee/marquee-skills.tsx",
+          "iframeSrc": "live-components/marquee-skills",
+          "parentlink": "marquee",
+          "parentName": "Marquee"
+        }
+      ],
+      "type": "creative",
+      "new": true
     }
   ]
 }

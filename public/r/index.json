@@ -180,5 +180,12 @@
       "@radix-ui/react-tooltip"
     ],
     "registryDependencies": []
+  },
+  {
+    "name": "marquee",
+    "type": "registry:ui",
+    "description": "An infinite scrolling marquee for text, images, or any HTML with left, right, up, and down directions.",
+    "dependencies": [],
+    "registryDependencies": []
   }
 ]

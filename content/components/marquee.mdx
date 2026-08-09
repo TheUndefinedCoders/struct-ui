@@ -1,0 +1,140 @@
+export const metadata = {
+  title: "Marquee - Infinite Scroll Component",
+  description: "An infinite scrolling marquee for text, images, logos, or any HTML. Supports left, right, up, and down directions with pause-on-hover, edge fade, and 3D layouts.",
+  keywords: [
+    "Marquee",
+    "Infinite Scroll",
+    "Scrolling Text",
+    "Logo Marquee",
+    "Testimonials",
+    "React Marquee",
+    "CSS Animation",
+  ],
+  authors: [{ name: "Numan", url: "https://numan-dev.web.app" }],
+  creator: "@numan-dev",
+  publisher: "Struct-UI",
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1
+    }
+  },
+  category: "technology"
+};
+
+## Installation
+
+```bash
+npx shadcn@latest add "https://ui-struct.vercel.app/r/marquee"
+```
+
+Add these animations to your `tailwind.config.ts` (if not already present):
+
+```ts
+// theme.extend.animation
+marquee: 'marquee var(--duration) linear infinite',
+'marquee-vertical': 'marquee-vertical var(--duration) linear infinite',
+
+// theme.extend.keyframes
+marquee: {
+  from: { transform: 'translateX(0)' },
+  to: { transform: 'translateX(calc(-100% - var(--gap)))' },
+},
+'marquee-vertical': {
+  from: { transform: 'translateY(0)' },
+  to: { transform: 'translateY(calc(-100% - var(--gap)))' },
+},
+```
+
+## Usage
+
+```tsx
+import Marquee from "@/components/ui/marquee";
+// or: import { Marquee } from "@/components/ui/marquee";
+
+<Marquee pauseOnHover>
+  <div>Item 1</div>
+  <div>Item 2</div>
+  <div>Item 3</div>
+</Marquee>
+```
+
+## Preview
+
+Two horizontal rows scrolling in opposite directions. Hover to pause.
+
+<ComponentCodePreview name='marquee-default' hasReTrigger isFitheight isDefaultCodeTab={false} />
+
+## Directions
+
+Scroll left, right, up, or down with the `direction` prop.
+
+<ComponentCodePreview name='marquee-directions' hasReTrigger isFitheight />
+
+### Direction Options
+
+| Direction | Description |
+|-----------|-------------|
+| `left` | Horizontal, moving left (default feel) |
+| `right` | Horizontal, moving right |
+| `up` | Vertical, moving up |
+| `down` | Vertical, moving down |
+
+You can also use `vertical` and `reverse` instead of `direction`.
+
+## Vertical
+
+Side-by-side vertical marquees — great for testimonials.
+
+<ComponentCodePreview name='marquee-vertical' hasReTrigger isFitheight />
+
+## 3D Perspective
+
+Stack vertical marquees with a 3D transform for a depth effect.
+
+<ComponentCodePreview name='marquee-3d' hasReTrigger isFitheight />
+
+## Text
+
+Works with any HTML — logos, badges, or plain text.
+
+<ComponentCodePreview name='marquee-logos' hasReTrigger isFitheight />
+
+## Icon with Text
+
+Skill tags and cards with brand icons — great for tech stacks and tool belts.
+
+<ComponentCodePreview name='marquee-skills' hasReTrigger isFitheight />
+
+## Props
+
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| `children` | `ReactNode` | - | Items to scroll (text, images, or any HTML) |
+| `direction` | `'left' \| 'right' \| 'up' \| 'down'` | - | Scroll direction (overrides `vertical` / `reverse`) |
+| `vertical` | `boolean` | `false` | Vertical orientation |
+| `reverse` | `boolean` | `false` | Reverse animation direction |
+| `pauseOnHover` | `boolean` | `false` | Pause while hovering |
+| `repeat` | `number` | `4` | Copies of children for a seamless loop |
+| `duration` | `number` | `40` | Animation duration in seconds |
+| `gap` | `string` | `'1rem'` | Gap between items |
+| `fade` | `boolean` | `true` | Soft fade on the edges |
+| `className` | `string` | - | Additional CSS classes |
+
+## Features
+
+- **Any content** — Text, images, cards, or custom HTML
+- **Four directions** — Left, right, up, down
+- **Pause on hover** — Optional interaction-friendly pause
+- **Edge fade** — Masked soft edges for a polished look
+- **Lightweight** — Pure CSS animation, no JS loop
+- **Accessible** — Duplicate tracks marked `aria-hidden`
+
+## Full Code
+
+<ComponentCodePreview name='marquee' hasReTrigger isFitheight isDefaultCodeTab={true} />

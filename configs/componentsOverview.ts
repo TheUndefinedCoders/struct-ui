@@ -23,7 +23,8 @@ export type ComponentSkeletonType =
   | 'blur-vignette'
   | 'motion-number'
   | 'floating-buttons'
-  | 'dock';
+  | 'dock'
+  | 'marquee';
 
 export type ComponentOverviewCard = {
   id: string;
@@ -183,6 +184,13 @@ const componentsOverviewCards: ComponentOverviewCard[] = [
     name: 'Dock',
     url: '/components/dock',
     skeleton: 'dock',
+    isNew: true,
+  },
+  {
+    id: 'marquee',
+    name: 'Marquee',
+    url: '/components/marquee',
+    skeleton: 'marquee',
     isNew: true,
   },
 ];

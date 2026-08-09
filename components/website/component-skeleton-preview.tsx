@@ -240,6 +240,24 @@ const skeletons: Record<ComponentSkeletonType, React.ReactNode> = {
       <Bone className="h-7 w-7 rounded-full" />
     </div>
   ),
+  marquee: (
+    <div className="relative flex w-full flex-col gap-2 overflow-hidden px-1">
+      <div className="flex gap-2">
+        <Bone className="h-10 w-20 shrink-0 rounded-lg" />
+        <Bone className="h-10 w-20 shrink-0 rounded-lg" />
+        <Bone className="h-10 w-20 shrink-0 rounded-lg opacity-60" />
+        <Bone className="h-10 w-12 shrink-0 rounded-lg opacity-25" />
+      </div>
+      <div className="flex gap-2">
+        <Bone className="h-10 w-12 shrink-0 rounded-lg opacity-25" />
+        <Bone className="h-10 w-20 shrink-0 rounded-lg opacity-60" />
+        <Bone className="h-10 w-20 shrink-0 rounded-lg" />
+        <Bone className="h-10 w-20 shrink-0 rounded-lg" />
+      </div>
+      <div className="pointer-events-none absolute inset-y-0 left-0 w-6 bg-gradient-to-r from-zinc-50 dark:from-zinc-900/80" />
+      <div className="pointer-events-none absolute inset-y-0 right-0 w-6 bg-gradient-to-l from-zinc-50 dark:from-zinc-900/80" />
+    </div>
+  ),
 };
 
 export function ComponentSkeletonPreview({
